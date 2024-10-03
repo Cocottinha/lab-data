@@ -1,10 +1,14 @@
 <template>
   <nav>   
-    
-    <router-link to="/" class="logo"><img src="../src/assets/icon.svg" width="36px" class="logoI"/>Lab.Data</router-link>
-    <router-link to="/about" class="item">About</router-link>
-    <router-link to="/posts" class="item">Posts</router-link>
-    <router-link to="/login" class="item">Login</router-link>   
+    <div>
+      <router-link to="/" class="logo"><img src="../src/assets/icon.svg" width="36px" class="logoI"/>Lab.Data</router-link>
+    </div>
+    <div class="bar">
+      <router-link to="/about" class="item">About</router-link>
+      <router-link to="/posts" class="item">Posts</router-link>
+      <router-link to="/login" class="item">Login</router-link>
+    </div>
+       
   </nav>
   <router-view/>
 </template>
@@ -28,35 +32,30 @@ body{
 }
 nav {
   gap: 40px;
-  margin-left: 40px;
   margin-bottom: 30px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  font-size: 18px;
+  justify-content: space-between;
 
-  .icon {
-    margin-left: 10px;
-    width: 40px;
-    min-width: 40px;
-    font-size: 18px;
-    text-align: left;
-    display: flex;
-    flex-direction: row;
+
+  .router-link-exact-active{
+     background: -webkit-linear-gradient(360deg, var(--labcolor), #00f0ff);
+     color: white;
+     border-radius: 0 0 20px 20px;
   }
 
+  .bar{
+    text-align: center;  
+  }
   a {
     font-weight: bold;
     color: #2c3e50;
     padding: 20px;
     cursor: pointer;
     text-decoration: none;
-    
-    
   }
   .item{
     font-size: 20px;
-    margin-top: 8px;
   }
   .logo{
     font-size: 30px;

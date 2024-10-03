@@ -1,8 +1,8 @@
 <template>
   <div class="posts">
     <h1>This is a posts page</h1>
-     <div class="PostItem" v-for="item, itemIndex in posts" :key="itemIndex">
-        {{ item }}
+     <div class="PostItem" v-for="item, itemIndex in posts" :key="itemIndex" @click="$router.push(`/post/${item.id}`)">
+        {{item}}
      </div>
   </div>
 </template>

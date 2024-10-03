@@ -33,7 +33,7 @@
     </div>
     
     <div class="imgcontainer">
-      <img src="../assets/lbmovel.jpg" alt="labmovel" class="heroImg" />
+      <img src="../assets/lbmovel.jpg" alt="labmovel"  class="heroImg" />
     </div>
   </div>;
   <HelloWorld msg="Welcome to Your Vue.js App" />
@@ -121,7 +121,7 @@ h4{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: 0px;
+    margin-left: 20px;
 }
 
 .imgcontainer {
@@ -129,7 +129,7 @@ h4{
     position: relative;
     transition: transform 0.5s;
     object-fit: cover;
-    width: 400px;
+    
 }
 
 .imgcontainer:hover {
@@ -139,7 +139,9 @@ h4{
 .heroImg {
     border-radius: 20px;
     box-shadow: 0.1rem 0.1rem 0.5rem gray;
-    width: 700px;
+    height: 450px;
+    max-width: 700px;
+    object-fit:cover ;
 }
 
 .brandImg {

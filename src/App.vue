@@ -36,21 +36,24 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-left: 210px;
+  margin-right: 180px;
 
 
   .router-link-exact-active{
      background: -webkit-linear-gradient(360deg, var(--labcolor), #00f0ff);
      color: white;
-     border-radius: 0 0 20px 20px;
+     border-radius: 20px 20px 20px 20px;
   }
 
   .bar{
-    text-align: center;  
+    text-align: end;  
+    margin-top: 7px;
   }
   a {
     font-weight: bold;
     color: #2c3e50;
-    padding: 20px;
+    padding: 10px;
     cursor: pointer;
     text-decoration: none;
   }

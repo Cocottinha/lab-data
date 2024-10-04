@@ -121,7 +121,7 @@ h4{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-left: 20px;
+    margin-left: 25px;
 }
 
 .imgcontainer {

@@ -33,11 +33,13 @@ body{
 nav {
   gap: 40px;
   margin-bottom: 30px;
+  margin-top: 10px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   margin-left: 210px;
-  margin-right: 180px;
+  margin-right: 200px;
+  width: 1450px;
+
 
 
   .router-link-exact-active{
@@ -49,6 +51,11 @@ nav {
   .bar{
     text-align: end;  
     margin-top: 7px;
+    transition: ease-in-out 0.5s;
+    :hover{
+      background-color: #a6a6a6;
+      transition: 0.8s;
+    }
   }
   a {
     font-weight: bold;
@@ -56,9 +63,13 @@ nav {
     padding: 10px;
     cursor: pointer;
     text-decoration: none;
+    gap: 10px;
+    padding: 10px;
   }
   .item{
     font-size: 20px;
+    border-radius: 20px 20px 20px 20px;
+    margin: 10px;
   }
   .logo{
     font-size: 30px;
@@ -69,7 +80,7 @@ nav {
   }
   .logoI {
     float: left;
-    padding: 5px;
+    padding: 2px;
     font-size: 30px;
   }
 }

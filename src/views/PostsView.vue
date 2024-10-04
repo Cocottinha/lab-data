@@ -48,10 +48,9 @@ const posts = [
 
 <template>
   <div class="posts">
-    <h1>This is a posts page</h1>
     <div class="grid">
       <div class="PostItem" v-for="item, itemIndex in posts" :key="itemIndex" @click="$router.push(`/post/${item.id}`)">        
-        <img src="../assets/teste2.jpg" width="300px"/>
+        <img src="../assets/validar.png" width="80%" height="75%" class="imgCard"/>
         <div class="info">
           <h2>{{ item.title }}</h2>
           <p>{{ item.description }}</p>
@@ -62,29 +61,38 @@ const posts = [
   </div>
 </template>
 
-<style lang="css">
+<style lang="scss" scoped>
 .posts{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }
 .grid{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   margin: 4%;
-  margin-left: 150px;
+  margin-left: 100px;
   margin-right: 180px;
   gap: 80px;
-  padding-left: 100px;
+  padding-left: 110px;
+}
+.imgCard{
+  width: 320px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 .PostItem {
-  padding: 40px;
+  padding: 20px;
   width: 400px;
   height: 530px;
   cursor: pointer;
-  gap: 20px;
-  background-color: rgb(234, 234, 234)
+  background-color: rgb(234, 234, 234);
+  transition: transform 0.3s;
+  border-radius: 10px;
+}
+.PostItem:hover{
+  transform: scale(1.1);
 }
 .info{
   background-color: rgb(234, 234, 234);

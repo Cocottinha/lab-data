@@ -117,10 +117,9 @@ h4{
 
 .brands {
     width: 100%;
-    height: 10px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: left;
     margin-left: 25px;
 }
 
@@ -145,12 +144,57 @@ h4{
 }
 
 .brandImg {
-    padding: 10px;
+    padding: 0px;
     width: 20vh;
     height: 20%;
 }
 
 @media (max-width: 1919px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        margin: 0px;
+        padding: 100px 0px 0px 80px;
+        width: 95%;
+    }
+    .title{
+        text-align: center;
+        margin: 0;
+    }
+    .textbox {
+        flex: 1;
+        display: flex;
+        flex-direction: column;  
+        width: 100%;
+        margin-left: 0px;
+    }
+    .desc{
+        text-align: center;
+    }
+    .buttons {
+        justify-content: left;
+    }
+    .brands{
+        width: 85%;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+    }
+    .brandImg {
+        padding: 10px;
+        width: 100%;
+        height: 20%;
+        margin-left: 10%;
+    }
+
+    .heroImg {
+        object-fit: cover;
+        width: 980px;
+        height: 580px;
+    }
+}
+
+@media (max-width: 1280px) {
     .container {
         flex-direction: column;
         text-align: center;
@@ -161,10 +205,9 @@ h4{
     }
 
     .brandImg {
-        padding: 10px;
-        width: 20vh;
-        height: 20%;
-        margin-left: 15%;
+        width: 100%;
+        height: 60px;
+        margin-left: 7%;
     }
 
     .heroImg {

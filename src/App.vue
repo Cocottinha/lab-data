@@ -22,7 +22,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #1e2831;
 }
 
 body{
@@ -38,8 +38,6 @@ nav {
   margin-left: 210px;
   margin-right: 200px;
   width: 1450px;
-
-
 
   .router-link-exact-active{
      background: -webkit-linear-gradient(360deg, var(--labcolor), #00f0ff);

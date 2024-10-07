@@ -35,7 +35,7 @@
     <div class="imgcontainer">
       <img src="../assets/lbmovel.jpg" alt="labmovel"  class="heroImg" />
     </div>
-  </div>;
+  </div>
   <HelloWorld msg="Welcome to Your Vue.js App" />
 </template>
 
@@ -110,7 +110,7 @@ h4{
     transition-timing-function: ease;
 }
 
-.button:hover {
+.button :hover {
     background-color: gray;
     color: white;
 }
@@ -129,7 +129,7 @@ h4{
     position: relative;
     transition: transform 0.5s;
     object-fit: cover;
-    
+    cursor: pointer;
 }
 
 .imgcontainer:hover {

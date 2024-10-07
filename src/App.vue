@@ -7,8 +7,7 @@
       <router-link to="/about" class="item">About</router-link>
       <router-link to="/posts" class="item">Posts</router-link>
       <router-link to="/login" class="item">Login</router-link>
-    </div>
-       
+    </div>     
   </nav>
   <router-view/>
 </template>
@@ -55,6 +54,7 @@ nav {
     :hover{
       background-color: #a6a6a6;
       transition: 0.8s;
+      color: white;
     }
   }
   a {

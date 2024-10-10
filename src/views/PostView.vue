@@ -220,12 +220,77 @@ export default {
     font-weight: 300;
 }
 
-.technique-list {
-    margin-top: 20px;
+.content {
+    font-size: 20px;
+    color: rgb(74, 74, 72);
 }
 
-.technique-list ul {
-    list-style: none;
+.tecnicas {
+    padding: 5px;
+}
+
+.row {
+    padding: 5px;
+}
+
+.cont {
+    display: flex;
+    flex-direction: row;
+    text-align: left
+}
+.contTop {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.column ul {
+    list-style-type: none;
+    
+}
+.column li {
+    padding: 3px;
+    font-size: 20px;
+}
+.column li:hover{
+    background: linear-gradient(90deg, var(--labcolor) 0%, rgba(0, 212, 255, 1) 100%);
+    color: white;
+    cursor: pointer;
+    a{
+        color: white;
+    }
+}
+.column:first-child {
+    width: 150px;
+    padding: 15px;
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+.column {
+    width: 150px;
     padding: 0;
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+.column::-webkit-scrollbar {
+    width: 10px;
+}
+
+.column::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 3px grey;
+    border-radius: 0;
+}
+
+.column::-webkit-scrollbar-thumb {
+    background: linear-gradient(0deg, var(--labcolor) 0%, rgba(0, 212, 255, 1) 100%);
+    border-radius: 0;
+}
+
+.selected {
+    background: linear-gradient(90deg, grey 0%, white 110%);
+    color: white;
+    font-weight: bold;
 }
 </style>

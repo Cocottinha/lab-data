@@ -51,7 +51,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-  .container {
+.container {
     display: flex;
     gap: 50px;
     flex-direction: row;

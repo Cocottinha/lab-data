@@ -1,11 +1,13 @@
 <script setup>
 import axios from 'axios';
 import { ref, onMounted } from 'vue';
+import { useRouter } from 'vue-router'; // Import the useRouter hook
 
-const a = "53|djNQxyOqT1oCthp2tjA980k3rlDQId5wtFfjbLT92720cd15";
+const a = "54|fUVcOpXhs7ivwUv80u2DWTvmAQ6dS0c8aXHSdmyVc0e06ba0";
 
 const posts = ref([]); // Initialize posts as a ref
 const isLoading = ref(true); // Initialize loading state
+const router = useRouter(); // Initialize the router
 
 const getPosts = async () => {
   try {
@@ -16,12 +18,23 @@ const getPosts = async () => {
         'Authorization': `Bearer ${a}`
       }
     });
+
+    // If response is not successful
     if (response.status !== 200) {
       throw new Error('Failed to fetch posts');
     }
+
     posts.value = response.data.Dados;
+
   } catch (error) {
     console.error('Error fetching posts:', error);
+    
+    // If the status code is 401, redirect to login page
+    if (error.response && error.response.status === 401) {
+      alert("Unauthorized access. Redirecting to login page.");
+      router.push('/login');
+    }
+
   } finally {
     isLoading.value = false;
   }

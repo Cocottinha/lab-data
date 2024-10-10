@@ -1,3 +1,231 @@
+<script>
+import axios from 'axios';
+import { ref, onMounted } from 'vue';
+import { useRoute } from 'vue-router';
+import PontoAnalise from '@/components/PontoAnalise.vue';
+import ComboBoxTecnicas from '@/components/ComboBoxTecnicas.vue'; // Assuming ComboBoxTecnicas.vue exists
+
+export default {
+  name: 'PostView',
+  components: { PontoAnalise, ComboBoxTecnicas },
+  setup() {
+    const post = ref({});
+    const filteredPosts = ref([]);
+    const selectedOption = ref('Todas');
+    const selectedPonto = ref(null);
+    const isTecnicaListVisible = ref(false);
+    const route = useRoute();
+    const isLoading = ref(true);
+
+    const getPost = async () => {
+      try {
+        const response = await axios.get(`https://api.labmov.tec.br/api/projetos/${route.params.id}`, {
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json; charset=utf-8',
+            'Authorization': `Bearer ${localStorage.getItem('auth-token')}`
+          }
+        });
+        post.value = response.data;
+      } catch (error) {
+        console.error('Error fetching posts:', error);
+      } finally {
+        isLoading.value = false;
+      }
+    };
+
+    onMounted(() => {
+      getPost();
+    });
+
+    const handlePontoClick = (pontoId) => {
+      selectedPonto.value = pontoId;
+      isTecnicaListVisible.value = true;
+      setTimeout(() => {
+        let windowElement = document.getElementById("hide");
+        if (windowElement) {
+          windowElement.style.display = "block";
+        }
+      }, 0);
+    };
+
+    const handleFilteredPostsChange = (newFilteredPosts) => {
+      filteredPosts.value = newFilteredPosts;
+      isTecnicaListVisible.value = false;
+    };
+
+    const handleSelectChange = (newSelectedOption) => {
+      selectedOption.value = newSelectedOption;
+    };
+
+    return {
+      post,
+      filteredPosts,
+      selectedOption,
+      selectedPonto,
+      isTecnicaListVisible,
+      handlePontoClick,
+      handleFilteredPostsChange,
+      handleSelectChange,
+      isLoading
+    };
+  }
+};
+</script>
+
 <template>
-    <h1></h1>
-</template>
+      <div v-if="isLoading">Loading...</div>
+      <div v-else class="Post">
+        <div class="imgContainer">
+          <!-- <img :src="`/ftp/${post.projeto_id}/${post.nome_imagem}${post.extensao_imagem}`" class="img" /> -->
+          <img src="../assets/20.jpeg" class="img"/>
+          <PontoAnalise
+            v-for="ponto in post.pontos"
+            :key="ponto.ponto_id"
+            :IdPonto="ponto.ponto_id"
+            :NomePonto="ponto.nome_ponto"
+            :X="ponto.coordenada_x"
+            :Y="ponto.coordenada_y"
+            :largImg="post.largura_imagem"
+            :altImg="post.altura_imagem"
+            @click="handlePontoClick(ponto.ponto_id)"
+          />
+        </div>
+  
+        <div class="textContainer">
+          <h1 class="title">{{ post.nome_projeto }}</h1>
+          <div class="detail">
+            <div class="detailText">
+              <span class="detailTitle">Autor:</span>
+              <span class="detailValue">{{ post.nome_autor }}</span>
+            </div>
+            <div class="detailText">
+              <span class="detailTitle">Ano:</span>
+              <span class="detailValue">{{ post.ano_obra }}</span>
+            </div>
+            <div class="detailText">
+              <span class="detailTitle">Estilo:</span>
+              <span class="detailValue">{{ post.estilo }}</span>
+            </div>
+          </div>
+  
+          <div class="contTop">
+            <ComboBoxTecnicas
+              :pontos="post.pontos"
+              @setSortedPosts="handleFilteredPostsChange"
+              @onSelectChange="handleSelectChange"
+            />
+            <div class="cont">
+              <div class="row">
+                <h2>Pontos:</h2>
+                <div class="column">
+                  <ul>
+                    <li
+                      v-for="ponto in (filteredPosts.length > 0 ? filteredPosts : (selectedOption === 'Todas' ? post.pontos : []))"
+                      :key="ponto.ponto_id"
+                      @click="handlePontoClick(ponto.ponto_id)"
+                      :class="{ selected: selectedPonto === ponto.ponto_id }"
+                    >
+                      {{ ponto.nome_ponto }}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+  
+              <div class="row" id="hide" v-show="isTecnicaListVisible">
+                <h2>Técnicas:</h2>
+                <div class="column">
+                  <ul>
+                    <li
+                      v-for="(tecnica, index) in post.pontos.find(ponto => ponto.ponto_id === selectedPonto)?.tecnicas || []"
+                      :key="index"
+                    >
+                      <router-link
+                        v-if="tecnica.nome_tecnica.startsWith('MO')"
+                        :to="`/imagem/${post.projeto_id}-${tecnica.nome_tecnica}`"
+                        target="_blank"
+                      >
+                        {{ tecnica.nome_tecnica }}
+                      </router-link>
+                      <router-link
+                        v-else-if="tecnica.nome_tecnica.startsWith('FTIR') || tecnica.nome_tecnica.startsWith('XRF') || selectedOption === 'Todas'"
+                        :to="`/grafico/${post.projeto_id}-${tecnica.nome_tecnica}`"
+                        target="_blank"
+                      >
+                        {{ tecnica.nome_tecnica }}
+                      </router-link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </template>
+
+<style scoped>
+.Post {
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    gap: 50px;
+    margin-left: 180px;
+}
+
+.imgContainer {
+    position: relative;
+    width: 1024px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.img {
+    height: auto;
+    width: 1024px;
+    object-fit: contain;
+}
+
+.textContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    width: 310px;
+}
+
+.title {
+    font-size: 50px;
+    text-align: left;
+}
+
+.detail {
+    display: flex;
+    gap: 20px;
+}
+
+.detailText {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.detailTitle {
+    color: gray;
+    font-weight: bold;
+}
+
+.detailValue {
+    font-weight: 300;
+}
+
+.technique-list {
+    margin-top: 20px;
+}
+
+.technique-list ul {
+    list-style: none;
+    padding: 0;
+}
+</style>

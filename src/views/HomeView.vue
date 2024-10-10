@@ -69,7 +69,7 @@ h4{
     flex-direction: column;
     gap: 50px;    
     width: 750px;
-    margin-left: 60px;
+    margin-left: 50px;
 }
 
 .title {
@@ -110,7 +110,7 @@ h4{
     transition-timing-function: ease;
 }
 
-.button :hover {
+.button:hover {
     background-color: gray;
     color: white;
 }

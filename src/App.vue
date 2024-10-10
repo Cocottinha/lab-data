@@ -37,7 +37,7 @@ nav {
   justify-content: space-between;
   margin-left: 210px;
   margin-right: 200px;
-  width: 1450px;
+  width: 1480px;
 
   .router-link-exact-active{
      background: -webkit-linear-gradient(360deg, var(--labcolor), #00f0ff);

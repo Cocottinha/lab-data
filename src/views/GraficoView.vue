@@ -10,24 +10,24 @@ export default {
         GraficoXRF,
         GraficoFTIR
     },
-    props: ['params'], // Pass in params from the router
+    props: ['params'],
     setup() {
         const tecnica = ref('');
         const post = ref(null);
         const objetoAnalise = ref(null);
-        const filePath = ref(''); // Add filePath ref
-        const route = useRoute(); //slug
+        const filePath = ref('');
+
+        const route = useRoute();
 
         const getParams = async () => {
             const tecnicaParams = route.params.id.split('-');
-            tecnica.value = tecnicaParams[1] //set name of technique
+            tecnica.value = tecnicaParams[1];
             return tecnicaParams;
-        }
+        };
 
         const getPost = async (projetoId) => {
-            let response;
             try {
-                response = await axios.get(`https://api.labmov.tec.br/api/projetos/${projetoId}`, {
+                const response = await axios.get(`https://api.labmov.tec.br/api/projetos/${projetoId}`, {
                     headers: {
                         'Accept': 'application/json',
                         'Content-Type': 'application/json; charset=utf-8',
@@ -36,7 +36,7 @@ export default {
                 });
                 return response;
             } catch (error) {
-                console.log("Não foi possível recuperar o post!");
+                console.error("Não foi possível recuperar o post!", error);
                 return null;
             }
         };
@@ -54,8 +54,18 @@ export default {
                     });
                 });
 
-                if (objetoAnalise.value != null) {
-                    filePath.value = "../assets/20_ponto_97_XRF_1.csv"; // Set file path
+                if (objetoAnalise.value) {
+                    const vrau = require('/public/files/20_ponto_97_XRF_1.csv');
+                    filePath.value = "/public/files/20_ponto_97_XRF_1.csv";
+                    console.log(vrau)
+                    // console.log(vrau)
+                    // Create a Blob from the file path
+                    //const fileResponse = await axios.get(filePath.value);
+                    // const fileBlob = new Blob([fileResponse.data], { type: 'text/csv' });
+
+                     //console.log("blob", fileResponse)
+
+                
                 }
             } else {
                 console.log("Impossível recuperar os dados!");
@@ -69,7 +79,7 @@ export default {
         return {
             objetoAnalise,
             tecnica,
-            filePath // Make filePath available
+            filePath
         };
     }
 };
@@ -78,9 +88,7 @@ export default {
 <template>
     <div v-if="objetoAnalise">
         <h1>{{ objetoAnalise.nome_tecnica }}</h1>
-
-        <!-- Pass filePath as a prop to GraficoXRF -->
         <GraficoXRF v-if="tecnica.startsWith('XRF')" :file-path="filePath" />
-        <GraficoFTIR v-if="tecnica == 'FTIR'" :file-path="filePath" />
+        <GraficoFTIR v-if="tecnica === 'FTIR'" :file-path="filePath" />
     </div>
 </template>

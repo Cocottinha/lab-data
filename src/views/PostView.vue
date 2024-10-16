@@ -32,6 +32,7 @@ export default {
       } finally {
         isLoading.value = false;
       }
+      console.log(post.value)
     };
 
     onMounted(() => {

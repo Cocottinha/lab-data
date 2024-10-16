@@ -1,22 +1,34 @@
-<script>
+<script module>
 import { ref, watch } from 'vue';
-import { readTextFileXRF } from '../utils/readFileXRF.js'; // Import the function to read the file
+import readTextFileXRF from '@/utils/readTextFileXRF'
 
 export default {
-    props: ['filePath'], // Accept filePath as a prop
+    props: ['filePath'],
     setup(props) {
         const arrayA = ref([]);
         const arrayB = ref([]);
-        console.log(props.filePath)
+
         const loadFileData = async () => {
             if (props.filePath) {
-                const { arrayA: a, arrayB: b } = await readTextFileXRF(props.filePath);
-                arrayA.value = a;
-                arrayB.value = b;
+                console.log("Loading file from:", props.filePath);
+                try {
+                    // const fetch = await fetch(props.filePath)
+                    const vrau = readTextFileXRF('/files/20_ponto_97_XRF_1.csv');
+                    console.log("teste", vrau)
+                    // const response = await readTextFileXRF(props.filePath); // Adjust the endpoint if necessary
+                    // const data = await response.json();
+                    
+                    // console.log(data)
+                    // arrayA.value = data.arrayA;
+                    // arrayB.value = data.arrayB;
+
+                    // console.log("Parsed data", arrayA.value, arrayB.value);
+                } catch (error) {
+                    console.error("Error loading CSV file:", error);
+                }
             }
         };
 
-        // Load data when filePath changes
         watch(() => props.filePath, () => {
             loadFileData();
         }, { immediate: true });
@@ -31,7 +43,6 @@ export default {
 
 <template>
     <div v-if="arrayA.length && arrayB.length">
-        <!-- Replace this with the actual chart component you're using -->
         <h2>XRF Chart</h2>
         <PlotComponent :x="arrayA" :y="arrayB" />
     </div>

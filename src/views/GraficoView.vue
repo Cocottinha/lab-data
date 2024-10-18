@@ -15,6 +15,8 @@ export default {
         const tecnica = ref('');
         const post = ref(null);
         const objetoAnalise = ref(null);
+        const idPonto = ref(null);
+        const atributos = ref(null);
         const filePath = ref('');
 
         const route = useRoute();
@@ -50,14 +52,16 @@ export default {
                     ponto.tecnicas.forEach((analise) => {
                         if (analise.nome_tecnica === tecnica.value) {
                             objetoAnalise.value = analise;
+                            idPonto.value = ponto.nome_ponto;
+                            console.log(idPonto.value)
+                            atributos.value = analise;
                         }
                     });
                 });
 
                 if (objetoAnalise.value) {
-                    const vrau = require('/public/files/20_ponto_97_XRF_1.csv');
-                    filePath.value = "/public/files/20_ponto_97_XRF_1.csv";
-                    console.log(vrau)
+                    //const vrau = require('/public/files/20_ponto_97_XRF_1.csv');
+                    filePath.value = "/files/20_ponto_97_XRF_1.csv";
                     // console.log(vrau)
                     // Create a Blob from the file path
                     //const fileResponse = await axios.get(filePath.value);
@@ -79,7 +83,9 @@ export default {
         return {
             objetoAnalise,
             tecnica,
-            filePath
+            filePath,
+            idPonto,
+            atributos
         };
     }
 };
@@ -87,8 +93,9 @@ export default {
 
 <template>
     <div v-if="objetoAnalise">
-        <h1>{{ objetoAnalise.nome_tecnica }}</h1>
-        <GraficoXRF v-if="tecnica.startsWith('XRF')" :file-path="filePath" />
-        <GraficoFTIR v-if="tecnica === 'FTIR'" :file-path="filePath" />
+        <h1>{{idPonto}}_{{ objetoAnalise.nome_tecnica }}</h1>
+        <GraficoXRF v-if="tecnica.startsWith('XRF') && filePath" :filePath="filePath" :attributes="atributos"/>
+
+        <GraficoFTIR v-if="tecnica === 'FTIR'" :filePath="filePath" />
     </div>
 </template>

@@ -132,8 +132,8 @@ export default {
                   </ul>
                 </div>
               </div>
-  
-              <div class="row" id="hide" v-show="isTecnicaListVisible">
+              <!-- /*arrumar*/ -->
+              <div class="row" id="hide" v-show="isTecnicaListVisible"> 
                 <h2>Técnicas:</h2>
                 <div class="column">
                   <ul>

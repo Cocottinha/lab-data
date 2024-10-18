@@ -1,32 +1,47 @@
-import Papa from "papaparse";
-
 export default async function readTextFileXRF(fileUrl) {
-    console.log(fileUrl);
+    //console.log(fileUrl);
     const response = await fetch(fileUrl);
-    console.log("resposta", response);
+    //console.log("resposta", response);
     const text = await response.text();
-    console.log(text)
+    //console.log(text)
     
+    const line = text.split('\n');
+    let contaLinhas = 0;
+
     let arrayA = [];
     let arrayB = [];
 
-    const parsedData = Papa.parse(text, {
-        header: false,
-        skipEmptyLines: true,
-        delimiter: text.includes(';') ? ';' : ','
-    });
+    if(line.includes(';')){
+        line.forEach(l => {
 
-    parsedData.data.forEach((row, index) => {
-        if (row[0] !== undefined && (index > 21 || !text.includes(','))) {
-            const valueA = parseFloat(row[0]);
-            const valueB = parseFloat(row[1]?.trim());
+            let part = l.trim().split(';');
 
-            if (!isNaN(valueA) && !isNaN(valueB)) {
-                arrayA.push(valueA);
-                arrayB.push(valueB);
+            if (part[1] && part[0] !== undefined) {
+                const num = parseFloat(part[0])
+                const num1 = parseFloat(part[1].trim())
+                arrayA.push(num)
+                arrayB.push(num1);
             }
-        }
-    });
+            
+        })
+    }
+    else{
+        line.forEach(l => {
+            contaLinhas++;
+            if (contaLinhas > 21) {
+                
+                let part = l.trim().split(',');
+    
+                if (part[1] && part[0] !== undefined) {
+                    const num = parseFloat(part[0])
+                    const num1 = parseFloat(part[1].trim())
+                    arrayA.push(num)
+                    arrayB.push(num1);
+                }
+            }
+            
+        })
+    }
 
     console.log("lista", arrayA, arrayB);
     return { arrayA, arrayB };

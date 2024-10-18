@@ -1,12 +1,21 @@
-<script>
-
-</script>
 <template>
-    <div>
-        <h1>Login</h1>
-        <div>
-            <p>Entre na sua conta</p>
-        </div>
+    <div id="app">
+      <LoginComponent />
     </div>
-
-</template>
+  </template>
+  
+  <script>
+  import LoginComponent from '@/components/LoginComponent.vue';
+  
+  export default {
+    name: 'LoginView',
+    components: {
+        LoginComponent,
+    },
+  };
+  </script>
+  
+  <style>
+  /* Add global styles if needed */
+  </style>
+  

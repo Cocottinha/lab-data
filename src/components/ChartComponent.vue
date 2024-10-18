@@ -1,5 +1,7 @@
 <template>
-  <div class="chart" ref="chartRef"></div>
+  <div>
+    <div class="chart" ref="chartRef"></div>
+  </div>
 </template>
 
 <script>
@@ -7,6 +9,7 @@ import * as echarts from 'echarts';
 import { onMounted, onBeforeUnmount, ref } from 'vue';
 
 export default {
+
   name: 'EChartComponent',
   props: {
     xData: {

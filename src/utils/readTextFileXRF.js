@@ -1,9 +1,7 @@
 export default async function readTextFileXRF(fileUrl) {
-    //console.log(fileUrl);
+
     const response = await fetch(fileUrl);
-    //console.log("resposta", response);
     const text = await response.text();
-    //console.log(text)
     
     const line = text.split('\n');
     let contaLinhas = 0;
@@ -43,6 +41,6 @@ export default async function readTextFileXRF(fileUrl) {
         })
     }
 
-    console.log("lista", arrayA, arrayB);
+    //console.log("lista", arrayA, arrayB);
     return { arrayA, arrayB };
 }

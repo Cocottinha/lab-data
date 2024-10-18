@@ -18,6 +18,7 @@ export default {
         const idPonto = ref(null);
         const atributos = ref(null);
         const filePath = ref('');
+        const isLoading = ref(true)
 
         const route = useRoute();
 
@@ -40,6 +41,8 @@ export default {
             } catch (error) {
                 console.error("Não foi possível recuperar o post!", error);
                 return null;
+            } finally{
+                isLoading.value = false;
             }
         };
 
@@ -85,17 +88,24 @@ export default {
             tecnica,
             filePath,
             idPonto,
-            atributos
+            atributos,
+            isLoading
         };
     }
 };
 </script>
 
 <template>
-    <div v-if="objetoAnalise">
-        <h1>{{idPonto}}_{{ objetoAnalise.nome_tecnica }}</h1>
-        <GraficoXRF v-if="tecnica.startsWith('XRF') && filePath" :filePath="filePath" :attributes="atributos"/>
-
-        <GraficoFTIR v-if="tecnica === 'FTIR'" :filePath="filePath" />
+    <div v-if="isLoading">
+        Loading...
     </div>
+    <div v-else>
+        <div v-if="objetoAnalise">
+            <h1>{{idPonto}}_{{ objetoAnalise.nome_tecnica }}</h1>
+            <GraficoXRF v-if="tecnica.startsWith('XRF') && filePath" :filePath="filePath" :attributes="atributos"/>
+
+            <GraficoFTIR v-if="tecnica === 'FTIR'" :filePath="filePath" />
+        </div>
+    </div>
+    
 </template>

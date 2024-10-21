@@ -1,19 +1,46 @@
 <template>
   <nav>   
     <div>
-      <router-link to="/" class="logo"><img src="../src/assets/icon.svg" width="36px" class="logoI"/>Lab.Data</router-link>
+      <router-link to="/" class="logo">
+        <img src="../src/assets/icon.svg" width="36px" class="logoI" />Lab.Data
+      </router-link>
     </div>
     <div class="bar">
       <router-link to="/about" class="item">About</router-link>
       <router-link to="/posts" class="item">Posts</router-link>
-      <router-link to="/login" class="item">Login</router-link>
+      <router-link to="/login" class="item" v-if="!loggedIn">Login</router-link>     
+      <a @click="handleLogout" class="item" v-if="loggedIn">{{username}}</a>
     </div>     
   </nav>
-  <router-view/>
+  <router-view />
 </template>
 
 <script>
+import { computed } from 'vue';
 
+export default {
+  setup() {
+    const username = computed(() => {
+      return localStorage.getItem("user-name");
+    });
+
+    const loggedIn = computed(() => {
+      return localStorage.getItem("auth-token") !== null;
+    });
+    
+    const handleLogout = () => {
+      localStorage.removeItem("auth-token");
+      localStorage.removeItem("user-name");
+      location.reload();
+    };
+
+    return {
+      loggedIn,
+      handleLogout,
+      username
+    };
+  },
+};
 </script>
 
 <style lang="scss">
@@ -25,10 +52,11 @@
   color: #1e2831;
 }
 
-body{
+body {
   padding: 10px;
-  margin: 10px
+  margin: 10px;
 }
+
 nav {
   gap: 40px;
   margin-bottom: 30px;
@@ -39,22 +67,17 @@ nav {
   margin-right: 200px;
   width: 1480px;
 
-  .router-link-exact-active{
-     background: -webkit-linear-gradient(360deg, var(--labcolor), #00f0ff);
-     color: white;
-     border-radius: 20px 20px 20px 20px;
+  .router-link-exact-active {
+    background: -webkit-linear-gradient(360deg, var(--labcolor), #00f0ff);
+    color: white;
+    border-radius: 20px;
   }
 
-  .bar{
+  .bar {
     text-align: end;  
     margin-top: 7px;
-    transition: ease-in-out 0.5s;
-    :hover{
-      background-color: #a6a6a6;
-      transition: 0.8s;
-      color: white;
-    }
   }
+
   a {
     font-weight: bold;
     color: #2c3e50;
@@ -62,20 +85,28 @@ nav {
     cursor: pointer;
     text-decoration: none;
     gap: 10px;
-    padding: 10px;
   }
-  .item{
+
+  .item {
     font-size: 20px;
-    border-radius: 20px 20px 20px 20px;
+    border-radius: 20px;
     margin: 10px;
+
+    &:hover {
+      background-color: #a6a6a6;
+      transition: 0.8s;
+      color: white;
+    }
   }
-  .logo{
+
+  .logo {
     font-size: 30px;
     font-weight: bold;
     background: -webkit-linear-gradient(360deg, var(--labcolor), #00f0ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
   .logoI {
     float: left;
     padding: 2px;

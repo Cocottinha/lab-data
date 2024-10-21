@@ -1,65 +1,61 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { createRouter, createWebHistory } from 'vue-router';
+import HomeView from '../views/HomeView.vue';
 
 const routes = [
   {
     path: '/',
     name: 'Home',
-    component: HomeView
+    component: HomeView,
   },
   {
     path: '/about',
     name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue'),
   },
   {
     path: '/posts',
     name: 'Posts',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/PostsView.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/PostsView.vue'),
   },
   {
     path: '/post/:id',
     name: 'Post',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import('../views/PostView.vue')
+    component: () => import('../views/PostView.vue'),
   },
   {
     path: '/grafico/:id',
     name: 'Grafico',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import('../views/GraficoView.vue')
+    component: () => import('../views/GraficoView.vue'),
   },
   {
     path: '/imagem/:id',
     name: 'Image',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import('../views/ImagemView.vue')
+    component: () => import('../views/ImagemView.vue'),
   },
   {
     path: '/login',
     name: 'Login',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import('../views/LoginView.vue')
-  }
-]
+    component: () => import('../views/LoginView.vue'),
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+  routes,
+});
 
-export default router
+// Global navigation guard
+router.beforeEach((to, from, next) => {
+  const authToken = localStorage.getItem('auth-token');
+
+  // If the user is trying to access a protected route
+  const protectedRoutes = ['Posts', 'Post', 'Grafico', 'Image']; // Add your protected route names here
+  if (protectedRoutes.includes(to.name) && !authToken) {
+    // Redirect to login if not authenticated
+    next({ name: 'Login' });
+  } else {
+    next(); // Allow the route
+  }
+});
+
+export default router;

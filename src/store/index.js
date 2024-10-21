@@ -18,6 +18,7 @@ const store = createStore({
       state.username = '';
       localStorage.removeItem('auth-token');
       localStorage.removeItem('user-name');
+      location.reload();
     },
     checkAuth(state) {
       state.loggedIn = !!localStorage.getItem('auth-token');

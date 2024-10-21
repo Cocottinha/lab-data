@@ -33,7 +33,7 @@ export default {
   methods: {
     ...mapActions(['login']),
     async handleLogin() {
-      // Reset error message
+
       this.errorMessage = '';
 
       try {

@@ -146,7 +146,7 @@ h4{
 }
 
 .brandImg {
-    padding: 0px;
+    padding: 5px;
     width: 20vh;
     height: 20%;
 }

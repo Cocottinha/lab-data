@@ -71,7 +71,7 @@ function formatDateToBrazilian(dateString) {
 </template>
 
 <style lang="scss" scoped>
-$bgColor: rgb(248 250 252);
+$bgColor: rgb(249, 249, 250);
 .posts {
   display: flex;
   flex-direction: column;
@@ -96,23 +96,27 @@ $bgColor: rgb(248 250 252);
   width: 320px;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .postItem {
   width: 320px;
   height: 400px;
   cursor: pointer;
   background-color: $bgColor;
+  // background-color: aqua;
   transition: transform 0.3s;
-  border-radius: 10px;
-  -webkit-box-shadow: 7px 7px 22px -7px rgba(0,0,0,0.75);
-  -moz-box-shadow: 7px 7px 22px -7px rgba(0,0,0,0.75);
-  box-shadow: 7px 7px 10px -7px rgba(0,0,0,0.75);
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 3px 11px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: 3px 3px 11px 1px rgba(0,0,0,0.75);
+box-shadow: 3px 3px 11px 1px rgba(0,0,0,0.75);
 }
 .postItem:hover {
   transform: scale(1.1);
 }
 .info {
-  padding: 0;
+  padding-left: 5px;
   margin-bottom: 5px;
   h2 {
     text-align: left;

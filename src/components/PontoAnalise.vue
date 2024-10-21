@@ -61,7 +61,6 @@ export default {
         scaleX = this.largImg / 1024;
         scaleY = this.altImg / (this.altImg * (1024 / this.largImg));
       }
-      console.log(this.X)
       return {
         left: `${this.X / scaleX}px`,
         top: `${this.Y / scaleY}px`

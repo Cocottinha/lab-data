@@ -9,7 +9,7 @@
       <router-link to="/about" class="item">About</router-link>
       <router-link to="/posts" class="item">Posts</router-link>
       <router-link to="/login" class="item" v-if="!loggedIn">Login</router-link>
-      <a @click="showModal = true" class="item" v-if="loggedIn">{{ username }}</a>
+      <a @click="showModal = true" class="profile" v-if="loggedIn">{{ username }}</a>
     </div>
 
     <ConfirmationModal
@@ -107,6 +107,18 @@ nav {
 
     &:hover {
       background-color: #a6a6a6;
+      transition: 0.8s;
+      color: white;
+    }
+  }
+
+  .profile{
+    font-size: 20px;
+    border-radius: 20px;
+    margin: 10px;
+
+    &:hover {
+      background-color: #cf3c3c;
       transition: 0.8s;
       color: white;
     }

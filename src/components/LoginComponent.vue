@@ -17,71 +17,44 @@
 </template>
 
 <script>
-import { ref } from 'vue';
+import { mapActions } from 'vuex';
 import axios from 'axios';
 import router from '@/router';
 
 export default {
   name: 'LoginComponent',
-  setup() {
-    const username = ref('');
-    const password = ref('');
-    const errorMessage = ref('');
-
-    const handleLogin = async () => {
-      errorMessage.value = ''; // Reset error message
-
-      try {
-        const result = await Login(username.value, password.value);
-        if (result) {
-          alert('Login successful!');
-          localStorage.setItem("auth-token", result.Dados.token);
-          localStorage.setItem("user-name", result.Dados.nome);
-
-          // Redirect to the intended route or home
-          const redirectPath = router.currentRoute.value.query.redirect || '/';
-          router.push(redirectPath);
-        } else {
-          errorMessage.value = 'Invalid username or password.';
-        }
-      } catch (err) {
-        errorMessage.value = err.message || 'An error occurred during login.';
-      }
-    };
-
+  data() {
     return {
-      username,
-      password,
-      errorMessage,
-      handleLogin,
+      username: '',
+      password: '',
+      errorMessage: '',
     };
   },
-};
+  methods: {
+    ...mapActions(['login']),
+    async handleLogin() {
+      // Reset error message
+      this.errorMessage = '';
 
-// The API login function
-export const Login = async (username, password) => {
-  const requestData = {
-    email: username,
-    password: password,
-  };
+      try {
+        const response = await axios.post("https://api.labmov.tec.br/api/login", {
+          email: this.username,
+          password: this.password,
+        });
 
-  try {
-    const response = await axios.post("https://api.labmov.tec.br/api/login", requestData, {
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json; charset=utf-8',
-      },
-    });
-
-    if (!response.data.Sucesso) {
-      throw new Error("Token not found!");
-    }
-
-    return response.data; // Return the response for further processing
-  } catch (err) {
-    console.error(err);
-    throw new Error('Login failed. Please check your credentials.');
-  }
+        if (response.data.Sucesso) {
+          const token = response.data.Dados.token;
+          const name = response.data.Dados.nome;
+          this.login({ token, name });
+          router.push(this.$route.query.redirect || '/');
+        } else {
+          this.errorMessage = 'Invalid username or password.';
+        }
+      } catch (err) {
+        this.errorMessage = err.message || 'An error occurred during login.';
+      }
+    },
+  },
 };
 </script>
 

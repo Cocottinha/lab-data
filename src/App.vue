@@ -1,43 +1,56 @@
 <template>
-  <nav>   
+  <nav>
     <div>
       <router-link to="/" class="logo">
-        <img src="../src/assets/icon.svg" width="36px" class="logoI" />Lab.Data
+        <img src="./assets/icon.svg" width="36px" class="logoI" />Lab.Data
       </router-link>
     </div>
     <div class="bar">
       <router-link to="/about" class="item">About</router-link>
       <router-link to="/posts" class="item">Posts</router-link>
-      <router-link to="/login" class="item" v-if="!loggedIn">Login</router-link>     
-      <a @click="handleLogout" class="item" v-if="loggedIn">{{username}}</a>
-    </div>     
+      <router-link to="/login" class="item" v-if="!loggedIn">Login</router-link>
+      <a @click="showModal = true" class="item" v-if="loggedIn">{{ username }}</a>
+    </div>
+
+    <ConfirmationModal
+      :isOpen="showModal"
+      :onConfirm="handleLogout"
+      :onCancel="cancelLogout"
+    />
   </nav>
   <router-view />
 </template>
 
 <script>
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
+import { useStore } from 'vuex';
+import ConfirmationModal from './components/ConfirmationModal.vue';
 
 export default {
+  components: {
+    ConfirmationModal,
+  },
   setup() {
-    const username = computed(() => {
-      return localStorage.getItem("user-name");
-    });
+    const store = useStore();
+    const username = computed(() => store.getters.getUsername);
+    const loggedIn = computed(() => store.getters.isLoggedIn);
+    const showModal = ref(false);
 
-    const loggedIn = computed(() => {
-      return localStorage.getItem("auth-token") !== null;
-    });
-    
     const handleLogout = () => {
-      localStorage.removeItem("auth-token");
-      localStorage.removeItem("user-name");
-      location.reload();
+      store.dispatch('logout'); // Dispatch the Vuex action to log out
+      showModal.value = false;   // Close the modal
+    };
+
+    const cancelLogout = () => {
+      showModal.value = false;    // Close the modal without logging out
     };
 
     return {
       loggedIn,
+      username,
+      showModal,
       handleLogout,
-      username
+      cancelLogout,
     };
   },
 };

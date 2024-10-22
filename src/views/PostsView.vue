@@ -121,13 +121,19 @@ $bgColor: rgb(250 250 250);
   background-color: $bgColor;
   // background-color: aqua;
   transition: transform 0.3s;
-  border-radius: 5px;
+  border-radius: 0px;
   -webkit-box-shadow: 3px 3px 9px 1px rgba(0,0,0,0.5);
 -moz-box-shadow: 3px 3px 9px 1px rgba(0,0,0,0.5);
 box-shadow: 3px 3px 9px 1px rgba(0,0,0,0.5);
 }
+
 .postItem:hover {
   transform: scale(1.1);
+  background: -webkit-linear-gradient(360deg, var(--labcolor), #00f0ff);
+  color: white;
+  p{
+    color: white;
+  }
 }
 .info {
   padding-left: 5px;

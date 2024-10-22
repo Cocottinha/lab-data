@@ -3,11 +3,18 @@ import axios from 'axios';
 import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router'; // Import the useRouter hook
 
-const a = "54|fUVcOpXhs7ivwUv80u2DWTvmAQ6dS0c8aXHSdmyVc0e06ba0";
-
 const posts = ref([]); // Initialize posts as a ref
 const isLoading = ref(true); // Initialize loading state
 const router = useRouter(); // Initialize the router
+
+const checkImageExists = async (imageUrl) => {
+  try {
+    const response = await fetch(imageUrl);
+    return response.ok;
+  } catch (error) {
+    return false;
+  }
+};
 
 const getPosts = async () => {
   try {
@@ -15,7 +22,7 @@ const getPosts = async () => {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json; charset=utf-8',
-        'Authorization': `Bearer ${a}`
+        'Authorization': `Bearer ${localStorage.getItem("auth-token")}`
       }
     });
 
@@ -25,6 +32,11 @@ const getPosts = async () => {
     }
 
     posts.value = response.data.Dados;
+
+    for (const item of posts.value) {
+      const imageUrl = `/files/ftp/${item.projeto_id}/${item.nome_imagem}${item.extensao_imagem}`;
+      item.imageExists = await checkImageExists(imageUrl);
+    }
 
   } catch (error) {
     console.error('Error fetching posts:', error);
@@ -59,7 +71,8 @@ function formatDateToBrazilian(dateString) {
     <div v-if="isLoading" class="loading">Loading...</div>
     <div v-else class="grid">
       <div class="postItem" v-for="item in posts" :key="item.projeto_id" @click="$router.push(`/post/${item.projeto_id}`)">        
-        <img src="../assets/andrerindo.jpg" width="80%" height="75%" class="imgCard"/>
+        <img v-if="item.imageExists" :src="`/files/ftp/${item.projeto_id}/${item.nome_imagem}${item.extensao_imagem}`" width="80%" height="75%" class="imgCard"/>
+        <img v-else src="/files/notfound.png" width="80%" height="75%" class="imgCard"/> <!-- Placeholder image -->
         <div class="info">
           <h2>{{ item.nome_projeto }}</h2>
           <p>{{ item.nome_autor }}</p>
@@ -70,8 +83,9 @@ function formatDateToBrazilian(dateString) {
   </div>
 </template>
 
+
 <style lang="scss" scoped>
-$bgColor: rgb(249, 249, 250);
+$bgColor: rgb(250 250 250);
 .posts {
   display: flex;
   flex-direction: column;
@@ -108,9 +122,9 @@ $bgColor: rgb(249, 249, 250);
   // background-color: aqua;
   transition: transform 0.3s;
   border-radius: 5px;
-  -webkit-box-shadow: 3px 3px 11px 1px rgba(0,0,0,0.75);
--moz-box-shadow: 3px 3px 11px 1px rgba(0,0,0,0.75);
-box-shadow: 3px 3px 11px 1px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 3px 3px 9px 1px rgba(0,0,0,0.5);
+-moz-box-shadow: 3px 3px 9px 1px rgba(0,0,0,0.5);
+box-shadow: 3px 3px 9px 1px rgba(0,0,0,0.5);
 }
 .postItem:hover {
   transform: scale(1.1);

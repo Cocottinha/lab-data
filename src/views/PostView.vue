@@ -78,8 +78,8 @@ export default {
       <div v-if="isLoading">Loading...</div>
       <div v-else class="Post">
         <div class="imgContainer">
-          <!-- <img :src="`/ftp/${post.projeto_id}/${post.nome_imagem}${post.extensao_imagem}`" class="img" /> -->
-          <img src="../assets/20.jpeg" class="img"/>
+          <img :src="`/files/ftp/${post.projeto_id}/${post.nome_imagem}${post.extensao_imagem}`" class="img" />
+          <!-- //<img src="../assets/20.jpeg" class="img"/> -->
           <PontoAnalise
             v-for="ponto in post.pontos"
             :key="ponto.ponto_id"

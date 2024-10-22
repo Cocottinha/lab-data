@@ -24,7 +24,7 @@ export default {
 
                     atributos.value = props.attributes;
                 } catch (error) {
-                    console.error("Error loading CSV file:", error);
+                    console.error("Error loading XRF file:", error);
                 }
             }
         };

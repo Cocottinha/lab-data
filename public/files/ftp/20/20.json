@@ -1,0 +1,80 @@
+{
+  "projeto_id": 20,
+  "nome_projeto": "19",
+  "nome_autor": "teste",
+  "ano_obra": 1800,
+  "tecnica": "teste",
+  "estilo": "teste",
+  "equipe": "Lab.Mov",
+  "nome_imagem": "20",
+  "extensao_imagem": ".jpeg",
+  "largura_imagem": 1091,
+  "altura_imagem": 1280,
+  "pontos": [
+    {
+      "ponto_id": 1,
+      "nome_ponto": "Ponto_1",
+      "coordenada_x": 166,
+      "coordenada_y": 122,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 10,
+          "tensao": 10,
+          "corrente": 10,
+          "calibracao": 10,
+          "colimador": 10,
+          "data": "2024/09/25",
+          "comentario": "a",
+          "resultado": "a",
+          "tonalidade": "flamengo",
+          "diretorio": "C:\\teste\\20_ponto_97_XRF_1.csv",
+          "nome_tecnica": "XRF_1"
+        }
+      ]
+    },
+    {
+      "ponto_id": 2,
+      "nome_ponto": "Ponto_2",
+      "coordenada_x": 388,
+      "coordenada_y": 188,
+      "tecnicas": [
+        {
+          "$type": "MO",
+          "objetiva": 10,
+          "data": "2024/09/25",
+          "comentario": "a",
+          "resultado": "a",
+          "tonalidade": "vermelho",
+          "imagensEAumentos": [
+            {
+              "diretorio": "C:\\teste\\20_ponto_98_MO_3_10_10.jpeg",
+              "aumento": 10
+            }
+          ],
+          "nome_tecnica": "MO_3"
+        }
+      ]
+    },
+    {
+      "ponto_id": 3,
+      "nome_ponto": "Ponto_3",
+      "coordenada_x": 264,
+      "coordenada_y": 244,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 10,
+          "intervalo": 10,
+          "resolucao": 10,
+          "data": "2024/09/25",
+          "comentario": "a",
+          "resultado": "a",
+          "tonalidade": "preto",
+          "diretorio": "C:\\teste\\20_ponto_99_FTIR_2.dpt",
+          "nome_tecnica": "FTIR_2"
+        }
+      ]
+    }
+  ]
+}

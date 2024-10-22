@@ -48,6 +48,7 @@ export default {
 
         const fetchData = async () => {
             const params = await getParams();
+
             post.value = await getPost(params[0]);
             if (post.value && post.value.status === 200) {
                 const Pontos = post.value.data.pontos;
@@ -63,16 +64,8 @@ export default {
                 });
 
                 if (objetoAnalise.value) {
-                    //const vrau = require('/public/files/20_ponto_97_XRF_1.csv');
-                    filePath.value = "/files/20_ponto_97_XRF_1.csv";
-                    // console.log(vrau)
-                    // Create a Blob from the file path
-                    //const fileResponse = await axios.get(filePath.value);
-                    // const fileBlob = new Blob([fileResponse.data], { type: 'text/csv' });
-
-                     //console.log("blob", fileResponse)
-
-                
+                    filePath.value = `/files/ftp/${params[0]}/${objetoAnalise.value.diretorio}`;
+                    console.log(filePath)       
                 }
             } else {
                 console.log("Impossível recuperar os dados!");
@@ -104,7 +97,7 @@ export default {
             <h1>{{idPonto}}_{{ objetoAnalise.nome_tecnica }}</h1>
             <GraficoXRF v-if="tecnica.startsWith('XRF') && filePath" :filePath="filePath" :attributes="atributos"/>
 
-            <GraficoFTIR v-if="tecnica === 'FTIR'" :filePath="filePath" />
+            <GraficoFTIR v-if="tecnica.startsWith('FTIR') && filePath" :filePath="filePath" :attributes="atributos"/>
         </div>
     </div>
     

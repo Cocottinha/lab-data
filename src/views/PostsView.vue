@@ -18,7 +18,7 @@ const checkImageExists = async (imageUrl) => {
 
 const getPosts = async () => {
   try {
-    const response = await axios.get("https://api.labmov.tec.br/api/projetos", {
+    const response = await axios.get(process.env.VUE_APP_APIPROJETOS, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json; charset=utf-8',

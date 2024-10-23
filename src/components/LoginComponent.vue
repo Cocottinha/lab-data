@@ -37,7 +37,7 @@ export default {
       this.errorMessage = '';
 
       try {
-        const response = await axios.post("https://api.labmov.tec.br/api/login", {
+        const response = await axios.post(process.env.VUE_APP_APILOGIN, {
           email: this.username,
           password: this.password,
         });

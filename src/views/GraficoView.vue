@@ -30,7 +30,7 @@ export default {
 
         const getPost = async (projetoId) => {
             try {
-                const response = await axios.get(`https://api.labmov.tec.br/api/projetos/${projetoId}`, {
+                const response = await axios.get(`${process.env.VUE_APP_APIPROJETOS}/${projetoId}`, {
                     headers: {
                         'Accept': 'application/json',
                         'Content-Type': 'application/json; charset=utf-8',

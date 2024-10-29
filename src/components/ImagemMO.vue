@@ -13,6 +13,9 @@ export default {
 
             atributos.value = props.attributes;
 
+            console.log(pathImagem.value)
+            console.log(atributos.value)
+            
             } catch (error) {
                 console.log(error)
             }
@@ -32,6 +35,15 @@ export default {
 
 <template>
     <div>
-        <img :src="`${pathImagem}`" />
+        <img v-for="(path, index) in pathImagem" :key="index" :src="path" />
+        <div class="atributos" v-if="atributos">
+                <h2>Parâmetros de aquisição: </h2>
+                <p>Aumento: {{ atributos.aumento }}</p>
+                <!-- <p>Data: {{ atributos.data }}</p>
+                <p>Comentário: {{ atributos.comentario }}</p>
+                <p>Resultado: {{ atributos.resultado }}</p>
+                <p>Tonalidade: {{ atributos.tonalidade }}</p> -->
+
+        </div>
     </div>
 </template>

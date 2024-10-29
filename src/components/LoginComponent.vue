@@ -47,6 +47,7 @@ export default {
           const name = response.data.Dados.nome;
           this.login({ token, name });
           router.push(this.$route.query.redirect || '/');
+          this.errorMessage = "Connecting ..."
         } else {
           this.errorMessage = 'Invalid username or password.';
         }

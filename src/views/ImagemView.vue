@@ -15,7 +15,7 @@ export default {
         const objetoAnalise = ref(null);
         const idPonto = ref(null);
         const atributos = ref(null);
-        const filePath = ref('');
+        const filePath = ref([]);
         const isLoading = ref(true)
 
         const route = useRoute();
@@ -61,7 +61,12 @@ export default {
 
                 if (objetoAnalise.value) {
                     const a = objetoAnalise.value.imagensEAumentos;
-                    filePath.value = `/files/ftp/${params[0]}/${a[0].diretorio}`;
+                    a.forEach((t) => {
+                        if(t.diretorio !== null){
+                            filePath.value.push(`/files/ftp/${params[0]}/${t.diretorio}`);
+                        }
+                    })
+                    //filePath.value = `/files/ftp/${params[0]}/${a[0].diretorio}`;
                     console.log(filePath)       
                 }
             } else {

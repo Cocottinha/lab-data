@@ -100,10 +100,8 @@ $bgColor: rgb(250 250 250);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin-top: 4%;
-  margin-left: 100px;
-  margin-right: 180px;
   gap: 50px;
-  padding-left: 100px;
+  padding-left: 50px;
   margin-bottom: 50px;
 }
 .imgCard {
@@ -146,6 +144,21 @@ box-shadow: 3px 3px 9px 1px rgba(0,0,0,0.5);
     text-align: left;
     padding-left: 11px;
     padding-bottom: 0;
+  }
+}
+@media (max-width: 1700px){
+  .grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 1176px){
+  .grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 960px){
+  .grid{
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 </style>

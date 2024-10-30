@@ -42,7 +42,6 @@ export default {
     // Calculate styles for positioning the point based on the image and current window size
     pontoStyles() {
       let scaleX, scaleY;
-        console.log("vrau", this.altImg, this.largImg)
       // Adjust scaling factors based on window width
       if (this.windowSize.width < 476) {
         scaleX = this.largImg / 340;

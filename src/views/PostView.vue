@@ -150,7 +150,7 @@ export default {
   flex-direction: row;
   padding: 50px;
   gap: 50px;
-  margin-left: 180px;
+  margin-left: 50px;
 }
 
 .imgContainer {

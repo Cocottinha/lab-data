@@ -5,18 +5,15 @@
         <img src="./assets/icon.svg" width="36px" class="logoI" />Lab.Data
       </router-link>
     </div>
+
     <div class="bar">
-      <router-link to="/about" class="item">About</router-link>
-      <router-link to="/posts" class="item">Posts</router-link>
-      <router-link to="/login" class="item" v-if="!loggedIn">Login</router-link>
-      <a @click="showModal = true" class="profile" v-if="loggedIn">{{ username }}</a>
+        <router-link to="/about" class="item">About</router-link>
+        <router-link to="/posts" class="item">Posts</router-link>
+        <router-link to="/login" class="item" v-if="!loggedIn">Login</router-link>
+        <a @click="showModal = true" class="profile" v-if="loggedIn">{{ username }}</a>
     </div>
 
-    <ConfirmationModal
-      :isOpen="showModal"
-      :onConfirm="handleLogout"
-      :onCancel="cancelLogout"
-    />
+    <ConfirmationModal :isOpen="showModal" :onConfirm="handleLogout" :onCancel="cancelLogout" />
   </nav>
   <router-view />
 </template>
@@ -37,12 +34,12 @@ export default {
     const showModal = ref(false);
 
     const handleLogout = () => {
-      store.dispatch('logout'); // Dispatch the Vuex action to log out
-      showModal.value = false;   // Close the modal
+      store.dispatch('logout');
+      showModal.value = false;
     };
 
     const cancelLogout = () => {
-      showModal.value = false;    // Close the modal without logging out
+      showModal.value = false;
     };
 
     return {
@@ -68,6 +65,8 @@ export default {
 body {
   padding: 10px;
   margin: 10px;
+  margin-left:10%;
+  margin-right: 10%;
 }
 
 nav {
@@ -76,9 +75,6 @@ nav {
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
-  margin-left: 210px;
-  margin-right: 200px;
-  width: 1480px;
 
   .router-link-exact-active {
     background: -webkit-linear-gradient(360deg, var(--labcolor), #00f0ff);

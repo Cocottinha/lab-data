@@ -34,8 +34,8 @@ export default {
 </script>
 
 <template>
-    <div>
-        <img v-for="(path, index) in pathImagem" :key="index" :src="path" />
+    <div v-for="(path, index) in pathImagem" :key="index">
+        <img :src="path" />
         <div class="atributos" v-if="atributos">
                 <h2>Parâmetros de aquisição: </h2>
                 <p>Aumento: {{ atributos.aumento }}</p>

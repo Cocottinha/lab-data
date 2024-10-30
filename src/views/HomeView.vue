@@ -57,7 +57,7 @@ export default {
     display: flex;
     gap: 50px;
     flex-direction: row;
-    padding: 120px;
+    padding-top: 120px;
     padding-right: 30px;
     width: 1340px;
 }
@@ -71,7 +71,7 @@ h4{
     flex-direction: column;
     gap: 50px;    
     width: 750px;
-    margin-left: 50px;
+    margin-left: 30px;
 }
 
 .title {

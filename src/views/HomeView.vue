@@ -6,10 +6,7 @@
         Primeira Equipe Nacional a Utilizar e Dominar a Tecnologia de MA-XRF!<br />
         Sediada no Campus IFRJ-Paracambi, a equipe do Laboratório Móvel se destaca como uma potência na área das
         análises físico-químicas de obras de arte.
-      </p>
-      <div class="buttons">
-        <a href="/about" target="_blank"><button class="button">Saiba Mais</button></a>
-      </div>  
+      </p> 
       <h4>
         Orgãos de Fomento/Parceiros:
       </h4>
@@ -57,7 +54,7 @@ export default {
     display: flex;
     gap: 50px;
     flex-direction: row;
-    padding-top: 120px;
+    padding-top: 100px;
     padding-right: 30px;
     width: 1340px;
 }
@@ -71,7 +68,7 @@ h4{
     flex-direction: column;
     gap: 50px;    
     width: 750px;
-    margin-left: 30px;
+    margin-left: 00px;
 }
 
 .title {
@@ -131,6 +128,7 @@ h4{
     transition: transform 0.5s;
     object-fit: cover;
     cursor: pointer;
+
 }
 
 .imgcontainer:hover {
@@ -141,7 +139,7 @@ h4{
     border-radius: 20px;
     box-shadow: 0.1rem 0.1rem 0.5rem gray;
     height: 450px;
-    max-width: 700px;
+    max-width: 650px;
     object-fit:cover ;
 }
 

@@ -1,22 +1,20 @@
 <template>
-  <nav>
-    <div>
-      <router-link to="/" class="logo">
-        <img src="./assets/icon.svg" width="36px" class="logoI" />Lab.Data
-      </router-link>
-    </div>
+<nav>
+    <router-link to="/" class="logo">
+      <img src="./assets/icon.svg" width="36px" class="logoI" /><span>Lab.Data</span>
+    </router-link>
 
     <div class="bar">
-        <router-link to="/about" class="item">About</router-link>
-        <router-link to="/posts" class="item">Posts</router-link>
-        <router-link to="/login" class="item" v-if="!loggedIn">Login</router-link>
-        <a @click="showModal = true" class="profile" v-if="loggedIn">{{ username }}</a>
+      <router-link to="/posts" class="item">Posts</router-link>
+      <router-link to="/login" class="item" v-if="!loggedIn">Login</router-link>
+      <a @click="showModal = true" class="profile" v-if="loggedIn">{{ username }}</a>
     </div>
 
     <ConfirmationModal :isOpen="showModal" :onConfirm="handleLogout" :onCancel="cancelLogout" />
   </nav>
   <router-view />
 </template>
+
 
 <script>
 import { computed, ref } from 'vue';
@@ -53,6 +51,7 @@ export default {
 };
 </script>
 
+
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -84,9 +83,9 @@ nav {
 
   .bar {
     text-align: end;  
-    margin-top: 7px;
+    margin-top: 0px;
+    display: flex;
   }
-
   a {
     font-weight: bold;
     color: #2c3e50;

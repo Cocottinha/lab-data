@@ -1,7 +1,10 @@
 <template>
 <nav>
-    <router-link to="/" class="logo">
+    <router-link to="/" class="logo" v-if="!isMobile">
       <img src="./assets/icon.svg" width="36px" class="logoI" /><span>Lab.Data</span>
+    </router-link>
+    <router-link to="/" class="logo" v-else>
+      <img src="./assets/icon.svg" width="36px" class="logoI" />
     </router-link>
 
     <div class="bar">
@@ -17,7 +20,7 @@
 
 
 <script>
-import { computed, ref } from 'vue';
+import { computed, ref, onMounted, onBeforeUnmount } from 'vue';
 import { useStore } from 'vuex';
 import ConfirmationModal from './components/ConfirmationModal.vue';
 
@@ -30,6 +33,7 @@ export default {
     const username = computed(() => store.getters.getUsername);
     const loggedIn = computed(() => store.getters.isLoggedIn);
     const showModal = ref(false);
+    const windowWidth = ref(window.innerWidth); // Reactive property for window width
 
     const handleLogout = () => {
       store.dispatch('logout');
@@ -40,16 +44,35 @@ export default {
       showModal.value = false;
     };
 
+    const updateWindowWidth = () => {
+      windowWidth.value = window.innerWidth; // Update the reactive property
+    };
+
+    const isMobile = computed(() => windowWidth.value < 970);
+
+    // Set up the resize event listener
+    onMounted(() => {
+      window.addEventListener('resize', updateWindowWidth);
+    });
+
+    // Clean up the event listener
+    onBeforeUnmount(() => {
+      window.removeEventListener('resize', updateWindowWidth);
+    });
+
     return {
       loggedIn,
       username,
       showModal,
       handleLogout,
       cancelLogout,
+      windowWidth,
+      isMobile // Return the windowWidth ref
     };
   },
 };
 </script>
+
 
 
 <style lang="scss">
@@ -98,7 +121,7 @@ nav {
   .item {
     font-size: 20px;
     border-radius: 20px;
-    margin: 10px;
+    margin: 6px;
 
     &:hover {
       background-color: #a6a6a6;
@@ -110,7 +133,7 @@ nav {
   .profile{
     font-size: 20px;
     border-radius: 20px;
-    margin: 10px;
+    margin: 6px;
 
     &:hover {
       background-color: #cf3c3c;

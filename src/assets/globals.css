@@ -14,67 +14,9 @@
     font-family: 'MinhaFonte', sans-serif;
   }
   
-  p {
-    color: rgb(74, 74, 72);
-  }
-  
   @font-face {
     font-family: 'MinhaFonte';
     src: url('../assets/fonts/Geologica_Auto-Light.ttf');
     font-weight: 100;
     font-style: normal;
-  }
-  
-  body {
-    background: white;
-    color: var(--text);
-  }
-  
-  a {
-    text-decoration: none;
-    color: var(--text);
-  }
-  
-  @media (max-width: 1536px) {
-    .container {
-      width: 1366px;
-    }
-  }
-  
-  @media (max-width: 1366px) {
-    .container {
-      width: 1280px;
-    }
-  }
-  
-  @media (max-width: 1280px) {
-    .container {
-      width: 1024px;
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-  }
-  
-  @media (max-width: 1024px) {
-    .container {
-      width: 768px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .container {
-      width: 640px;
-    }
-  }
-  
-  @media (max-width: 640px) {
-    .container {
-      width: 475px;
-    }
-  }
-  
-  @media (max-width: 475px) {
-    .container {
-      width: 380px;
-    }
   }

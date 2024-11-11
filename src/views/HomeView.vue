@@ -33,19 +33,12 @@
       <img src="../assets/lbmovel.jpg" alt="labmovel"  class="heroImg" />
     </div>
   </div>
-  <HelloWorld msg="Welcome to Your Vue.js App" />
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 export default {
   name: 'HomeView',
-  components: {
-    HelloWorld
-  }
-
-  
 }
 </script>
 
@@ -57,10 +50,13 @@ export default {
     padding-top: 100px;
     padding-right: 30px;
     width: 1340px;
+    @media (max-width: 970px) {
+        
+    }
 }
 h4{
     text-align: left;
-    margin-left: 40px;
+    margin: auto;
 }
 .textbox {
     flex: 1;
@@ -68,7 +64,7 @@ h4{
     flex-direction: column;
     gap: 50px;    
     width: 750px;
-    margin-left: 00px;
+    margin-left: 0px;
 }
 
 .title {
@@ -86,40 +82,12 @@ h4{
     padding-right: 40px;
 }
 
-.buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: left;
-    margin-left: 20px;
-    padding-left: 20px;
-}
-
-.button {
-    padding: 20px;
-    cursor: pointer;
-    min-width: 120px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    /* -webkit-transition: background-color 2s ease-out;
-    -moz-transition: background-color 2s ease-out;
-    -o-transition: background-color 2s ease-out; */
-    transition: color, background-color;
-    transition-duration: 0.5s;
-    transition-timing-function: ease;
-}
-
-.button:hover {
-    background-color: gray;
-    color: white;
-}
-
 .brands {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: left;
-    margin-left: 25px;
+    align-items: center;
+    margin: auto;
 }
 
 .imgcontainer {
@@ -154,7 +122,7 @@ h4{
         flex-direction: column;
         text-align: center;
         margin: 0px;
-        padding: 100px 0px 0px 80px;
+        padding: 60px 0px 0px 40px;
         width: 95%;
     }
     .title{
@@ -182,9 +150,9 @@ h4{
     }
     .brandImg {
         padding: 10px;
-        width: 100%;
-        height: 20%;
-        margin-left: 10%;
+        width: 80%;
+        height: 10%;
+        margin-left: auto;
     }
 
     .heroImg {
@@ -193,27 +161,21 @@ h4{
         height: 580px;
     }
 }
-
-@media (max-width: 1280px) {
+@media (max-width: 1700px) {
     .container {
         flex-direction: column;
         text-align: center;
     }
-
-    .buttons {
-        justify-content: center;
+    .brands{
+        width: 85%;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
     }
-
-    .brandImg {
-        width: 100%;
-        height: 60px;
-        margin-left: 7%;
-    }
-
     .heroImg {
         object-fit: cover;
-        width: 980px;
-        height: 580px;
+        width: 940px;
+        height: 430px;
     }
 }
 
@@ -222,21 +184,35 @@ h4{
         flex-direction: column;
         text-align: center;
     }
+    .brands{
+        width: 85%;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+    }
+    .heroImg {
+        object-fit: cover;
+        width: 740px;
+        height: 530px;
+    }
+}
 
-    .buttons {
-        justify-content: center;
+@media (max-width: 1280px) {
+    .container {
+        flex-direction: column;
+        
     }
 
     .brandImg {
-        width: 100%;
+        width: 85%;
         height: 60px;
-        margin-left: 7%;
+        margin-left: 0%;
     }
 
     .heroImg {
         object-fit: cover;
-        width: 980px;
-        height: 580px;
+        width: 640px;
+        height: 430px;
     }
 }
 
@@ -244,10 +220,6 @@ h4{
     .container {
         flex-direction: column;
         text-align: center;
-    }
-
-    .buttons {
-        justify-content: center;
     }
 
     .brandImg {

@@ -67,7 +67,7 @@ export default {
       handleLogout,
       cancelLogout,
       windowWidth,
-      isMobile // Return the windowWidth ref
+      isMobile
     };
   },
 };

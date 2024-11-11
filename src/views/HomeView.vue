@@ -18,9 +18,6 @@
           <img src='../assets/ifrj.png' width=120 height=40 alt="IFRJ" />
         </div>
         <div class="brandImg">
-          <img src="../assets/liscomp.png" width=155 height=40 alt="Liscomp" />
-        </div>
-        <div class="brandImg">
           <img src='../assets/cnpq.png' width=127 height=40 alt="CNPQ" />
         </div>
         <div class="brandImg">
@@ -36,7 +33,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
 export default {
   name: 'HomeView',
 }

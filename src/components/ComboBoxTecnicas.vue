@@ -53,14 +53,30 @@
           return;
         }
   
-        const filteredPosts = props.pontos.filter((ponto) => {
+        const filteredPosts = props.pontos.filter((ponto) => {   
+          let tecnicas = [];      
           switch (technique) {
-            case 'MO':
-              return ponto.tecnicas_mo && ponto.tecnicas_mo.length > 0;
+            case 'MO': 
+              ponto.tecnicas.map((i) => {
+                if(i.nome_tecnica.startsWith('MO')){
+                  tecnicas.push(i.nome_tecnica)
+                }
+              })
+              return tecnicas && tecnicas.length > 0;     
             case 'FTIR':
-              return ponto.tecnicas_ftir && ponto.tecnicas_ftir.length > 0;
+              ponto.tecnicas.map((i) => {
+                if(i.nome_tecnica.startsWith('FTIR')){
+                  tecnicas.push(i.nome_tecnica)
+                }
+              })
+              return tecnicas && tecnicas.length > 0; 
             case 'XRF':
-              return ponto.tecnicas_xrf && ponto.tecnicas_xrf.length > 0;
+              ponto.tecnicas.map((i) => {
+                if(i.nome_tecnica.startsWith('XRF')){
+                  tecnicas.push(i.nome_tecnica)
+                }
+              })
+              return tecnicas && tecnicas.length > 0; 
             default:
               return false;
           }

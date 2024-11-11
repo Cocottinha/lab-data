@@ -150,7 +150,7 @@ export default {
   flex-direction: row;
   padding: 50px;
   gap: 50px;
-  margin-left: 50px;
+  margin-left: 0px;
 }
 
 .imgContainer {
@@ -172,9 +172,12 @@ export default {
   flex-direction: column;
   gap: 20px;
   padding: 20px;
-  width: 310px;
+  width: 300px;
 }
-
+a{
+  text-decoration: none;
+  color: black
+}
 .title {
   font-size: 50px;
   text-align: left;
@@ -233,6 +236,7 @@ export default {
 .column li {
   padding: 3px;
   font-size: 20px;
+  text-decoration: none;
 }
 
 .column li:hover {
@@ -277,5 +281,29 @@ export default {
   background: linear-gradient(90deg, grey 0%, white 110%);
   color: white;
   font-weight: bold;
+}
+@media (max-width: 1700px){
+  .imgContainer {
+  position: relative;
+  width: 812px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.img {
+  height: 812px;
+  width: 812px;
+  object-fit: contain;
+}
+}
+@media (max-width: 1176px){
+  .grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 960px){
+  .grid{
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 </style>

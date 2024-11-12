@@ -151,6 +151,7 @@ export default {
 .center {
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 }
 
 .Post {
@@ -334,5 +335,21 @@ a {
   }
 }
 
-@media (max-width: 960px) {}
+@media (max-width: 768px) {
+  .imgContainer {
+    width: 600px;
+  }
+}
+
+@media (max-width: 640px) {
+  .imgContainer {
+    width: 435px;
+  }
+}
+
+@media (max-width: 476px) {
+  .imgContainer {
+    width: 340px;
+  }
+}
 </style>

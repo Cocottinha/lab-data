@@ -55,7 +55,18 @@ export default {
       } else if (this.windowSize.width < 1024) {
         scaleX = this.largImg / 728;
         scaleY = this.altImg / (this.altImg * (728 / this.largImg));
-      } else {
+      }else if (this.windowSize.width < 1260) {
+        scaleX = this.largImg / 984;
+        scaleY = this.altImg / (this.altImg * (984 / this.largImg));
+      }else if (this.windowSize.width < 1367) {
+        scaleX = this.largImg / 820;
+        scaleY = this.altImg / (this.altImg * (820 / this.largImg));
+      } 
+      else if (this.windowSize.width < 1537) {
+        scaleX = this.largImg / 906;
+        scaleY = this.altImg / (this.altImg * (906 / this.largImg));
+      } 
+      else {
         // Default scaling factors for larger screens
         scaleX = this.largImg / 1024;
         scaleY = this.altImg / (this.altImg * (1024 / this.largImg));

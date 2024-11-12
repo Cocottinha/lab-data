@@ -74,70 +74,73 @@ export default {
 </script>
 
 <template>
-  <div v-if="isLoading">Loading...</div>
-  <div v-else class="Post">
-    <div class="imgContainer">
-      <img :src="`/files/ftp/${post.projeto_id}/${post.nome_imagem}${post.extensao_imagem}`" class="img" />
-      <PontoAnalise v-for="ponto in post.pontos" :key="ponto.ponto_id" :IdPonto="ponto.ponto_id"
-        :NomePonto="ponto.nome_ponto" :X="ponto.coordenada_x" :Y="ponto.coordenada_y" :largImg="post.largura_imagem"
-        :altImg="post.altura_imagem" @click="handlePontoClick(ponto.ponto_id)" />
-    </div>
-
-    <div class="textContainer">
-      <h1 class="title">{{ post.nome_projeto }}</h1>
-      <div class="detail">
-        <div class="detailText">
-          <span class="detailTitle">Autor:</span>
-          <span class="detailValue">{{ post.nome_autor }}</span>
-        </div>
-        <div class="detailText">
-          <span class="detailTitle">Ano:</span>
-          <span class="detailValue">{{ post.ano_obra }}</span>
-        </div>
-        <div class="detailText">
-          <span class="detailTitle">Estilo:</span>
-          <span class="detailValue">{{ post.estilo }}</span>
-        </div>
+  <div class="center">
+    <div v-if="isLoading">Loading...</div>
+    <div v-else class="Post">
+      <div class="imgContainer">
+        <img :src="`/files/ftp/${post.projeto_id}/${post.nome_imagem}${post.extensao_imagem}`" class="img"
+          :width="`${post.largura_imagem}`" :height="`${post.altura_imagem}`" />
+        <PontoAnalise v-for="ponto in post.pontos" :key="ponto.ponto_id" :IdPonto="ponto.ponto_id"
+          :NomePonto="ponto.nome_ponto" :X="ponto.coordenada_x" :Y="ponto.coordenada_y" :largImg="post.largura_imagem"
+          :altImg="post.altura_imagem" @click="handlePontoClick(ponto.ponto_id)" />
       </div>
 
-      <div class="contTop">
-        <ComboBoxTecnicas :pontos="post.pontos" @setSortedPosts="handleFilteredPostsChange"
-          @onSelectChange="handleSelectChange" />
-        <div class="cont">
-          <div class="row">
-            <h2>Pontos:</h2>
-            <div class="column">
-              <ul>
-                <li
-                  v-for="ponto in (filteredPosts.length > 0 ? filteredPosts : (selectedOption === 'Todas' ? post.pontos : []))"
-                  :key="ponto.ponto_id" @click="handlePontoClick(ponto.ponto_id)"
-                  :class="{ selected: selectedPonto === ponto.ponto_id }">
-                  {{ ponto.nome_ponto }}
-                </li>
-              </ul>
-            </div>
+      <div class="textContainer">
+        <h1 class="title">{{ post.nome_projeto }}</h1>
+        <div class="detail">
+          <div class="detailText">
+            <span class="detailTitle">Autor:</span>
+            <span class="detailValue">{{ post.nome_autor }}</span>
           </div>
-          <!-- /*arrumar*/ -->
-          <div class="row" id="hide" v-show="isTecnicaListVisible">
-            <h2>Técnicas:</h2>
-            <div class="column">
-              <ul>
-                <template
-                  v-for="(tecnica, index) in post.pontos.find(ponto => ponto.ponto_id === selectedPonto)?.tecnicas || []">
-                  <router-link :key="index" v-if="tecnica.nome_tecnica.startsWith('MO')"
-                    :to="`/imagem/${post.projeto_id}-${tecnica.nome_tecnica}`" target="_blank">
-                    <li>{{ tecnica.nome_tecnica }}</li>
-                  </router-link>
-                  <router-link :key="tecnica"
-                    v-else-if="tecnica.nome_tecnica.startsWith('FTIR') || tecnica.nome_tecnica.startsWith('XRF') || selectedOption === 'Todas'"
-                    :to="`/grafico/${post.projeto_id}-${tecnica.nome_tecnica}`" target="_blank">
-                    <li>{{ tecnica.nome_tecnica }}</li>
-                  </router-link>
-                </template>
-              </ul>
-            </div>
+          <div class="detailText">
+            <span class="detailTitle">Ano:</span>
+            <span class="detailValue">{{ post.ano_obra }}</span>
           </div>
+          <div class="detailText">
+            <span class="detailTitle">Estilo:</span>
+            <span class="detailValue">{{ post.estilo }}</span>
+          </div>
+        </div>
 
+        <div class="contTop">
+          <ComboBoxTecnicas :pontos="post.pontos" @setSortedPosts="handleFilteredPostsChange"
+            @onSelectChange="handleSelectChange" />
+          <div class="cont">
+            <div class="row">
+              <h2>Pontos:</h2>
+              <div class="column">
+                <ul>
+                  <li
+                    v-for="ponto in (filteredPosts.length > 0 ? filteredPosts : (selectedOption === 'Todas' ? post.pontos : []))"
+                    :key="ponto.ponto_id" @click="handlePontoClick(ponto.ponto_id)"
+                    :class="{ selected: selectedPonto === ponto.ponto_id }">
+                    {{ ponto.nome_ponto }}
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- /*arrumar*/ -->
+            <div class="row" id="hide" v-show="isTecnicaListVisible">
+              <h2>Técnicas:</h2>
+              <div class="column">
+                <ul>
+                  <template
+                    v-for="(tecnica, index) in post.pontos.find(ponto => ponto.ponto_id === selectedPonto)?.tecnicas || []">
+                    <router-link :key="index" v-if="tecnica.nome_tecnica.startsWith('MO')"
+                      :to="`/imagem/${post.projeto_id}-${tecnica.nome_tecnica}`" target="_blank">
+                      <li>{{ tecnica.nome_tecnica }}</li>
+                    </router-link>
+                    <router-link :key="tecnica"
+                      v-else-if="tecnica.nome_tecnica.startsWith('FTIR') || tecnica.nome_tecnica.startsWith('XRF') || selectedOption === 'Todas'"
+                      :to="`/grafico/${post.projeto_id}-${tecnica.nome_tecnica}`" target="_blank">
+                      <li>{{ tecnica.nome_tecnica }}</li>
+                    </router-link>
+                  </template>
+                </ul>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>
@@ -145,17 +148,22 @@ export default {
 </template>
 
 <style scoped>
+.center {
+  display: flex;
+  justify-content: center;
+}
+
 .Post {
   display: flex;
   flex-direction: row;
-  padding: 50px;
+  padding: 0px;
   gap: 50px;
-  margin-left: 0px;
+  margin: 0 auto;
 }
 
 .imgContainer {
   position: relative;
-  width: 1024px;
+  max-width: 1024px;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -164,6 +172,8 @@ export default {
   height: auto;
   width: 1024px;
   object-fit: contain;
+  max-width: 100%;
+  display: block;
 }
 
 .textContainer {
@@ -172,12 +182,14 @@ export default {
   flex-direction: column;
   gap: 20px;
   padding: 20px;
-  width: 300px;
+  width: 200px;
 }
-a{
+
+a {
   text-decoration: none;
   color: black
 }
+
 .title {
   font-size: 50px;
   text-align: left;
@@ -192,6 +204,7 @@ a{
   display: flex;
   flex-direction: column;
   gap: 20px;
+  text-align: left;
 }
 
 .detailTitle {
@@ -230,7 +243,6 @@ a{
 
 .column ul {
   list-style-type: none;
-
 }
 
 .column li {
@@ -282,28 +294,45 @@ a{
   color: white;
   font-weight: bold;
 }
-@media (max-width: 1700px){
-  .imgContainer {
-  position: relative;
-  width: 812px;
-  margin: 0 auto;
-  overflow: hidden;
+
+@media (max-width: 1669px) {
+  .Post {
+    width: 1280px;
+  }
+
+  .imgContainer {}
 }
 
-.img {
-  height: 812px;
-  width: 812px;
-  object-fit: contain;
+@media (max-width: 1536px) {
+  .Post {
+    width: 1200px;
+  }
+
+  .imgContainer {}
 }
-}
-@media (max-width: 1176px){
-  .grid{
-    grid-template-columns: repeat(2, 1fr);
+
+@media (max-width: 1367px) {
+  .Post {
+    width: 1150px;
   }
 }
-@media (max-width: 960px){
-  .grid{
-    grid-template-columns: repeat(1, 1fr);
+
+@media (max-width: 1260px) {
+  .Post {
+    flex-direction: column;
+    width: 1024px;
   }
 }
+
+@media (max-width: 1024px) {
+  .Post {
+    width: 768px;
+  }
+
+  .imgContainer {
+    width: 728px;
+  }
+}
+
+@media (max-width: 960px) {}
 </style>

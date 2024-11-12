@@ -34,11 +34,14 @@ export default {
 </script>
 
 <template>
+    <div>
+        {{atributos}}
+    </div>
     <div v-for="(path, index) in pathImagem" :key="index">
         <img :src="path" />
         <div class="atributos" v-if="atributos">
                 <h2>Parâmetros de aquisição: </h2>
-                <p>Aumento: {{ atributos.aumento }}</p>
+                <p>Aumento: </p>
                 <!-- <p>Data: {{ atributos.data }}</p>
                 <p>Comentário: {{ atributos.comentario }}</p>
                 <p>Resultado: {{ atributos.resultado }}</p>

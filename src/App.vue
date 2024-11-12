@@ -48,7 +48,7 @@ export default {
       windowWidth.value = window.innerWidth; // Update the reactive property
     };
 
-    const isMobile = computed(() => windowWidth.value < 970);
+    const isMobile = computed(() => windowWidth.value < 670);
 
     // Set up the resize event listener
     onMounted(() => {
@@ -85,10 +85,14 @@ export default {
 }
 
 body {
-  padding: 10px;
-  margin: 10px;
-  margin-left:10%;
-  margin-right: 10%;
+  margin: auto;
+  padding-top: 5px;
+    padding-left: 50px;
+    padding-right: 50px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 nav {

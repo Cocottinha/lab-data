@@ -1,18 +1,19 @@
 <template>
-  <div class="login-container">
-    <h2>Login</h2>
-    <form @submit.prevent="handleLogin">
-      <div class="form-group">
-        <label for="username">Username</label>
-        <input type="text" id="username" v-model="username" required />
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" v-model="password" required />
-      </div>
-      <button type="submit">Login</button>
-      <p v-if="errorMessage" class="error">{{ errorMessage }}</p>
-    </form>
+  <div class="main">
+    <div class="login-container">
+      <h2>Entrar</h2>
+      <form @submit.prevent="handleLogin">
+        <div class="form-group">
+          <input type="text" id="username" placeholder="Email" v-model="username" required />
+          <input type="password" id="password" placeholder="Senha" v-model="password" required />
+        </div>
+        <button type="submit">Conectar</button>
+        
+        <p v-if="errorMessage" class="error">{{ errorMessage }}</p>
+        <a href="/forgot-password">Esqueceu a Senha?</a>
+
+      </form>
+    </div>
   </div>
 </template>
 
@@ -47,12 +48,12 @@ export default {
           const name = response.data.Dados.nome;
           this.login({ token, name });
           router.push(this.$route.query.redirect || '/');
-          this.errorMessage = "Connecting ..."
+          this.errorMessage = "Conectando ..."
         } else {
-          this.errorMessage = 'Invalid username or password.';
+          this.errorMessage = 'Usuário ou senha incorretos!';
         }
       } catch (err) {
-        this.errorMessage = err.message || 'An error occurred during login.';
+        this.errorMessage = err.message || 'Ocorreu um erro durante a conexão.';
       }
     },
   },
@@ -60,16 +61,28 @@ export default {
 </script>
 
 <style scoped>
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh; /* Full viewport height */
+  margin: 0 auto; /* Ensure no extra margin is added */
+}
+
 .login-container {
-  width: 300px;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px; /* Set a max-width instead of fixed width */
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #ffffff; /* Add background if needed */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
+  border-radius: 8px; /* Optional rounded corners */
 }
 
 .form-group {
+  margin-top: 15px;
   margin-bottom: 15px;
 }
 
@@ -79,20 +92,27 @@ label {
 }
 
 input {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  width: 90%;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 5px;
+  border: 1px black;
+  outline: 1px black;
+  background-color: #f4f4f5;
+  color: var(black);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 button {
-  width: 100%;
-  padding: 10px;
-  background-color: #2897f3;
-  color: white;
+  width: 90%;
+  padding: 20px;
+  background: linear-gradient(90deg, var(--labcolor) 0%, rgba(0, 212, 255, 1) 100%);
+  color: var(--bg);
+  font-weight: bold;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
+  margin-bottom: 15px;
 }
 
 button:hover {
@@ -102,5 +122,9 @@ button:hover {
 .error {
   color: red;
   margin-top: 10px;
+}
+a{
+  text-decoration: none;
+  color: black;
 }
 </style>

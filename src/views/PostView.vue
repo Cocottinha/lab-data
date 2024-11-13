@@ -160,6 +160,7 @@ export default {
   padding: 0px;
   gap: 50px;
   margin: 0 auto;
+  width: 1400px;
 }
 
 .imgContainer {

@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div class="main">
       <LoginComponent />
     </div>
   </template>
@@ -16,6 +16,11 @@
   </script>
   
   <style>
-  /* Add global styles if needed */
+    .main{
+      display: flex;
+      place-items: center;
+      margin: 0 auto;
+    }
+
   </style>
   

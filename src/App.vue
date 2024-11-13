@@ -8,9 +8,9 @@
     </router-link>
 
     <div class="bar">
-      <router-link to="/posts" class="item">Posts</router-link>
-      <router-link to="/login" class="item" v-if="!loggedIn">Login</router-link>
-      <a @click="showModal = true" class="profile" v-if="loggedIn">{{ username }}</a>
+      <router-link to="/posts" class="item">Postagens</router-link>
+      <router-link to="/login" class="item" v-if="!loggedIn">Entrar</router-link>
+      <a @click="showModal = true" class="profile" v-if="loggedIn">Sair</a>
     </div>
 
     <ConfirmationModal :isOpen="showModal" :onConfirm="handleLogout" :onCancel="cancelLogout" />

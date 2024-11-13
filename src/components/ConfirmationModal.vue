@@ -1,11 +1,11 @@
 <template>
   <div class="modal-overlay" v-if="isOpen">
     <div class="modal">
-      <h3>Confirm Logout</h3>
-      <p>Are you sure you want to log out?</p>
+      <h3>Sair</h3>
+      <p>Tem certeza que deseja sair?</p>
       <div class="modal-buttons">
-        <button @click="confirmLogout">Yes, Logout</button>
-        <button @click="cancelLogout">Cancel</button>
+        <button @click="confirmLogout">Sim, Sair</button>
+        <button @click="cancelLogout">Cancelar</button>
       </div>
     </div>
   </div>
@@ -72,9 +72,17 @@ export default {
 }
 
 button {
-  margin: 0 10px;
-  padding: 5px;
-  border-radius: 5px;
-  cursor: pointer;
+  padding: 10px;
+    background-color: dimgrey;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: 0.5s ease;
+}
+button:hover{
+  background-color: red;
 }
 </style>

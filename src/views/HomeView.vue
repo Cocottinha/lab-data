@@ -40,15 +40,15 @@ export default {
 
 <style scoped lang="scss">
 .container {
+    place-items: center;
+    margin: 0 auto ;
     display: flex;
     gap: 50px;
     flex-direction: row;
     padding-top: 100px;
     padding-right: 30px;
-    width: 1340px;
-    @media (max-width: 970px) {
-        
-    }
+    width: 1440px;
+    height: 65vh;
 }
 h4{
     text-align: left;
@@ -69,7 +69,6 @@ h4{
     text-align: left;
     margin-left: 40px;
 }
-
 .desc {
     font-size: 22px;
     margin-left: 40px;
@@ -77,7 +76,6 @@ h4{
     text-align: justify;
     padding-right: 40px;
 }
-
 .brands {
     width: 100%;
     display: flex;
@@ -103,7 +101,7 @@ h4{
     border-radius: 20px;
     box-shadow: 0.1rem 0.1rem 0.5rem gray;
     height: 450px;
-    max-width: 650px;
+   width: 650px;
     object-fit:cover ;
 }
 
@@ -154,7 +152,7 @@ h4{
     .heroImg {
         object-fit: cover;
         width: 980px;
-        height: 580px;
+        height: 680px;
     }
 }
 @media (max-width: 1700px) {

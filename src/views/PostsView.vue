@@ -101,8 +101,9 @@ $bgColor: rgb(250 250 250);
   grid-template-columns: repeat(4, 1fr);
   margin-top: 4%;
   gap: 50px;
-  padding-left: 50px;
+  padding-left: 0px;
   margin-bottom: 50px;
+  place-items: center;
 }
 .imgCard {
   width: 320px;
@@ -156,8 +157,10 @@ box-shadow: 3px 3px 9px 1px rgba(0,0,0,0.5);
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (max-width: 960px){
+@media (max-width: 840px){
   .grid{
+    place-items: center;
+    padding-left: 0px;
     grid-template-columns: repeat(1, 1fr);
   }
 }

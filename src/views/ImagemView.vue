@@ -66,7 +66,6 @@ export default {
                             filePath.value.push(`/files/ftp/${params[0]}/${t.diretorio}`);
                         }
                     })
-                    //filePath.value = `/files/ftp/${params[0]}/${a[0].diretorio}`;
                     console.log(filePath)       
                 }
             } else {

@@ -1,46 +1,32 @@
 export default async function readTextFileXRF(fileUrl) {
-
     const response = await fetch(fileUrl);
     const text = await response.text();
     
-    const line = text.split('\n');
-    let contaLinhas = 0;
-
+    const lines = text.split('\n'); // Split text into individual lines
     let arrayA = [];
     let arrayB = [];
 
-    if(line.includes(';')){
-        line.forEach(l => {
+    lines.forEach(line => {
+        const trimmedLine = line.trim();
 
-            let part = l.trim().split(';');
+        // Skip empty lines
+        if (!trimmedLine) return;
 
-            if (part[1] && part[0] !== undefined) {
-                const num = parseFloat(part[0])
-                const num1 = parseFloat(part[1].trim())
-                arrayA.push(num)
+        // Determine delimiter based on line content
+        const delimiter = trimmedLine.includes(';') ? ';' : ',';
+        const parts = trimmedLine.split(delimiter);
+
+        if (parts.length === 2) { // Ensure the line contains two parts
+            const num = parseFloat(parts[0]);
+            const num1 = parseFloat(parts[1]);
+
+            // Check if both parts are valid numbers before pushing
+            if (!isNaN(num) && !isNaN(num1)) {
+                arrayA.push(num);
                 arrayB.push(num1);
             }
-            
-        })
-    }
-    else{
-        line.forEach(l => {
-            contaLinhas++;
-            if (contaLinhas > 21) {
-                
-                let part = l.trim().split(',');
-    
-                if (part[1] && part[0] !== undefined) {
-                    const num = parseFloat(part[0])
-                    const num1 = parseFloat(part[1].trim())
-                    arrayA.push(num)
-                    arrayB.push(num1);
-                }
-            }
-            
-        })
-    }
+        }
+    });
 
-    //console.log("lista", arrayA, arrayB);
     return { arrayA, arrayB };
 }

@@ -1,0 +1,1177 @@
+{
+  "projeto_id": 44,
+  "nome_projeto": "anita_estudante",
+  "nome_autor": "Anita Malfatti",
+  "ano_obra": 0,
+  "tecnica": "\u00D3leo sobre tela",
+  "estilo": "Modernismo",
+  "equipe": "Lab.Mov",
+  "nome_imagem": "44",
+  "extensao_imagem": ".jpg",
+  "largura_imagem": 3315,
+  "altura_imagem": 4199,
+  "pontos": [
+    {
+      "ponto_id": 1,
+      "nome_ponto": "Ponto_1",
+      "coordenada_x": 994,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "regi\u00E3o com tonalidade azul, e bandas associados ao oleo. Verificar bandas de materiais ligados ao Ca, como carbonatos e sulfatos.\n",
+          "resultado": "bandas 4260, 4320, 4028, 3940, 2915, 2834, 1740.  Banda 2510, 2140 e 2053 associados ao azul da Prussia.",
+          "tonalidade": "marrom",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_323_FTIR_1.dpt",
+          "nome_tecnica": "FTIR_1"
+        }
+      ]
+    },
+    {
+      "ponto_id": 2,
+      "nome_ponto": "Ponto_2",
+      "coordenada_x": 663,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "verde",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_324_FTIR_2.dpt",
+          "nome_tecnica": "FTIR_2"
+        }
+      ]
+    },
+    {
+      "ponto_id": 3,
+      "nome_ponto": "Ponto_3",
+      "coordenada_x": 994,
+      "coordenada_y": 840,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "vermelho",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_325_FTIR_3.dpt",
+          "nome_tecnica": "FTIR_3"
+        }
+      ]
+    },
+    {
+      "ponto_id": 4,
+      "nome_ponto": "Ponto_4",
+      "coordenada_x": 994,
+      "coordenada_y": 840,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "vermelho",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_326_FTIR_4.dpt",
+          "nome_tecnica": "FTIR_4"
+        }
+      ]
+    },
+    {
+      "ponto_id": 5,
+      "nome_ponto": "Ponto_5",
+      "coordenada_x": 1326,
+      "coordenada_y": 1680,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "bandas do carbonato 1400.",
+          "tonalidade": "azul",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_327_FTIR_5.dpt",
+          "nome_tecnica": "FTIR_5"
+        }
+      ]
+    },
+    {
+      "ponto_id": 6,
+      "nome_ponto": "Ponto_6",
+      "coordenada_x": 1658,
+      "coordenada_y": 1680,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "azul",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_328_FTIR_6.dpt",
+          "nome_tecnica": "FTIR_6"
+        }
+      ]
+    },
+    {
+      "ponto_id": 7,
+      "nome_ponto": "Ponto_7",
+      "coordenada_x": 1658,
+      "coordenada_y": 1680,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "amarelo",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_329_FTIR_7.dpt",
+          "nome_tecnica": "FTIR_7"
+        }
+      ]
+    },
+    {
+      "ponto_id": 8,
+      "nome_ponto": "Ponto_8",
+      "coordenada_x": 994,
+      "coordenada_y": 1680,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "bandas similhares do azul. Com exece\u00E7\u00E3o do azul da Prussia.\n",
+          "resultado": "",
+          "tonalidade": "preto",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_330_FTIR_8.dpt",
+          "nome_tecnica": "FTIR_8"
+        }
+      ]
+    },
+    {
+      "ponto_id": 9,
+      "nome_ponto": "Ponto_9",
+      "coordenada_x": 0,
+      "coordenada_y": 1680,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "lilas",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_331_FTIR_9.dpt",
+          "nome_tecnica": "FTIR_9"
+        }
+      ]
+    },
+    {
+      "ponto_id": 10,
+      "nome_ponto": "Ponto_10",
+      "coordenada_x": 1326,
+      "coordenada_y": 3359,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "oleo e com verniz com bandas (4324, 4257, 2910, 2840, 2507, 1750), Carbonato (1460 e 711), fosfato (950).\n\nProvavelmente o branco \u00E9 relacionado ao branco de chumbo.\n",
+          "resultado": "711, 740, 980, 1480, 1500, 1560, 1740, 2100, 2520, 2840, 2910, 4260, 4330, 4610.",
+          "tonalidade": "violeta",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_332_FTIR_10.dpt",
+          "nome_tecnica": "FTIR_10"
+        }
+      ]
+    },
+    {
+      "ponto_id": 11,
+      "nome_ponto": "Ponto_11",
+      "coordenada_x": 994,
+      "coordenada_y": 2939,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "oleo e com verniz com bandas (4324, 4257, 2910, 2840, 2507, 1750), Carbonato (1460 e 711), fosfato (950).\n\nProvavelmente o branco \u00E9 relacionado ao branco de chumbo.\n",
+          "resultado": "4670 (muito ruidoso), 4330, 4260, 2915, 2830, 2512, 1740, 1650, 1560 (pouco intensa), 1400, 1260, 1140, 711. ",
+          "tonalidade": "violeta",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_333_FTIR_11.dpt",
+          "nome_tecnica": "FTIR_11"
+        }
+      ]
+    },
+    {
+      "ponto_id": 12,
+      "nome_ponto": "Ponto_12",
+      "coordenada_x": 2984,
+      "coordenada_y": 2519,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "Bandas do fosfato (980), oleo e carbonato.\n",
+          "resultado": "2915, 2840, 1740, 1470, 1380, 960, 730 e 711.",
+          "tonalidade": "preto",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_334_FTIR_12.dpt",
+          "nome_tecnica": "FTIR_12"
+        }
+      ]
+    },
+    {
+      "ponto_id": 13,
+      "nome_ponto": "Ponto_13",
+      "coordenada_x": 332,
+      "coordenada_y": 3359,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "Bandas do azul da Prussia  sem a banda do fosfato.\n",
+          "resultado": "660, 711, 731, 1130, 1380, 1450, 1480, 1750, 2510, 2100, 2840, 2910, 4250, 4340.",
+          "tonalidade": "violeta",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_335_FTIR_13.dpt",
+          "nome_tecnica": "FTIR_13"
+        }
+      ]
+    },
+    {
+      "ponto_id": 14,
+      "nome_ponto": "Ponto_14",
+      "coordenada_x": 663,
+      "coordenada_y": 2519,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "oleo e com verniz com bandas (4324, 4257, 2910, 2840, 2507, 1750), Carbonato (1460 e 711), bandas do cromato (1200).\n\nProvavelmente o branco \u00E9 relacionado ao branco de chumbo.\n",
+          "resultado": "640, 660, 700, 780, 900, 970, 1400, 1480, 1540, 1660, 1740, 2050, 2140, 2340, 2840, 2910, 4360, 4340.",
+          "tonalidade": "amarelo",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_336_FTIR_14.dpt",
+          "nome_tecnica": "FTIR_14"
+        }
+      ]
+    },
+    {
+      "ponto_id": 15,
+      "nome_ponto": "Ponto_15",
+      "coordenada_x": 2984,
+      "coordenada_y": 3359,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "bandas de oleo, com bandas de fosfato (970).\n",
+          "resultado": "630, 660, 700, 970, 1400, 1480, 1560, 1740, 2840, 2910, ",
+          "tonalidade": "preto",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_337_FTIR_15.dpt",
+          "nome_tecnica": "FTIR_15"
+        }
+      ]
+    },
+    {
+      "ponto_id": 16,
+      "nome_ponto": "Ponto_16",
+      "coordenada_x": 1326,
+      "coordenada_y": 1680,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "\n",
+          "resultado": "",
+          "tonalidade": "vermelho",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_338_FTIR_16.dpt",
+          "nome_tecnica": "FTIR_16"
+        }
+      ]
+    },
+    {
+      "ponto_id": 17,
+      "nome_ponto": "Ponto_17",
+      "coordenada_x": 994,
+      "coordenada_y": 3359,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "660, 711, 731, 1130, 1380, 1450, 1480, 1750, 2510, 2100, 2840, 2910, 4250, 4340.",
+          "tonalidade": "vermelho",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_339_FTIR_17.dpt",
+          "nome_tecnica": "FTIR_17"
+        }
+      ]
+    },
+    {
+      "ponto_id": 18,
+      "nome_ponto": "Ponto_18",
+      "coordenada_x": 663,
+      "coordenada_y": 2939,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "\noleo e com verniz com bandas (4324, 4257, 2910, 2840, 2507, 1750), Carbonato (1460 e 711), bandas do cromato (1200).\n\nProvavelmente o branco \u00E9 relacionado ao branco de chumbo.\n",
+          "resultado": "640, 700, 910, 980, 1290, 1400, 1480, 1540, 1740, 2100, 2520, 2840, 2910, 4260, 4330, ",
+          "tonalidade": "amarelo",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_340_FTIR_18.dpt",
+          "nome_tecnica": "FTIR_18"
+        }
+      ]
+    },
+    {
+      "ponto_id": 19,
+      "nome_ponto": "Ponto_19",
+      "coordenada_x": 0,
+      "coordenada_y": 2939,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "violeta",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_341_FTIR_19.0",
+          "nome_tecnica": "FTIR_19"
+        }
+      ]
+    },
+    {
+      "ponto_id": 20,
+      "nome_ponto": "Ponto_20",
+      "coordenada_x": 2652,
+      "coordenada_y": 2939,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "\n",
+          "resultado": "980, 1135, 1320, 1400, 1470, 1560, 1750, 2100, 2510, 2840, 2910, 4350, 4330.",
+          "tonalidade": "verde",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_342_FTIR_20.dpt",
+          "nome_tecnica": "FTIR_20"
+        }
+      ]
+    },
+    {
+      "ponto_id": 21,
+      "nome_ponto": "Ponto_21",
+      "coordenada_x": 1326,
+      "coordenada_y": 3359,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "oleo e com verniz com bandas (4324, 4257, 2910, 2840, 2507, 1750), Carbonato (1460 e 711), fosfato (950).\n\nProvavelmente o branco \u00E9 relacionado ao branco de chumbo.\n",
+          "resultado": "4324, 4257, 2910, 2840, 2507, 1750, 1640, 1560, 1460,  950 e 711.",
+          "tonalidade": "branco",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_343_FTIR_21.dpt",
+          "nome_tecnica": "FTIR_21"
+        }
+      ]
+    },
+    {
+      "ponto_id": 22,
+      "nome_ponto": "Ponto_22",
+      "coordenada_x": 332,
+      "coordenada_y": 2939,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "A banda do carbonato 1400 aumentada, regi\u00E3o com alta intensidade de chumbo.\n",
+          "resultado": "",
+          "tonalidade": "violeta",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_344_FTIR_22.dpt",
+          "nome_tecnica": "FTIR_22"
+        }
+      ]
+    },
+    {
+      "ponto_id": 23,
+      "nome_ponto": "Ponto_23",
+      "coordenada_x": 2984,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "verso",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_345_FTIR_23.0",
+          "nome_tecnica": "FTIR_23"
+        }
+      ]
+    },
+    {
+      "ponto_id": 24,
+      "nome_ponto": "Ponto_24",
+      "coordenada_x": 2320,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "lado",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_346_FTIR_24.0",
+          "nome_tecnica": "FTIR_24"
+        }
+      ]
+    },
+    {
+      "ponto_id": 25,
+      "nome_ponto": "Ponto_25",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "Pode ter pigmento ver tamb\u00E9m, que pode ser associado ao \u00F3xido de Cr. A base \u00E9 de chumbo. Pode ter pigmento amarelo, que pode ser amarelo de Cromo. O vermelho pode ser org\u00E2nico, mas tamb\u00E9m associado ao \u00F3xido de ferro.\n",
+          "resultado": "Ca, Fe, Ti, Cr, Pb, Zn. \nMojorit\u00E1rios (Cr, Pb, Zn). \nMinorit\u00E1rios (Ca, Fe, Ti).\n",
+          "tonalidade": "vermelho",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_347_XRF_1.txt",
+          "nome_tecnica": "XRF_1"
+        }
+      ]
+    },
+    {
+      "ponto_id": 26,
+      "nome_ponto": "Ponto_26",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "Parecido com o ponto 1. O Co se justifica pelo azul cobalto. O Cr pode ser devido ao \u00F3xido de cromo.\n",
+          "resultado": "Minorit\u00E1rios (Ca, Mn, Co); majorit\u00E1rio (Ti, Cr, Pb e Zn). \n",
+          "tonalidade": "vermelho",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_348_XRF_2.txt",
+          "nome_tecnica": "XRF_2"
+        }
+      ]
+    },
+    {
+      "ponto_id": 27,
+      "nome_ponto": "Ponto_27",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "Espectro semelhante ao ponto 2, com mais Cr e menos chubo.\n",
+          "resultado": "Minorit\u00E1rio (Ca, Mn, Fe e Co); Majorit\u00E1rio (Ti, Cr, Pb e Zn)\n",
+          "tonalidade": "vermelho",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_349_XRF_3.txt",
+          "nome_tecnica": "XRF_3"
+        }
+      ]
+    },
+    {
+      "ponto_id": 28,
+      "nome_ponto": "Ponto_28",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "O ferro \u00E9 mais evidente neste ponto indicando o uso do \u00F3xido de ferro \u00E9 mais evidente.\n",
+          "resultado": "Minorit\u00E1rios (Ca, Cr, Mn, Co); majorit\u00E1rio (Ti, Fe, Zn, Pb) \n",
+          "tonalidade": "vermelho",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_350_XRF_4.txt",
+          "nome_tecnica": "XRF_4"
+        }
+      ]
+    },
+    {
+      "ponto_id": 29,
+      "nome_ponto": "Ponto_29",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "O Co ficoou baixo.\n",
+          "resultado": "Minorit\u00E1rios (Ca, Cr, Mn, Fe, Co); majorit\u00E1rio (Ti, Pb, Zn). \nO Ba parece estar presente no espectro.\n",
+          "tonalidade": "azul",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_351_XRF_5.txt",
+          "nome_tecnica": "XRF_5"
+        }
+      ]
+    },
+    {
+      "ponto_id": 30,
+      "nome_ponto": "Ponto_30",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "Pela presen\u00E7ao de Fe e Co pode ser uma mistura de azul da Pr\u00FAssia e azul cobalto.\n",
+          "resultado": "Minorit\u00E1rios (Ca, Ti/Ba?, Mn?, Co, Fe); majorit\u00E1rios (Cr, Pb e Zn).\n",
+          "tonalidade": "azul",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_352_XRF_6.txt",
+          "nome_tecnica": "XRF_6"
+        }
+      ]
+    },
+    {
+      "ponto_id": 31,
+      "nome_ponto": "Ponto_31",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "Semelhante ao resultado do ponto 06.\n",
+          "resultado": "Minorit\u00E1rios (Ca, Ti/Ba?, Mn?, Co, Fe); majorit\u00E1rios (Cr, Pb e Zn).\n",
+          "tonalidade": "azul_escuro",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_353_XRF_7.txt",
+          "nome_tecnica": "XRF_7"
+        }
+      ]
+    },
+    {
+      "ponto_id": 32,
+      "nome_ponto": "Ponto_32",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "O verde pode ser associado ao Cr e Fe. Fazer FTIR para verificar a presen\u00E7\u00E3o de viridian ou \u00F3xido de cromo.\n",
+          "resultado": "Minorit\u00E1rios (Ca, Mn?, Co, Fe, Cr?); majorit\u00E1rios (Ti/Ba?, Pb e Zn). \n",
+          "tonalidade": "verde",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_354_XRF_8.txt",
+          "nome_tecnica": "XRF_8"
+        }
+      ]
+    },
+    {
+      "ponto_id": 33,
+      "nome_ponto": "Ponto_33",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "Pode ser os pigmentos negros a base de C.\n",
+          "resultado": "Minorit\u00E1rios (Mn?, Co, Fe); majorit\u00E1rios (Ca, Ti/Ba?, Pb e Zn). \n",
+          "tonalidade": "preto",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_355_XRF_9.txt",
+          "nome_tecnica": "XRF_9"
+        }
+      ]
+    },
+    {
+      "ponto_id": 34,
+      "nome_ponto": "Ponto_34",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "Alta intensidade de Ca, indicando o pigmento negro osso.\n",
+          "resultado": "Minorit\u00E1rios (Mn?, Co, Fe); majorit\u00E1rios (Ca, Ti/Ba?, Pb e Zn). \n",
+          "tonalidade": "preto",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_356_XRF_10.txt",
+          "nome_tecnica": "XRF_10"
+        }
+      ]
+    },
+    {
+      "ponto_id": 35,
+      "nome_ponto": "Ponto_35",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "O pigmento azul pode ser azul da Pr\u00FAssia, mas Cr indica a presen\u00E7a de pigmento verdes.\n",
+          "resultado": "Minorit\u00E1rios (Ca, Mn?, Co, Fe); majorit\u00E1rios (Ti/Ba?, Cr, Pb e Zn). \n",
+          "tonalidade": "azul",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_357_XRF_11.txt",
+          "nome_tecnica": "XRF_11"
+        }
+      ]
+    },
+    {
+      "ponto_id": 36,
+      "nome_ponto": "Ponto_36",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "Somente a base, altas intensidade de Ti/Ba, Pb e Zn.\n",
+          "resultado": "Minorit\u00E1rios (Ca, Mn, Co, Fe); majorit\u00E1rios (Ti/Ba?, Pb e Zn). \n",
+          "tonalidade": "branco",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_358_XRF_12.txt",
+          "nome_tecnica": "XRF_12"
+        }
+      ]
+    },
+    {
+      "ponto_id": 37,
+      "nome_ponto": "Ponto_37",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "Fe e Co aparecem em todos os espectros com azul em intensidades semelhantes.\n",
+          "resultado": "Minorit\u00E1rios (Ca, Fe, Mn, Co); majorit\u00E1rios (Ti/Ba?, Pb e Zn). \n",
+          "tonalidade": "azul",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_359_XRF_13.txt",
+          "nome_tecnica": "XRF_13"
+        }
+      ]
+    },
+    {
+      "ponto_id": 38,
+      "nome_ponto": "Ponto_38",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "O amarelo pode ser associado ao Fe.\n",
+          "resultado": "Minorit\u00E1rios (Ca, Mn?, Co, Fe); majorit\u00E1rios (Ti/Ba?, Pb e Zn). \n",
+          "tonalidade": "amarelo",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_360_XRF_14.txt",
+          "nome_tecnica": "XRF_14"
+        }
+      ]
+    },
+    {
+      "ponto_id": 39,
+      "nome_ponto": "Ponto_39",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "Resultando semelhante ao ponto 14. \n",
+          "resultado": "Minorit\u00E1rios (Ca, Mn, Fe, Co); majorit\u00E1rios (Ti/Ba?, Pb e Zn). \n",
+          "tonalidade": "amarelo",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_361_XRF_15.txt",
+          "nome_tecnica": "XRF_15"
+        }
+      ]
+    },
+    {
+      "ponto_id": 40,
+      "nome_ponto": "Ponto_40",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "O azul pode ser ser Pr\u00FAssia, ultramarino. \nFazer FTIR, para confirmar. O Pb \u00E9 de baixa intensidade, logo pode ser ponto de restaure.\n",
+          "resultado": "Minorit\u00E1rios (Ca, Mn, Co, Fe, Pb); majorit\u00E1rios (Ti/Ba?, Zn). \n",
+          "tonalidade": "azul",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_362_XRF_16.txt",
+          "nome_tecnica": "XRF_16"
+        }
+      ]
+    },
+    {
+      "ponto_id": 41,
+      "nome_ponto": "Ponto_41",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "Resultado semelhante do ponto 16.\n",
+          "resultado": "Minorit\u00E1rios (Ca, Mn, Co, Fe, Pb); majorit\u00E1rios (Ti/Ba?, Zn). \n",
+          "tonalidade": "azul",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_363_XRF_17.txt",
+          "nome_tecnica": "XRF_17"
+        }
+      ]
+    },
+    {
+      "ponto_id": 42,
+      "nome_ponto": "Ponto_42",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "O verde pode estar assoacido a Cr, \u00F3xido de cromo.\n",
+          "resultado": "Minorit\u00E1rios (Ca, Mn, Co, Fe, Cr, Pb); majorit\u00E1rios (Ti/Ba?, Zn). \n",
+          "tonalidade": "verde",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_364_XRF_18.txt",
+          "nome_tecnica": "XRF_18"
+        }
+      ]
+    },
+    {
+      "ponto_id": 43,
+      "nome_ponto": "Ponto_43",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "Resultado semelhante ao ponto 18.\n",
+          "resultado": "Minorit\u00E1rios (Ca, Mn, Co, Fe, Cr, Pb); majorit\u00E1rios (Ti/Ba?, Zn). \n",
+          "tonalidade": "verde",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_365_XRF_19.txt",
+          "nome_tecnica": "XRF_19"
+        }
+      ]
+    },
+    {
+      "ponto_id": 44,
+      "nome_ponto": "Ponto_44",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "A tonalidade vermelha pode ser devido a corantes org\u00E2nicos. \n",
+          "resultado": "Minorit\u00E1rios (Ca, Mn, Co, Fe); majorit\u00E1rios (Ti/Ba?, Pb, Zn).\n",
+          "tonalidade": "vermelho",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_366_XRF_20.txt",
+          "nome_tecnica": "XRF_20"
+        }
+      ]
+    },
+    {
+      "ponto_id": 45,
+      "nome_ponto": "Ponto_45",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "O verde parece agora estar mais associado ao Cr, sendo o \u00F3xido de cromo.\n",
+          "resultado": "Minorit\u00E1rios (Ca, Ti/Ba?, Fe, Co); majorit\u00E1rios (Cr, Pb, Zn). \n",
+          "tonalidade": "verde",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_367_XRF_21.txt",
+          "nome_tecnica": "XRF_21"
+        }
+      ]
+    },
+    {
+      "ponto_id": 46,
+      "nome_ponto": "Ponto_46",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "O vermelho parace ser corante.\n",
+          "resultado": "Minorit\u00E1rios (Ca, Mn, Co, Fe); m\u00E9dio (Ti/Ba?, Pb); majorit\u00E1rios (Zn).\n",
+          "tonalidade": "vermelho",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_368_XRF_22.txt",
+          "nome_tecnica": "XRF_22"
+        }
+      ]
+    },
+    {
+      "ponto_id": 47,
+      "nome_ponto": "Ponto_47",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "Semelhante ao ponto 22, com intensidades menores de Ca, Mn, Fe e Co. \n",
+          "resultado": "Minorit\u00E1rios (Ca, Mn, Co, Fe); m\u00E9dio (Ti/Ba?, Pb); majorit\u00E1rios (Zn).\n",
+          "tonalidade": "pele",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_369_XRF_23.txt",
+          "nome_tecnica": "XRF_23"
+        }
+      ]
+    },
+    {
+      "ponto_id": 48,
+      "nome_ponto": "Ponto_48",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "Semelhante aos pontos 22, 23 e intensidade Fe e Co.\n",
+          "resultado": "Minorit\u00E1rios (Ca, Mn, Co, Fe); m\u00E9dio (Ti/Ba?, Pb); majorit\u00E1rios (Zn).\n",
+          "tonalidade": "Vermelho",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_370_XRF_24.txt",
+          "nome_tecnica": "XRF_24"
+        }
+      ]
+    },
+    {
+      "ponto_id": 49,
+      "nome_ponto": "Ponto_49",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "Semelhante ao resultado do ponto 24 com intensidades aumentadas. \n",
+          "resultado": "Minorit\u00E1rios (Ca, Mn, Co, Fe); m\u00E9dio (Ti/Ba?, Pb); majorit\u00E1rios (Zn).\n",
+          "tonalidade": "cabelo",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_371_XRF_25.txt",
+          "nome_tecnica": "XRF_25"
+        }
+      ]
+    },
+    {
+      "ponto_id": 50,
+      "nome_ponto": "Ponto_50",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "O cromo pode ser associado ao \u00F3xido de cromo.\n",
+          "resultado": "Minorit\u00E1rios (Ca, Mn, Co, Fe, Cr); m\u00E9dio (Ti/Ba?, Pb); majorit\u00E1rios (Zn).\n",
+          "tonalidade": "verde_fundo",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_372_XRF_26.txt",
+          "nome_tecnica": "XRF_26"
+        }
+      ]
+    },
+    {
+      "ponto_id": 51,
+      "nome_ponto": "Ponto_51",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "O verde poder relaciona a presen\u00E7a do \u00F3xido de cromo.\n",
+          "resultado": "Minorit\u00E1rios (Ca, Co, Fe); m\u00E9dio (Ti/Ba?, Pb); majorit\u00E1rios (Cr, Zn).\n",
+          "tonalidade": "verde",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_373_XRF_27.txt",
+          "nome_tecnica": "XRF_27"
+        }
+      ]
+    },
+    {
+      "ponto_id": 52,
+      "nome_ponto": "Ponto_52",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "O Co pode ser associado a tonalidade violeta.\n",
+          "resultado": "Minorit\u00E1rios (Ca, Co, Fe); majorit\u00E1rios (Ti/Ba?, Pb, Zn)\n",
+          "tonalidade": "violeta",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_374_XRF_28.txt",
+          "nome_tecnica": "XRF_28"
+        }
+      ]
+    },
+    {
+      "ponto_id": 53,
+      "nome_ponto": "Ponto_53",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "Semelhante ao ponto 27. Maior intensidade de Cr.\n",
+          "resultado": "Minorit\u00E1rios (Ca, Co, Fe); m\u00E9dio (Ti/Ba?, Pb); majorit\u00E1rios (Cr, Zn).\n",
+          "tonalidade": "verde",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_375_XRF_29.txt",
+          "nome_tecnica": "XRF_29"
+        }
+      ]
+    },
+    {
+      "ponto_id": 54,
+      "nome_ponto": "Ponto_54",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "lado",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_376_XRF_30.csv",
+          "nome_tecnica": "XRF_30"
+        }
+      ]
+    },
+    {
+      "ponto_id": 55,
+      "nome_ponto": "Ponto_55",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "verso",
+          "diretorio": "C:\\XmlsConvertidos\\anita_estudante\\44_ponto_377_XRF_31.csv",
+          "nome_tecnica": "XRF_31"
+        }
+      ]
+    }
+  ]
+}

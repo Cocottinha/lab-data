@@ -41,10 +41,7 @@
           this.errorMessage = 'As senhas não coincidem.';
           return;
         }
-        console.log(this.name.toString(),
-            this.email.toString(),
-            this.password.toString(),
-            this.cPassword.toString(),)
+
         try {
           const response = await axios.post(process.env.VUE_APP_APIREGISTRAR, {
             name: this.name.toString(),
@@ -57,7 +54,6 @@
                 'Content-Type': 'application/json; charset=utf-8',
         }});
           
-          console.log(response)
           if (response.data.Sucesso) {
             // Armazena o token e redireciona
             const token = response.data.Dados.token;

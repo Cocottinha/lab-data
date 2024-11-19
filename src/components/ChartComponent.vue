@@ -57,13 +57,13 @@ export default {
             start: 0,
             end: 100,
           },
-          {
-            show: true,
-            type: 'slider',
-            top: '90%',
-            start: 0,
-            end: 100,
-          },
+          // {
+          //   show: true,
+          //   type: 'slider',
+          //   top: '90%',
+          //   start: 0,
+          //   end: 100,
+          // },
         ],
         toolbox: {
           feature: {

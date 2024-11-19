@@ -20,10 +20,12 @@ export default async function readTextFileXRF(fileUrl) {
             const num = parseFloat(parts[0]);
             const num1 = parseFloat(parts[1]);
 
+            const vrau = Math.log(num1)
+
             // Check if both parts are valid numbers before pushing
-            if (!isNaN(num) && !isNaN(num1)) {
+            if (!isNaN(num) && !isNaN(vrau)) {
                 arrayA.push(num);
-                arrayB.push(num1);
+                arrayB.push(vrau);
             }
         }
     });

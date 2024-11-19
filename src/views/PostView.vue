@@ -175,7 +175,7 @@ export default {
   height: auto;
   width: 1024px;
   object-fit: contain;
-  max-width: 100%;
+  
   display: block;
 }
 

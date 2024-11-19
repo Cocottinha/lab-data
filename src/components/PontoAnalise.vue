@@ -56,15 +56,15 @@ export default {
         scaleX = this.largImg / 728;
         scaleY = this.altImg / (this.altImg * (728 / this.largImg));
       }else if (this.windowSize.width < 1260) {
-        scaleX = this.largImg / 984;
-        scaleY = this.altImg / (this.altImg * (984 / this.largImg));
+        scaleX = this.largImg / 1024;
+        scaleY = this.altImg / (this.altImg * (1024 / this.largImg));
       }else if (this.windowSize.width < 1367) {
-        scaleX = this.largImg / 820;
-        scaleY = this.altImg / (this.altImg * (820 / this.largImg));
+        scaleX = this.largImg / 900;
+        scaleY = this.altImg / (this.altImg * (900 / this.largImg));
       } 
       else if (this.windowSize.width < 1537) {
-        scaleX = this.largImg / 906;
-        scaleY = this.altImg / (this.altImg * (906 / this.largImg));
+        scaleX = this.largImg / 950;
+        scaleY = this.altImg / (this.altImg * (950 / this.largImg));
       } 
       else {
         // Default scaling factors for larger screens
@@ -90,7 +90,6 @@ export default {
     updateWindowSize() {
       this.windowSize.width = window.innerWidth;
       this.windowSize.height = window.innerHeight;
-      console.log(this.windowSize)
     },
     // Emit click event with point ID to the parent component
     handleClick() {
@@ -116,8 +115,8 @@ export default {
 .ponto {
   position: absolute;
   background-color: rgb(0, 0, 0);
-  width: 15px;
-  height: 15px;
+  width: 17px;
+  height: 17px;
   border-radius: 15px;
   font-size: 16px;
   font-weight: 700;

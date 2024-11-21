@@ -98,7 +98,7 @@ $bgColor: rgb(250 250 250);
 }
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   margin-top: 4%;
   gap: 50px;
   padding-left: 0px;

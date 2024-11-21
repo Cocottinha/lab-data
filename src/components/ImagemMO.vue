@@ -46,17 +46,18 @@ export default {
 
 <template>
     <div class="parametros">
-        <h2>Parâmetros:</h2>
-
-        <p>Data: {{ formatDateToBrazilian(atributos?.data) }}</p>
-        <p>Tonalidade: {{ atributos?.tonalidade }}</p>
-        <p>Objetiva: {{ atributos?.objetiva }}</p>
-        <p>Resultado: {{ atributos?.resultado }}</p>
-        <p>Comentario: {{ atributos?.comentario }}</p>
+        <div class="desc">
+            <h2>Parâmetros:</h2>
+            <p><strong>Data:</strong> {{ formatDateToBrazilian(atributos?.data) }}</p>
+            <p><strong>Tonalidade:</strong> {{ atributos?.tonalidade }}</p>
+            <p><strong>Objetiva:</strong> {{ atributos?.objetiva }}</p>
+            <p><strong>Resultado:</strong> {{ atributos?.resultado }}</p>
+            <p><strong>Comentário:</strong> {{ atributos?.comentario }}</p>
+        </div>
 
         <div v-for="(item, index) in atributos?.imagensEAumentos" :key="index" class="imagens">
-            <p>Aumento: {{ item?.aumento }}</p>
-            <img :src="`/files/ftp/${idProjeto}/${item?.diretorio}`" alt="Image" width="60%" />
+            <p><strong>Aumento:</strong> {{ item?.aumento }}</p>
+            <img :src="`/files/ftp/${idProjeto}/${item?.diretorio}`" alt="Image" width="75%" />
         </div>
     </div>
 </template>
@@ -68,7 +69,6 @@ export default {
     margin-bottom: 5px;
     margin-top: 10px;
 }
-
 .parametros h2 {
     margin-bottom: 25px;
 }
@@ -77,19 +77,27 @@ export default {
     margin: 25px;
     max-width: 100%;
 }
-
+.desc{
+    display: flex;
+    flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  text-align: left;
+  height: 30vh; /* Full viewport height */
+  margin: 0 auto; /* Ensure no extra margin is added */
+  width: 1000px;
+}
 .imagens {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    /* Ensure no extra margin is added */
     padding: 5px;
     margin: 5px;
-    margin-top: 30px;
+    gap: 20px;
     p{
-        padding: 10px;
+        text-align: left;
     }
 }
 </style>

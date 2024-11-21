@@ -56,8 +56,9 @@ export default {
         </div>
 
         <div v-for="(item, index) in atributos?.imagensEAumentos" :key="index" class="imagens">
+            
+            <img :src="`/files/ftp/${idProjeto}/${item?.diretorio}`" alt="Image" class="imagem"/>
             <p><strong>Aumento:</strong> {{ item?.aumento }}</p>
-            <img :src="`/files/ftp/${idProjeto}/${item?.diretorio}`" alt="Image" width="75%" />
         </div>
     </div>
 </template>
@@ -76,6 +77,8 @@ export default {
 .parametros {
     margin: 25px;
     max-width: 100%;
+    display: flex;
+    flex-direction: row;
 }
 .desc{
     display: flex;
@@ -85,7 +88,7 @@ export default {
   text-align: left;
   height: 30vh; /* Full viewport height */
   margin: 0 auto; /* Ensure no extra margin is added */
-  width: 1000px;
+  max-width: 200px;
 }
 .imagens {
     display: flex;
@@ -99,5 +102,8 @@ export default {
     p{
         text-align: left;
     }
+}
+.imagem{
+    max-width: 500px;
 }
 </style>

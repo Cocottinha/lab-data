@@ -175,7 +175,7 @@ export default {
   height: auto;
   width: 1024px;
   object-fit: contain;
-  
+  max-width: 100%;
   display: block;
 }
 
@@ -325,6 +325,9 @@ a {
     flex-direction: column;
     width: 1024px;
   }
+  .img{
+    max-width: none;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -332,6 +335,9 @@ a {
     width: 768px;
   }
 
+  .img{
+    width: 728px;
+  }
   .imgContainer {
     width: 728px;
   }
@@ -341,16 +347,25 @@ a {
   .imgContainer {
     width: 600px;
   }
+  .img{
+    width: 600px;
+  }
 }
 
 @media (max-width: 640px) {
   .imgContainer {
     width: 435px;
   }
+  .img{
+    width: 435px;
+  }
 }
 
 @media (max-width: 476px) {
   .imgContainer {
+    width: 340px;
+  }
+  .img{
     width: 340px;
   }
 }

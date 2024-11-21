@@ -17,6 +17,7 @@ export default {
         const atributos = ref(null);
         const filePath = ref([]);
         const isLoading = ref(true)
+        const idProjeto = ref(null);
 
         const route = useRoute();
 
@@ -45,7 +46,8 @@ export default {
         };
         const fetchData = async () => {
             const params = await getParams();
-
+            
+            idProjeto.value = params[0];
             post.value = await getPost(params[0]);
             if (post.value && post.value.status === 200) {
                 const Pontos = post.value.data.pontos;
@@ -83,7 +85,8 @@ export default {
             filePath,
             idPonto,
             atributos,
-            isLoading
+            isLoading,
+            idProjeto
         };
     }
 }
@@ -97,7 +100,7 @@ export default {
     <div v-else>
         <div v-if="objetoAnalise">
             <h1>{{idPonto}}_{{ objetoAnalise.nome_tecnica }}</h1>
-            <ImagemMO v-if="tecnica.startsWith('MO') && filePath" :filePath="filePath" :attributes="atributos"/>
+            <ImagemMO v-if="tecnica.startsWith('MO') && idProjeto" :idProjeto="idProjeto" :attributes="atributos"/>
         </div>
     </div>
 </template>

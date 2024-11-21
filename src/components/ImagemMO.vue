@@ -1,53 +1,95 @@
 <script module>
+/* eslint-disable */
 import { ref, onMounted } from 'vue';
 
 export default {
-    props: ['filePath','attributes'],
+    props: ['idProjeto', 'attributes'],
     setup(props) {
         const atributos = ref(null);
-        const pathImagem = ref(null);
+        const idProjeto = ref(null);
 
+        function formatDateToBrazilian(dateString) {
+            const date = new Date(dateString);
+            const day = String(date.getDate()).padStart(2, '0');
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const year = date.getFullYear();
+
+            return `${day}/${month}/${year}`;
+        }
         const getProps = async () => {
             try {
-            pathImagem.value = props.filePath;
+                idProjeto.value = props.idProjeto;
 
-            atributos.value = props.attributes;
+                atributos.value = props.attributes;
 
-            console.log(pathImagem.value)
-            console.log(atributos.value)
+                console.log(idProjeto.value)
+                console.log(atributos.value)
 
             } catch (error) {
                 console.log(error)
             }
         }
-        
+
         onMounted(() => {
             getProps();
         });
 
         return {
-            pathImagem,
-            atributos
+            idProjeto,
+            atributos,
+            formatDateToBrazilian
         };
     },
 };
+
 </script>
 
 <template>
-    <div>
-        <!-- Loop through attributes -->
-        <div v-for="(atributo, index) in atributos" :key="index">
-            <h3>Parâmetro {{ index }}</h3>
-            <p>{{ atributo }}</p>
-        </div>
-    </div>
+    <div class="parametros">
+        <h2>Parâmetros:</h2>
 
-    <!-- Loop through image paths -->
-    <div v-for="(path, index) in pathImagem" :key="index">
-        <img :src="path" alt="Image" />
-        <div class="atributos" v-if="atributos.length">
-            <h2>Parâmetros de aquisição:</h2>
-            <p>Aumentos: {{ atributos[index] || 'N/A' }}</p>
+        <p>Data: {{ formatDateToBrazilian(atributos?.data) }}</p>
+        <p>Tonalidade: {{ atributos?.tonalidade }}</p>
+        <p>Objetiva: {{ atributos?.objetiva }}</p>
+        <p>Resultado: {{ atributos?.resultado }}</p>
+        <p>Comentario: {{ atributos?.comentario }}</p>
+
+        <div v-for="(item, index) in atributos?.imagensEAumentos" :key="index" class="imagens">
+            <p>Aumento: {{ item?.aumento }}</p>
+            <img :src="`/files/ftp/${idProjeto}/${item?.diretorio}`" alt="Image" width="60%" />
         </div>
     </div>
 </template>
+
+<style>
+.parametros p {
+    padding-left: 10px;
+    gap: 15px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.parametros h2 {
+    margin-bottom: 25px;
+}
+
+.parametros {
+    margin: 25px;
+    max-width: 100%;
+}
+
+.imagens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    /* Ensure no extra margin is added */
+    padding: 5px;
+    margin: 5px;
+    margin-top: 30px;
+    p{
+        padding: 10px;
+    }
+}
+</style>

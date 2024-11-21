@@ -1,0 +1,56 @@
+{
+  "projeto_id": 50,
+  "nome_projeto": "Valida",
+  "nome_autor": "Valida",
+  "ano_obra": 1999,
+  "tecnica": "Valida",
+  "estilo": "Valida",
+  "equipe": "Lab.Mov",
+  "nome_imagem": "50",
+  "extensao_imagem": ".jpg",
+  "largura_imagem": 997,
+  "altura_imagem": 1200,
+  "pontos": [
+    {
+      "ponto_id": 1,
+      "nome_ponto": "Ponto_1",
+      "coordenada_x": 252,
+      "coordenada_y": 235,
+      "tecnicas": [
+        {
+          "$type": "MO",
+          "objetiva": 10,
+          "data": "2024/11/21",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "",
+          "imagensEAumentos": [
+            {
+              "diretorio": "C:\\Valida\\50_ponto_556_MO_1_10_10.jpeg",
+              "aumento": 10
+            },
+            {
+              "diretorio": "C:\\Valida\\50_ponto_556_MO_1_10_20.jpeg",
+              "aumento": 20
+            }
+          ],
+          "nome_tecnica": "MO_1"
+        }
+      ]
+    },
+    {
+      "ponto_id": 2,
+      "nome_ponto": "Ponto_2",
+      "coordenada_x": 446,
+      "coordenada_y": 225,
+      "tecnicas": []
+    },
+    {
+      "ponto_id": 3,
+      "nome_ponto": "Ponto_3",
+      "coordenada_x": 209,
+      "coordenada_y": 406,
+      "tecnicas": []
+    }
+  ]
+}

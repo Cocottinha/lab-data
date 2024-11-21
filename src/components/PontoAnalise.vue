@@ -72,8 +72,8 @@ export default {
         scaleY = this.altImg / (this.altImg * (1024 / this.largImg));
       }
       return {
-        left: `${this.X / scaleX}px`,
-        top: `${this.Y / scaleY}px`
+        left: `${(this.X / scaleX) - 8}px`,
+        top: `${(this.Y / scaleY) - 8}px`
       };
     }
   },

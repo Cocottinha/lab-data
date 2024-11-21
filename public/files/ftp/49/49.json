@@ -1,0 +1,433 @@
+{
+  "projeto_id": 49,
+  "nome_projeto": "Figura_So",
+  "nome_autor": "Tarsila",
+  "ano_obra": 0,
+  "tecnica": "\u00D3leo sobre tela",
+  "estilo": "Modernismo",
+  "equipe": "Lab.Mov",
+  "nome_imagem": "49",
+  "extensao_imagem": ".jpg",
+  "largura_imagem": 5353,
+  "altura_imagem": 3411,
+  "pontos": [
+    {
+      "ponto_id": 1,
+      "nome_ponto": "Ponto_1",
+      "coordenada_x": 579,
+      "coordenada_y": 1872,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "verde",
+          "diretorio": "C:\\XmlsConvertidos\\Figura_So\\49_ponto_537_XRF_1.spt",
+          "nome_tecnica": "XRF_1"
+        }
+      ]
+    },
+    {
+      "ponto_id": 2,
+      "nome_ponto": "Ponto_2",
+      "coordenada_x": 681,
+      "coordenada_y": 1873,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "verde",
+          "diretorio": "C:\\XmlsConvertidos\\Figura_So\\49_ponto_538_XRF_2.spt",
+          "nome_tecnica": "XRF_2"
+        }
+      ]
+    },
+    {
+      "ponto_id": 3,
+      "nome_ponto": "Ponto_3",
+      "coordenada_x": 1836,
+      "coordenada_y": 1849,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "azul",
+          "diretorio": "C:\\XmlsConvertidos\\Figura_So\\49_ponto_539_XRF_3.spt",
+          "nome_tecnica": "XRF_3"
+        }
+      ]
+    },
+    {
+      "ponto_id": 4,
+      "nome_ponto": "Ponto_4",
+      "coordenada_x": 1974,
+      "coordenada_y": 1837,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "branco",
+          "diretorio": "C:\\XmlsConvertidos\\Figura_So\\49_ponto_540_XRF_4.spt",
+          "nome_tecnica": "XRF_4"
+        }
+      ]
+    },
+    {
+      "ponto_id": 5,
+      "nome_ponto": "Ponto_5",
+      "coordenada_x": 1974,
+      "coordenada_y": 1033,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "carnacao",
+          "diretorio": "C:\\XmlsConvertidos\\Figura_So\\49_ponto_541_XRF_5.spt",
+          "nome_tecnica": "XRF_5"
+        }
+      ]
+    },
+    {
+      "ponto_id": 6,
+      "nome_ponto": "Ponto_6",
+      "coordenada_x": 1915,
+      "coordenada_y": 867,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "marrom",
+          "diretorio": "C:\\XmlsConvertidos\\Figura_So\\49_ponto_542_XRF_6.spt",
+          "nome_tecnica": "XRF_6"
+        }
+      ]
+    },
+    {
+      "ponto_id": 7,
+      "nome_ponto": "Ponto_7",
+      "coordenada_x": 2076,
+      "coordenada_y": 904,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "marrom",
+          "diretorio": "C:\\XmlsConvertidos\\Figura_So\\49_ponto_543_XRF_7.spt",
+          "nome_tecnica": "XRF_7"
+        }
+      ]
+    },
+    {
+      "ponto_id": 8,
+      "nome_ponto": "Ponto_8",
+      "coordenada_x": 729,
+      "coordenada_y": 1119,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "verde",
+          "diretorio": "C:\\XmlsConvertidos\\Figura_So\\49_ponto_544_XRF_8.spt",
+          "nome_tecnica": "XRF_8"
+        }
+      ]
+    },
+    {
+      "ponto_id": 9,
+      "nome_ponto": "Ponto_9",
+      "coordenada_x": 722,
+      "coordenada_y": 888,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "verde",
+          "diretorio": "C:\\XmlsConvertidos\\Figura_So\\49_ponto_545_XRF_9.spt",
+          "nome_tecnica": "XRF_9"
+        }
+      ]
+    },
+    {
+      "ponto_id": 10,
+      "nome_ponto": "Ponto_10",
+      "coordenada_x": 610,
+      "coordenada_y": 564,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "azul",
+          "diretorio": "C:\\XmlsConvertidos\\Figura_So\\49_ponto_546_XRF_10.spt",
+          "nome_tecnica": "XRF_10"
+        }
+      ]
+    },
+    {
+      "ponto_id": 11,
+      "nome_ponto": "Ponto_11",
+      "coordenada_x": 2377,
+      "coordenada_y": 2332,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "verde",
+          "diretorio": "C:\\XmlsConvertidos\\Figura_So\\49_ponto_547_XRF_11.spt",
+          "nome_tecnica": "XRF_11"
+        }
+      ]
+    },
+    {
+      "ponto_id": 12,
+      "nome_ponto": "Ponto_12",
+      "coordenada_x": 2515,
+      "coordenada_y": 2479,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "verde",
+          "diretorio": "C:\\XmlsConvertidos\\Figura_So\\49_ponto_548_XRF_12.spt",
+          "nome_tecnica": "XRF_12"
+        }
+      ]
+    },
+    {
+      "ponto_id": 13,
+      "nome_ponto": "Ponto_13",
+      "coordenada_x": 3476,
+      "coordenada_y": 2057,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "verde",
+          "diretorio": "C:\\XmlsConvertidos\\Figura_So\\49_ponto_549_XRF_13.spt",
+          "nome_tecnica": "XRF_13"
+        }
+      ]
+    },
+    {
+      "ponto_id": 14,
+      "nome_ponto": "Ponto_14",
+      "coordenada_x": 3753,
+      "coordenada_y": 2444,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "verde",
+          "diretorio": "C:\\XmlsConvertidos\\Figura_So\\49_ponto_550_XRF_14.spt",
+          "nome_tecnica": "XRF_14"
+        }
+      ]
+    },
+    {
+      "ponto_id": 15,
+      "nome_ponto": "Ponto_15",
+      "coordenada_x": 3745,
+      "coordenada_y": 2600,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "verde",
+          "diretorio": "C:\\XmlsConvertidos\\Figura_So\\49_ponto_551_XRF_15.spt",
+          "nome_tecnica": "XRF_15"
+        }
+      ]
+    },
+    {
+      "ponto_id": 16,
+      "nome_ponto": "Ponto_16",
+      "coordenada_x": 3727,
+      "coordenada_y": 2804,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "verde",
+          "diretorio": "C:\\XmlsConvertidos\\Figura_So\\49_ponto_552_XRF_16.spt",
+          "nome_tecnica": "XRF_16"
+        }
+      ]
+    },
+    {
+      "ponto_id": 17,
+      "nome_ponto": "Ponto_17",
+      "coordenada_x": 4466,
+      "coordenada_y": 1172,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "azul",
+          "diretorio": "C:\\XmlsConvertidos\\Figura_So\\49_ponto_553_XRF_17.spt",
+          "nome_tecnica": "XRF_17"
+        }
+      ]
+    },
+    {
+      "ponto_id": 18,
+      "nome_ponto": "Ponto_18",
+      "coordenada_x": 4470,
+      "coordenada_y": 837,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "marrom",
+          "diretorio": "C:\\XmlsConvertidos\\Figura_So\\49_ponto_554_XRF_18.spt",
+          "nome_tecnica": "XRF_18"
+        }
+      ]
+    },
+    {
+      "ponto_id": 19,
+      "nome_ponto": "Ponto_19",
+      "coordenada_x": 4477,
+      "coordenada_y": 727,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "marrom",
+          "diretorio": "C:\\XmlsConvertidos\\Figura_So\\49_ponto_555_XRF_19.spt",
+          "nome_tecnica": "XRF_19"
+        }
+      ]
+    }
+  ]
+}

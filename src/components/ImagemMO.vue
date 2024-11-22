@@ -1,12 +1,18 @@
 <script module>
 /* eslint-disable */
 import { ref, onMounted } from 'vue';
+import ZoomMoModal from './ZoomMoModal.vue';
 
 export default {
+    components:{
+        ZoomMoModal,
+    },  
     props: ['idProjeto', 'attributes'],
     setup(props) {
         const atributos = ref(null);
         const idProjeto = ref(null);
+        const showModal = ref(false);
+        const filePath = ref("");
 
         function formatDateToBrazilian(dateString) {
             const date = new Date(dateString);
@@ -22,12 +28,17 @@ export default {
 
                 atributos.value = props.attributes;
 
-                console.log(idProjeto.value)
-                console.log(atributos.value)
-
             } catch (error) {
                 console.log(error)
             }
+        }
+        const openModal = (file) =>{
+            filePath.value = file;
+            showModal.value = true;
+        }
+        const closeModal = () =>{
+            showModal.value = false;
+            filePath.value = null;
         }
 
         onMounted(() => {
@@ -37,7 +48,11 @@ export default {
         return {
             idProjeto,
             atributos,
-            formatDateToBrazilian
+            formatDateToBrazilian,
+            showModal, 
+            openModal,
+            closeModal,
+            filePath
         };
     },
 };
@@ -55,12 +70,16 @@ export default {
             <p><strong>Comentário:</strong> {{ atributos?.comentario }}</p>
         </div>
 
-        <div v-for="(item, index) in atributos?.imagensEAumentos" :key="index" class="imagens">
-            
-            <img :src="`/files/ftp/${idProjeto}/${item?.diretorio}`" alt="Image" class="imagem"/>
-            <p><strong>Aumento:</strong> {{ item?.aumento }}</p>
+        <div v-for="(item, index) in atributos?.imagensEAumentos" :key="index" class="imagens">  
+            <div class="norm">
+                <img :src="`/files/ftp/${idProjeto}/${item?.diretorio}`" alt="Image" class="imagem" @click="openModal(`/files/ftp/${idProjeto}/${item?.diretorio}`)"/>
+                <div id="myResult" class="img-zoom-result"></div>
+                <p><strong>Aumento:</strong> {{ item?.aumento }}</p> 
+            </div>
+                                
         </div>
     </div>
+    <ZoomMoModal :isOpen="showModal" :onExit="closeModal" :file="filePath"/>
 </template>
 
 <style>
@@ -73,10 +92,11 @@ export default {
 .parametros h2 {
     margin-bottom: 25px;
 }
-
 .parametros {
-    margin: 25px;
+    margin: 25px auto;
     max-width: 100%;
+    align-items: left;
+  justify-content: center;
     display: flex;
     flex-direction: row;
 }
@@ -86,24 +106,32 @@ export default {
   align-items: left;
   justify-content: left;
   text-align: left;
-  height: 30vh; /* Full viewport height */
-  margin: 0 auto; /* Ensure no extra margin is added */
-  max-width: 200px;
+  height: 20vh; /* Full viewport height */
+  margin: 0 ; /* Ensure no extra margin is added */
+  max-width: 300px;
+  text-wrap:balance;
+  p{
+    width: 300px;
+  }
 }
 .imagens {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
     align-items: center;
     justify-content: center;
-    margin: 0 auto;
-    padding: 5px;
-    margin: 5px;
-    gap: 20px;
+    margin: 0 20px;
+    gap: 0px;
+    max-width: 500px;
+    transition: 0.3s;
     p{
-        text-align: left;
+        text-align: center;
     }
 }
 .imagem{
     max-width: 500px;
+    cursor: zoom-in;   
 }
+.imagens:hover{
+        transform: scale(1.1);
+    }
 </style>

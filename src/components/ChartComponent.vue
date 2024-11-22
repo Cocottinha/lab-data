@@ -6,10 +6,9 @@
 
 <script>
 import * as echarts from 'echarts';
-import { onMounted, onBeforeUnmount, ref } from 'vue';
+import { onMounted, onBeforeUnmount, ref, watch } from 'vue';
 
 export default {
-
   name: 'EChartComponent',
   props: {
     xData: {
@@ -57,13 +56,6 @@ export default {
             start: 0,
             end: 100,
           },
-          // {
-          //   show: true,
-          //   type: 'slider',
-          //   top: '90%',
-          //   start: 0,
-          //   end: 100,
-          // },
         ],
         toolbox: {
           feature: {
@@ -76,7 +68,9 @@ export default {
         },
       };
 
-      chartInstance = echarts.init(chartRef.value);
+      if (!chartInstance) {
+        chartInstance = echarts.init(chartRef.value);
+      }
       chartInstance.setOption(option);
     };
 
@@ -85,6 +79,15 @@ export default {
         chartInstance.resize();
       }
     };
+
+    // Watch for data changes and update the chart
+    watch(
+      () => [props.xData, props.yData],
+      () => {
+        initChart(); // Re-initialize the chart with updated data
+      },
+      { deep: true }
+    );
 
     onMounted(() => {
       initChart();

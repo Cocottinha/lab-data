@@ -1,34 +1,56 @@
-export default async function readTextFileXRF(fileUrl) {
+export default async function readTextFileXRF(fileUrl, applyLog = false) {
     const response = await fetch(fileUrl);
     const text = await response.text();
-    
-    const lines = text.split('\n'); // Split text into individual lines
+    const extensao = fileUrl.substring(fileUrl.lastIndexOf('.') + 1) || fileUrl;
+
+    const lines = text.split('\n');
     let arrayA = [];
     let arrayB = [];
 
-    lines.forEach(line => {
-        const trimmedLine = line.trim();
+    const startDataLine = 17;
 
-        // Skip empty lines
-        if (!trimmedLine) return;
-
-        // Determine delimiter based on line content
-        const delimiter = trimmedLine.includes(';') ? ';' : ',';
-        const parts = trimmedLine.split(delimiter);
-
-        if (parts.length === 2) { // Ensure the line contains two parts
-            const num = parseFloat(parts[0]);
-            const num1 = parseFloat(parts[1]);
-
-            const vrau = Math.log(num1)
-
-            // Check if both parts are valid numbers before pushing
-            if (!isNaN(num) && !isNaN(vrau)) {
-                arrayA.push(num);
-                arrayB.push(vrau);
-            }
+    function generateRange(n) {
+        let range = [];
+        for (let i = 0; i <= n; i++) {
+            range[i] = i;
         }
-    });
+        return range;
+    }
+
+    if (extensao === "spt") {
+        lines.forEach((line, index) => {
+            if (index > startDataLine) {
+                const trimmedLine = line.trim();
+                if (!trimmedLine || isNaN(trimmedLine)) return;
+                const value = parseFloat(trimmedLine);
+                arrayB.push(value);
+                arrayA = generateRange(arrayB.length);
+            }
+        });
+    } else {
+        lines.forEach(line => {
+            const trimmedLine = line.trim();
+            if (!trimmedLine) return;
+
+            const delimiter = trimmedLine.includes(';') ? ';' : ',';
+            const parts = trimmedLine.split(delimiter);
+
+            if (parts.length === 2) {
+                const num = parseFloat(parts[0]);
+                const num1 = parseFloat(parts[1]);
+
+                if (!isNaN(num) && !isNaN(num1)) {
+                    arrayA.push(num);
+                    arrayB.push(num1);
+                }
+            }
+        });
+    }
+
+    // Apply Logarithmic Transformation if flag is true
+    if (applyLog) {
+        arrayB = arrayB.map(value => Math.log10(value));
+    }
 
     return { arrayA, arrayB };
 }

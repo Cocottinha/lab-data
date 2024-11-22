@@ -100,6 +100,7 @@ export default {
     <div v-else>
         <div v-if="objetoAnalise">
             <h1>{{idPonto}}_{{ objetoAnalise.nome_tecnica }}</h1>
+            <br>
             <ImagemMO v-if="tecnica.startsWith('MO') && idProjeto" :idProjeto="idProjeto" :attributes="atributos"/>
         </div>
     </div>

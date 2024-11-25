@@ -3,7 +3,10 @@
     <div class="modal">
       <img :src="file" alt="Full size" class="modal-image"/>
       <div class="modal-buttons"> 
-        <button @click="exit">Fechar</button>
+        <a :href="`${file}`" download>
+          <button>Baixar Imagem</button>
+        </a>
+        <button @click="exit">Fechar</button>     
       </div>
     </div>
   </div>

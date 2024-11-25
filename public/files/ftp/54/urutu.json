@@ -1,0 +1,675 @@
+{
+  "projeto_id": 0,
+  "nome_projeto": "urutu",
+  "nome_autor": "Tarsila",
+  "ano_obra": 0,
+  "tecnica": "a",
+  "estilo": "a",
+  "equipe": "a",
+  "nome_imagem": "urutu",
+  "extensao_imagem": ".jpg",
+  "largura_imagem": 640,
+  "altura_imagem": 527,
+  "pontos": [
+    {
+      "ponto_id": 1,
+      "nome_ponto": "Ponto_1",
+      "coordenada_x": 338,
+      "coordenada_y": 307,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "Estiramento C-H3 em ~4255\nEstiramento C-H em ~4320 (?)\nEstiramento assim\u00E9trico C=O em 1715\n",
+          "resultado": "",
+          "tonalidade": "azul",
+          "diretorio": "C:\\XmlsConvertidos\\urutu\\ponto_1_FTIR_1.dpt",
+          "nome_tecnica": "FTIR_1"
+        }
+      ]
+    },
+    {
+      "ponto_id": 2,
+      "nome_ponto": "Ponto_2",
+      "coordenada_x": 229,
+      "coordenada_y": 305,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "Estiramento C-H em ~2915 e 2850\nEstiramento assim\u00E9trico C=O em 1715\nBanda invertida intensa centrada em ~1725\nBanda invertida intensa em ~680 do branco de chumbo(?)\nBanda invertida intensa centrada em ~1425 do branco de chumbo(?)\n",
+          "resultado": "",
+          "tonalidade": "branco",
+          "diretorio": "C:\\XmlsConvertidos\\urutu\\ponto_2_FTIR_2.dpt",
+          "nome_tecnica": "FTIR_2"
+        }
+      ]
+    },
+    {
+      "ponto_id": 3,
+      "nome_ponto": "Ponto_3",
+      "coordenada_x": 114,
+      "coordenada_y": 302,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "Estiramento C-H em ~2915 e 2850\nEstiramento C-H3 em ~4255\nEstiramento C-H em ~4320 (?)\nEstiramento assim\u00E9trico C=O em 1715\n",
+          "resultado": "",
+          "tonalidade": "brancosombra",
+          "diretorio": "C:\\XmlsConvertidos\\urutu\\ponto_3_FTIR_3.dpt",
+          "nome_tecnica": "FTIR_3"
+        }
+      ]
+    },
+    {
+      "ponto_id": 4,
+      "nome_ponto": "Ponto_4",
+      "coordenada_x": 523,
+      "coordenada_y": 251,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "Estiramento assim\u00E9trico C=O em 1715\n",
+          "resultado": "",
+          "tonalidade": "roxo",
+          "diretorio": "C:\\XmlsConvertidos\\urutu\\ponto_4_FTIR_4.dpt",
+          "nome_tecnica": "FTIR_4"
+        }
+      ]
+    },
+    {
+      "ponto_id": 5,
+      "nome_ponto": "Ponto_5",
+      "coordenada_x": 388,
+      "coordenada_y": 190,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "Estiramento assim\u00E9trico C=O em 1715\n",
+          "resultado": "",
+          "tonalidade": "azul",
+          "diretorio": "C:\\XmlsConvertidos\\urutu\\ponto_5_FTIR_5.dpt",
+          "nome_tecnica": "FTIR_5"
+        }
+      ]
+    },
+    {
+      "ponto_id": 6,
+      "nome_ponto": "Ponto_6",
+      "coordenada_x": 513,
+      "coordenada_y": 192,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "Estiramento C-H3 em ~4255\nEstiramento C-H em ~4320 (?)\nEstiramento assim\u00E9trico C=O em 1715\n",
+          "resultado": "",
+          "tonalidade": "laranja",
+          "diretorio": "C:\\XmlsConvertidos\\urutu\\ponto_6_FTIR_6.dpt",
+          "nome_tecnica": "FTIR_6"
+        }
+      ]
+    },
+    {
+      "ponto_id": 7,
+      "nome_ponto": "Ponto_7",
+      "coordenada_x": 477,
+      "coordenada_y": 445,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "Estiramento C-H em ~2915 e 2850\nEstiramento C-H3 em ~4255\nEstiramento C-H em ~4320 (?)\nEstiramento assim\u00E9trico C=O em 1715\n",
+          "resultado": "",
+          "tonalidade": "verde",
+          "diretorio": "C:\\XmlsConvertidos\\urutu\\ponto_7_FTIR_7.dpt",
+          "nome_tecnica": "FTIR_7"
+        }
+      ]
+    },
+    {
+      "ponto_id": 8,
+      "nome_ponto": "Ponto_8",
+      "coordenada_x": 432,
+      "coordenada_y": 441,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "Estiramento C-H em ~2915 e 2850\nEstiramento C-H3 em ~4255\nEstiramento C-H em ~4320 (?)\nEstiramento assim\u00E9trico C=O em 1715\n",
+          "resultado": "",
+          "tonalidade": "verde",
+          "diretorio": "C:\\XmlsConvertidos\\urutu\\ponto_8_FTIR_8.dpt",
+          "nome_tecnica": "FTIR_8"
+        }
+      ]
+    },
+    {
+      "ponto_id": 9,
+      "nome_ponto": "Ponto_9",
+      "coordenada_x": 518,
+      "coordenada_y": 249,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "Pb, Ca, Co, Zn\nAlta intenidade de Co, provavelmente ao violeta de cobalto\n",
+          "tonalidade": "roxo",
+          "diretorio": "C:\\XmlsConvertidos\\urutu\\ponto_9_XRF_1.spt",
+          "nome_tecnica": "XRF_1"
+        }
+      ]
+    },
+    {
+      "ponto_id": 10,
+      "nome_ponto": "Ponto_10",
+      "coordenada_x": 509,
+      "coordenada_y": 378,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "Verificar a presen\u00E7a de Cd\n",
+          "resultado": "Ca, Fe, Hg, Cd, Pb, s\n",
+          "tonalidade": "laranja",
+          "diretorio": "C:\\XmlsConvertidos\\urutu\\ponto_10_XRF_2.spt",
+          "nome_tecnica": "XRF_2"
+        }
+      ]
+    },
+    {
+      "ponto_id": 11,
+      "nome_ponto": "Ponto_11",
+      "coordenada_x": 431,
+      "coordenada_y": 370,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "Verificar o sn\n",
+          "resultado": "Pb, Cr, Sn, Fe, Ca\n",
+          "tonalidade": "verde",
+          "diretorio": "C:\\XmlsConvertidos\\urutu\\ponto_11_XRF_3.spt",
+          "nome_tecnica": "XRF_3"
+        }
+      ]
+    },
+    {
+      "ponto_id": 12,
+      "nome_ponto": "Ponto_12",
+      "coordenada_x": 426,
+      "coordenada_y": 443,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "Pb, Cr, Ca, Sn\n",
+          "tonalidade": "verdeclaro",
+          "diretorio": "C:\\XmlsConvertidos\\urutu\\ponto_12_XRF_4.spt",
+          "nome_tecnica": "XRF_4"
+        }
+      ]
+    },
+    {
+      "ponto_id": 13,
+      "nome_ponto": "Ponto_13",
+      "coordenada_x": 324,
+      "coordenada_y": 435,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "Pb, Fe, Co, Zn, Sn\n",
+          "tonalidade": "roxo",
+          "diretorio": "C:\\XmlsConvertidos\\urutu\\ponto_13_XRF_5.spt",
+          "nome_tecnica": "XRF_5"
+        }
+      ]
+    },
+    {
+      "ponto_id": 14,
+      "nome_ponto": "Ponto_14",
+      "coordenada_x": 230,
+      "coordenada_y": 391,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "Pb, Cd, Sn, Zn\n",
+          "tonalidade": "branco",
+          "diretorio": "C:\\XmlsConvertidos\\urutu\\ponto_14_XRF_6.spt",
+          "nome_tecnica": "XRF_6"
+        }
+      ]
+    },
+    {
+      "ponto_id": 15,
+      "nome_ponto": "Ponto_15",
+      "coordenada_x": 116,
+      "coordenada_y": 251,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "Pb, Sn, Ca\n",
+          "tonalidade": "brancosombra",
+          "diretorio": "C:\\XmlsConvertidos\\urutu\\ponto_15_XRF_7.spt",
+          "nome_tecnica": "XRF_7"
+        }
+      ]
+    },
+    {
+      "ponto_id": 16,
+      "nome_ponto": "Ponto_16",
+      "coordenada_x": 41,
+      "coordenada_y": 242,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "Verificar Sn\n",
+          "resultado": "Pb, Ca, Co, Sn\n",
+          "tonalidade": "azul",
+          "diretorio": "C:\\XmlsConvertidos\\urutu\\ponto_16_XRF_8.spt",
+          "nome_tecnica": "XRF_8"
+        }
+      ]
+    },
+    {
+      "ponto_id": 17,
+      "nome_ponto": "Ponto_17",
+      "coordenada_x": 387,
+      "coordenada_y": 212,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "Pb, Ca, Co, Sn, Zn\n",
+          "tonalidade": "azul",
+          "diretorio": "C:\\XmlsConvertidos\\urutu\\ponto_17_XRF_9.spt",
+          "nome_tecnica": "XRF_9"
+        }
+      ]
+    },
+    {
+      "ponto_id": 18,
+      "nome_ponto": "Ponto_18",
+      "coordenada_x": 482,
+      "coordenada_y": 438,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "Pb, Ca, Cr, Fe, Cd\n",
+          "tonalidade": "verde",
+          "diretorio": "C:\\XmlsConvertidos\\urutu\\ponto_18_XRF_10.spt",
+          "nome_tecnica": "XRF_10"
+        }
+      ]
+    },
+    {
+      "ponto_id": 19,
+      "nome_ponto": "Ponto_19",
+      "coordenada_x": 485,
+      "coordenada_y": 446,
+      "tecnicas": [
+        {
+          "$type": "MO",
+          "objetiva": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "verde",
+          "imagensEAumentos": [
+            {
+              "diretorio": "",
+              "aumento": 7
+            },
+            {
+              "diretorio": "",
+              "aumento": 10
+            },
+            {
+              "diretorio": "",
+              "aumento": 20
+            },
+            {
+              "diretorio": "",
+              "aumento": 40
+            }
+          ],
+          "nome_tecnica": "MO_1"
+        }
+      ]
+    },
+    {
+      "ponto_id": 20,
+      "nome_ponto": "Ponto_20",
+      "coordenada_x": 421,
+      "coordenada_y": 452,
+      "tecnicas": [
+        {
+          "$type": "MO",
+          "objetiva": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "verde",
+          "imagensEAumentos": [
+            {
+              "diretorio": "",
+              "aumento": 7
+            },
+            {
+              "diretorio": "",
+              "aumento": 10
+            },
+            {
+              "diretorio": "",
+              "aumento": 20
+            },
+            {
+              "diretorio": "",
+              "aumento": 40
+            }
+          ],
+          "nome_tecnica": "MO_2"
+        }
+      ]
+    },
+    {
+      "ponto_id": 21,
+      "nome_ponto": "Ponto_21",
+      "coordenada_x": 325,
+      "coordenada_y": 445,
+      "tecnicas": [
+        {
+          "$type": "MO",
+          "objetiva": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "roxo",
+          "imagensEAumentos": [
+            {
+              "diretorio": "",
+              "aumento": 7
+            },
+            {
+              "diretorio": "",
+              "aumento": 10
+            },
+            {
+              "diretorio": "",
+              "aumento": 20
+            },
+            {
+              "diretorio": "",
+              "aumento": 40
+            }
+          ],
+          "nome_tecnica": "MO_3"
+        }
+      ]
+    },
+    {
+      "ponto_id": 22,
+      "nome_ponto": "Ponto_22",
+      "coordenada_x": 230,
+      "coordenada_y": 394,
+      "tecnicas": [
+        {
+          "$type": "MO",
+          "objetiva": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "branco",
+          "imagensEAumentos": [
+            {
+              "diretorio": "",
+              "aumento": 7
+            },
+            {
+              "diretorio": "",
+              "aumento": 10
+            },
+            {
+              "diretorio": "",
+              "aumento": 20
+            },
+            {
+              "diretorio": "",
+              "aumento": 40
+            }
+          ],
+          "nome_tecnica": "MO_4"
+        }
+      ]
+    },
+    {
+      "ponto_id": 23,
+      "nome_ponto": "Ponto_23",
+      "coordenada_x": 124,
+      "coordenada_y": 256,
+      "tecnicas": [
+        {
+          "$type": "MO",
+          "objetiva": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "branco",
+          "imagensEAumentos": [
+            {
+              "diretorio": "",
+              "aumento": 7
+            },
+            {
+              "diretorio": "",
+              "aumento": 10
+            },
+            {
+              "diretorio": "",
+              "aumento": 20
+            },
+            {
+              "diretorio": "",
+              "aumento": 40
+            }
+          ],
+          "nome_tecnica": "MO_5"
+        }
+      ]
+    },
+    {
+      "ponto_id": 24,
+      "nome_ponto": "Ponto_24",
+      "coordenada_x": 513,
+      "coordenada_y": 370,
+      "tecnicas": [
+        {
+          "$type": "MO",
+          "objetiva": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "laranja",
+          "imagensEAumentos": [
+            {
+              "diretorio": "",
+              "aumento": 7
+            },
+            {
+              "diretorio": "",
+              "aumento": 10
+            },
+            {
+              "diretorio": "",
+              "aumento": 20
+            },
+            {
+              "diretorio": "",
+              "aumento": 40
+            }
+          ],
+          "nome_tecnica": "MO_6"
+        }
+      ]
+    },
+    {
+      "ponto_id": 25,
+      "nome_ponto": "Ponto_25",
+      "coordenada_x": 439,
+      "coordenada_y": 366,
+      "tecnicas": [
+        {
+          "$type": "MO",
+          "objetiva": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "\n",
+          "tonalidade": "verde",
+          "imagensEAumentos": [
+            {
+              "diretorio": "",
+              "aumento": 7
+            },
+            {
+              "diretorio": "",
+              "aumento": 10
+            },
+            {
+              "diretorio": "",
+              "aumento": 20
+            },
+            {
+              "diretorio": "",
+              "aumento": 40
+            }
+          ],
+          "nome_tecnica": "MO_7"
+        }
+      ]
+    },
+    {
+      "ponto_id": 26,
+      "nome_ponto": "Ponto_26",
+      "coordenada_x": 390,
+      "coordenada_y": 235,
+      "tecnicas": [
+        {
+          "$type": "MO",
+          "objetiva": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "azul",
+          "imagensEAumentos": [
+            {
+              "diretorio": "",
+              "aumento": 7
+            },
+            {
+              "diretorio": "",
+              "aumento": 10
+            },
+            {
+              "diretorio": "",
+              "aumento": 20
+            },
+            {
+              "diretorio": "",
+              "aumento": 40
+            }
+          ],
+          "nome_tecnica": "MO_8"
+        }
+      ]
+    }
+  ]
+}

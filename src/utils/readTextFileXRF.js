@@ -47,7 +47,6 @@ export default async function readTextFileXRF(fileUrl, applyLog = false) {
         });
     }
 
-    // Apply Logarithmic Transformation if flag is true
     if (applyLog) {
         arrayB = arrayB.map(value => Math.log10(value));
     }

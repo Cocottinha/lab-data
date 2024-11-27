@@ -50,12 +50,10 @@ export default {
 
     const isMobile = computed(() => windowWidth.value < 670);
 
-    // Set up the resize event listener
     onMounted(() => {
       window.addEventListener('resize', updateWindowWidth);
     });
 
-    // Clean up the event listener
     onBeforeUnmount(() => {
       window.removeEventListener('resize', updateWindowWidth);
     });

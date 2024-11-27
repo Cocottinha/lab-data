@@ -4,9 +4,9 @@
       <img :src="file" alt="Full size" class="modal-image"/>
       <div class="modal-buttons"> 
         <a :href="`${file}`" download>
-          <button>Baixar Imagem</button>
+          <button class="baixar">Baixar Imagem</button>
         </a>
-        <button @click="exit">Fechar</button>     
+        <button @click="exit" class="fechar">Fechar</button>     
       </div>
     </div>
   </div>
@@ -64,7 +64,7 @@ export default {
   padding: 0px;
 }
 
-button {
+.fechar {
   padding: 10px;
   background-color: rgb(201, 199, 199);
   color: black;
@@ -75,8 +75,25 @@ button {
   margin: 5px;
   transition: 0.5s ease;
 }
-button:hover {
+.fechar:hover {
   background-color: red;
+  color: white;
+}
+
+.baixar {
+  padding: 10px;
+  background-color: rgb(201, 199, 199);
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  transition: 0.5s ease;
+}
+.baixar:hover {
+  background: -webkit-linear-gradient(360deg, var(--labcolor), #00f0ff);
+    color: white;
 }
 
 .modal-image {

@@ -297,4 +297,33 @@ h4{
         gap: 40px;
     }
 }
+
+@media (max-width: 420px) {
+    .container {
+        padding: 40px 0px 0px 20px;
+    }
+    .desc {
+        margin-left: 20px;
+        padding-right: 20px;
+    }
+    .brands{
+        margin: 0;
+        width: 220px;
+    }
+    h4{
+        text-align: center;
+        margin: auto;
+    }
+    .textbox{
+        gap: 20px;
+    }.brandImg{
+        margin: 0;
+        padding: 25px;
+    }
+    .heroImg{
+        width: 320px;
+        height: 210px;
+        margin: 10px;
+    }
+}
 </style>

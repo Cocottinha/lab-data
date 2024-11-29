@@ -164,4 +164,12 @@ box-shadow: 3px 3px 9px 1px rgba(0,0,0,0.5);
     grid-template-columns: repeat(1, 1fr);
   }
 }
+@media (max-width: 420px){
+.imgCard {
+  width: 260px;
+}
+.postItem {
+  width: 260px;
+}
+}
 </style>

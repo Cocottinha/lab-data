@@ -157,5 +157,11 @@ nav {
     padding: 2px;
     font-size: 30px;
   }
+  
+}
+@media (max-width: 420px){
+nav{
+  gap: 20px;
+}
 }
 </style>

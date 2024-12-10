@@ -71,7 +71,7 @@ export default {
     </div>
 </template>
 
-<style>
+<style scoped>
 .container1 {
     height: 900px;
     padding: 10px;
@@ -82,12 +82,12 @@ export default {
     place-items: center;
 }
 .atributos {
-    display: grid;
-    place-items: left;
     text-align: left;
-    width: 1200px;
+    place-items: left;
     margin-top: 20px;
+    width: 1200px;
     padding: 10px;
+    padding-bottom: 20px;
     p {
         padding: 10px;
     }
@@ -104,5 +104,40 @@ button.log {
 }
 button.log:hover {
     background-color: #555;
+}
+@media (max-width: 1367px) {
+  .atributos {
+    width: 1150px;
+  }
+}
+
+@media (max-width: 1260px) {
+  .atributos {
+    width: 1024px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .atributos {
+    width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  .atributos {
+    width: 600px;
+  }
+}
+
+@media (max-width: 640px) {
+  .atributos {
+    width: 435px;
+  }
+}
+
+@media (max-width: 476px) {
+  .atributos {
+    width: 340px;
+  }
 }
 </style>

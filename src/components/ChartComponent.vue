@@ -113,4 +113,40 @@ export default {
   width: 1200px;
   height: 700px;
 }
+
+@media (max-width: 1367px) {
+  .chart {
+    width: 1150px;
+  }
+}
+
+@media (max-width: 1260px) {
+  .chart {
+    width: 1024px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .chart {
+    width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  .chart {
+    width: 600px;
+  }
+}
+
+@media (max-width: 640px) {
+  .chart {
+    width: 435px;
+  }
+}
+
+@media (max-width: 476px) {
+  .chart {
+    width: 340px;
+  }
+}
 </style>

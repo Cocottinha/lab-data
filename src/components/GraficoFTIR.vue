@@ -67,26 +67,73 @@ export default {
     </div>
 </template>
 
-<style>
-    .container1{
-        height:900px;
-        padding: 10px; 
-        place-items: center;
+<style scoped>
+.container1 {
+    height: 900px;
+    padding: 10px;
+    place-items: center;
+}
+.chart {
+    display: grid;
+    place-items: center;
+}
+.atributos {
+    text-align: left;
+    place-items: left;
+    width: 1200px;
+    margin-top: 20px;
+    padding: 10px;
+    padding-bottom: 20px;
+    p {
+        padding: 10px;
     }
-    .chart{
-        display: grid;
-        place-items: center;
-    }
-    .atributos{
-        display: grid;
-        place-items: left;
-        text-align: left;
-        width: 1200px;
-        margin-top: 20px;
-        padding: 10px 10px 100px 10px;
-        p{
-            padding: 10px;
-        }
-    }
-    
+}
+button.log {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button.log:hover {
+    background-color: #555;
+}
+@media (max-width: 1367px) {
+  .atributos {
+    width: 1150px;
+  }
+}
+
+@media (max-width: 1260px) {
+  .atributos {
+    width: 1024px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .atributos {
+    width: 768px;
+  }
+}
+
+@media (max-width: 768px) {
+  .atributos {
+    width: 600px;
+  }
+}
+
+@media (max-width: 640px) {
+  .atributos {
+    width: 435px;
+  }
+}
+
+@media (max-width: 476px) {
+  .atributos {
+    width: 340px;
+  }
+}
 </style>

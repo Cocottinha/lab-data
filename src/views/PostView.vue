@@ -150,7 +150,7 @@ export default {
 .center {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 40px;
   margin-bottom: 10px;
 }
 
@@ -267,14 +267,14 @@ a {
   width: 150px;
   padding: 15px;
   overflow-y: auto;
-  max-height: 400px;
+  max-height: 300px;
 }
 
 .column {
   width: 150px;
   padding: 0;
   overflow-y: auto;
-  max-height: 400px;
+  max-height: 300px;
 }
 
 .column::-webkit-scrollbar {

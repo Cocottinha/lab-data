@@ -71,14 +71,14 @@ export default {
 
 .login-container {
   width: 100%;
-  max-width: 500px; /* Set a max-width instead of fixed width */
+  max-width: 500px;
   padding: 50px;
   display: flex;
   flex-direction: column;
   text-align: center;
-  background-color: #ffffff; /* Add background if needed */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
-  border-radius: 8px; /* Optional rounded corners */
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
 }
 
 .form-group {

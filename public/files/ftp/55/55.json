@@ -1,0 +1,36 @@
+{
+  "projeto_id": 55,
+  "nome_projeto": "Valida2",
+  "nome_autor": "Valida2",
+  "ano_obra": 2000,
+  "tecnica": "Valida2",
+  "estilo": "Valida2",
+  "equipe": "Lab.Mov",
+  "nome_imagem": "55",
+  "extensao_imagem": ".jpeg",
+  "largura_imagem": 1091,
+  "altura_imagem": 1280,
+  "pontos": [
+    {
+      "ponto_id": 1,
+      "nome_ponto": "Ponto_1",
+      "coordenada_x": 268,
+      "coordenada_y": 374,
+      "tecnicas": []
+    },
+    {
+      "ponto_id": 2,
+      "nome_ponto": "Ponto_2",
+      "coordenada_x": 148,
+      "coordenada_y": 340,
+      "tecnicas": []
+    },
+    {
+      "ponto_id": 3,
+      "nome_ponto": "Ponto_3",
+      "coordenada_x": 413,
+      "coordenada_y": 194,
+      "tecnicas": []
+    }
+  ]
+}

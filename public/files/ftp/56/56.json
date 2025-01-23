@@ -1,0 +1,115 @@
+{
+  "projeto_id": 56,
+  "nome_projeto": "Virgem_em_lamenta\u00E7\u00E3o",
+  "nome_autor": "Desconhecido",
+  "ano_obra": 0,
+  "tecnica": "Desconhecida",
+  "estilo": "Desconhecido",
+  "equipe": "Lab.Mov",
+  "nome_imagem": "56",
+  "extensao_imagem": ".jpg",
+  "largura_imagem": 3125,
+  "altura_imagem": 4270,
+  "pontos": [
+    {
+      "ponto_id": 1,
+      "nome_ponto": "Ponto_1",
+      "coordenada_x": 771,
+      "coordenada_y": 2723,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "OBS. Regi\u00E3o em janela, sem verniz.\n\nBamdas de oleo (4340. 4260, 3015, 2510) , bandas Si-O (1001), caulinita (930). \n",
+          "resultado": "4340, 4260, 3950, 3076, 3015, 2912, 2510, 2340, 1740, 1474, 1315, 1212, 1001, 814, 930, 820, 740.",
+          "tonalidade": "azul",
+          "diretorio": "C:\\XmlsConvertidos\\Virgem_em_lamenta\u00E7\u00E3o\\56_ponto_724_FTIR_1.dpt",
+          "nome_tecnica": "FTIR_1"
+        }
+      ]
+    },
+    {
+      "ponto_id": 2,
+      "nome_ponto": "Ponto_2",
+      "coordenada_x": 122,
+      "coordenada_y": 2196,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "Oleo (4260, 2990,02912, 1740), com bandas de aromatico (1610) banda de carbonato (1400). Unico ponto com banda 1680. Baixa intensidade da banda 1430, 1390. Unico ponto que aparece 1340.  \nN\u00E3o \u00E9 visivel a banda do carbonato.\n\nOBS. Regi\u00E3o em janela, sem verniz.\n",
+          "resultado": "4335, 4260, 3950, 2990,2912, 1846, 2396, 2336, 1740, 1680, 1610, 1474, 1310, 1212, 1120, 890, 800 ",
+          "tonalidade": "vermelho",
+          "diretorio": "C:\\XmlsConvertidos\\Virgem_em_lamenta\u00E7\u00E3o\\ponto_2_FTIR_2.dpt",
+          "nome_tecnica": "FTIR_2"
+        }
+      ]
+    },
+    {
+      "ponto_id": 3,
+      "nome_ponto": "Ponto_3",
+      "coordenada_x": 2403,
+      "coordenada_y": 2358,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "bandas de oleo, aromatico. \n\nBaixa intensidade da banda 1510. \n\nOBS. Regi\u00E3o em janela, sem verniz.\n",
+          "resultado": "4320, 4250, 4020, 2980(banda para cima), 2908, 2840, 2360, 2330, 1760, 1690, 1600, 1470, 1400, 1358, 1280, 1150, 1110, 1010 (para baixo), 777, ",
+          "tonalidade": "marrom",
+          "diretorio": "C:\\XmlsConvertidos\\Virgem_em_lamenta\u00E7\u00E3o\\56_ponto_726_FTIR_3.dpt",
+          "nome_tecnica": "FTIR_3"
+        }
+      ]
+    },
+    {
+      "ponto_id": 4,
+      "nome_ponto": "Ponto_4",
+      "coordenada_x": 2467,
+      "coordenada_y": 2399,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "Bandas oleo (4320, 4250, 1908, 2842), bandas aromaticos (1610). \n\nBanda intensa invertida em 1510, 840. \n\nOBS. Regi\u00E3o em janela, sem verniz.\n",
+          "resultado": "4320, 4250, 2980, 2908, 2842, 2360, 2331, 2755, 2960, 2470, 1760, 1610, 1390, 1300, 1150, 1006, 680, 660",
+          "tonalidade": "marrom",
+          "diretorio": "C:\\XmlsConvertidos\\Virgem_em_lamenta\u00E7\u00E3o\\56_ponto_727_FTIR_4.dpt",
+          "nome_tecnica": "FTIR_4"
+        }
+      ]
+    },
+    {
+      "ponto_id": 5,
+      "nome_ponto": "Ponto_5",
+      "coordenada_x": 2567,
+      "coordenada_y": 2359,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "Bandas do oleo, e aromatico e carbonatos.\n\nOBS. Regi\u00E3o em janela, sem verniz.\n",
+          "resultado": "4330, 4260, 3940, 2980, 2910, 2840, 2510, 2360, 2340, 2140, 1750, 1662, 1560, 1510, 1470, 1400, 1280, 1147, 1100, 930, 700, 670.",
+          "tonalidade": "marrom",
+          "diretorio": "C:\\XmlsConvertidos\\Virgem_em_lamenta\u00E7\u00E3o\\56_ponto_728_FTIR_5.dpt",
+          "nome_tecnica": "FTIR_5"
+        }
+      ]
+    }
+  ]
+}

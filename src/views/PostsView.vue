@@ -3,9 +3,12 @@ import axios from 'axios';
 import { ref, onMounted } from 'vue';
 import { useRouter } from 'vue-router'; // Import the useRouter hook
 
-const posts = ref([]); // Initialize posts as a ref
-const isLoading = ref(true); // Initialize loading state
-const router = useRouter(); // Initialize the router
+const posts = ref([]); // Store posts data
+const currentPage = ref(1); // Current page
+const lastPage = ref(1); // Total pages
+const isLoading = ref(true); // Loading state
+const searchQuery = ref(''); // Search query
+const router = useRouter();
 
 const checkImageExists = async (imageUrl) => {
   try {
@@ -16,9 +19,9 @@ const checkImageExists = async (imageUrl) => {
   }
 };
 
-const getPosts = async () => {
+const getPosts = async (page = 1, query = '') => {
   try {
-    const response = await axios.get(process.env.VUE_APP_APIPROJETOS, {
+    const response = await axios.get(`${process.env.VUE_APP_APIPROJETOS}?page=${page}&search=${query}`, {
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json; charset=utf-8',
@@ -31,7 +34,10 @@ const getPosts = async () => {
       throw new Error('Failed to fetch posts');
     }
 
-    posts.value = response.data.Dados;
+    posts.value = response.data.Dados.data;
+    currentPage.value = response.data.Dados.current_page; // Update current page
+    lastPage.value = response.data.Dados.last_page; // Update total pages
+    console.log(response.data.Dados);
 
     for (const item of posts.value) {
       const imageUrl = `/files/ftp/${item.projeto_id}/${item.nome_imagem}${item.extensao_imagem}`;
@@ -51,7 +57,23 @@ const getPosts = async () => {
     isLoading.value = false;
   }
 };
+const searchPosts = () => {
+  // Trim search query and ensure it's either a string or an empty value
+  const query = searchQuery.value.trim();
+  getPosts(1, query || ''); // Pass an empty string to fetch all records if the query is empty
+};
 
+const nextPage = () => {
+  if (currentPage.value < lastPage.value) {
+    getPosts(currentPage.value + 1, searchQuery.value);
+  }
+};
+
+const prevPage = () => {
+  if (currentPage.value > 1) {
+    getPosts(currentPage.value - 1, searchQuery.value);
+  }
+};
 onMounted(() => {
   getPosts();
 });
@@ -68,10 +90,19 @@ function formatDateToBrazilian(dateString) {
 
 <template>
   <div class="posts">
+    <div class="search-bar">
+      <input
+        type="text"
+        v-model="searchQuery"
+        placeholder="Buscar projetos..."
+        @keyup.enter="searchPosts"
+      />
+      <button @click="searchPosts">Buscar</button>
+    </div>
     <div v-if="isLoading" class="loading">Loading...</div>
     <div v-else class="grid">
       <div class="postItem" v-for="item in posts" :key="item.projeto_id" @click="$router.push(`/post/${item.projeto_id}`)">        
-        <img v-if="item.imageExists" :src="`/files/ftp/${item.projeto_id}/${item.nome_imagem}${item.extensao_imagem}`" width="80%" height="75%" class="imgCard"/>
+        <img v-if="item.imageExists" :src="`/files/ftp/${item.projeto_id}/${item.nome_imagem}${item.extensao_imagem}`" width="80%" height="75%" class="imgCard" :title="`${item.nome_projeto}`" />
         <img v-else src="/files/notfound.png" width="80%" height="75%" class="imgCard"/> <!-- Placeholder image -->
         <div class="info">
           <h2>{{ item.nome_projeto }}</h2>
@@ -80,12 +111,71 @@ function formatDateToBrazilian(dateString) {
         </div>  
       </div>
     </div>
+    <div class="pagination" v-if="!isLoading">
+      <button :disabled="currentPage === 1" @click="prevPage">Anterior</button>
+      <span>Página {{ currentPage }} de {{ lastPage }}</span>
+      <button :disabled="currentPage === lastPage" @click="nextPage">Próxima</button>
+    </div>
   </div>
 </template>
 
 
 <style lang="scss" scoped>
 $bgColor: rgb(250 250 250);
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.search-bar input {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #bbbaba;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #0056b3;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  gap: 10px;
+}
+span{
+  padding: 5px;
+}
+button{
+  cursor: pointer;
+  padding: 0px;
+  
+  border-radius: 20px;
+  border: none;
+  padding: 5px;
+}
+button:hover{
+background: -webkit-linear-gradient(360deg, var(--labcolor), #00f0ff);
+  color: white;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 .posts {
   display: flex;
   flex-direction: column;
@@ -126,6 +216,24 @@ $bgColor: rgb(250 250 250);
 box-shadow: 3px 3px 9px 1px rgba(0,0,0,0.5);
 }
 
+.info {
+  padding-left: 5px;
+  margin-bottom: 5px;
+  padding-right: 20px;
+  h2 {
+    text-align: left;
+    padding: 8px 0 5px 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 300px;
+  }
+  p {
+    text-align: left;
+    padding-left: 11px;
+    padding-bottom: 0;
+  }
+}
 .postItem:hover {
   transform: scale(1.1);
   background: -webkit-linear-gradient(360deg, var(--labcolor), #00f0ff);
@@ -133,19 +241,22 @@ box-shadow: 3px 3px 9px 1px rgba(0,0,0,0.5);
   p{
     color: white;
   }
-}
-.info {
+  .info {
   padding-left: 5px;
   margin-bottom: 5px;
+  padding-right: 20px;
   h2 {
     text-align: left;
     padding: 8px 0 5px 10px;
+    white-space: wrap;
+    overflow: auto  ;
+    text-overflow:inherit;
+    overflow-wrap: break-word;
   }
   p {
-    text-align: left;
-    padding-left: 11px;
-    padding-bottom: 0;
+    visibility: hidden;
   }
+}
 }
 @media (max-width: 1700px){
   .grid{

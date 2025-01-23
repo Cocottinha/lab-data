@@ -1,0 +1,491 @@
+{
+  "projeto_id": 57,
+  "nome_projeto": "quadro3_dechirico01",
+  "nome_autor": "Desconhecido",
+  "ano_obra": 0,
+  "tecnica": "Desconhecido",
+  "estilo": "Desconhecido",
+  "equipe": "Lab.Mov",
+  "nome_imagem": "57",
+  "extensao_imagem": ".jpg",
+  "largura_imagem": 4764,
+  "altura_imagem": 3732,
+  "pontos": [
+    {
+      "ponto_id": 1,
+      "nome_ponto": "Ponto_1",
+      "coordenada_x": 2768,
+      "coordenada_y": 1310,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "Ponto apresenta apenas o sinal significante do verniz aplicado sobre a tela\n",
+          "resultado": "",
+          "tonalidade": "verde",
+          "diretorio": "C:\\XmlsConvertidos\\quadro3_dechirico01\\57_ponto_729_FTIR_1.txt",
+          "nome_tecnica": "FTIR_1"
+        }
+      ]
+    },
+    {
+      "ponto_id": 2,
+      "nome_ponto": "Ponto_2",
+      "coordenada_x": 2753,
+      "coordenada_y": 2247,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "Assim como o ponto 01, este ponto somente apresenta sinais significantes relativos ao verniz\n",
+          "resultado": "",
+          "tonalidade": "amarelo",
+          "diretorio": "C:\\XmlsConvertidos\\quadro3_dechirico01\\57_ponto_730_FTIR_2.txt",
+          "nome_tecnica": "FTIR_2"
+        }
+      ]
+    },
+    {
+      "ponto_id": 3,
+      "nome_ponto": "Ponto_3",
+      "coordenada_x": 281,
+      "coordenada_y": 2476,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "Neste ponto o espectro apresenta-se muito ruidoso, mesmo com a limita\u00E7\u00E3o os \u00FAnicos sinais identficados tamb\u00E9m foram do verniz\n",
+          "resultado": "",
+          "tonalidade": "marrom",
+          "diretorio": "C:\\XmlsConvertidos\\quadro3_dechirico01\\57_ponto_731_FTIR_3.txt",
+          "nome_tecnica": "FTIR_3"
+        }
+      ]
+    },
+    {
+      "ponto_id": 4,
+      "nome_ponto": "Ponto_4",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "branco",
+          "diretorio": "",
+          "nome_tecnica": "FTIR_4"
+        }
+      ]
+    },
+    {
+      "ponto_id": 5,
+      "nome_ponto": "Ponto_5",
+      "coordenada_x": 2321,
+      "coordenada_y": 696,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "O ferrr n\u00E3o \u00E9 visto na imagem de MA-XRF pois este \u00E9 um dos pontos de menor intensidade de Fe.\n",
+          "resultado": "Ca, Ti/Ba, Cr, Fe, Cu, Zn, Pb\n",
+          "tonalidade": "azul",
+          "diretorio": "C:\\XmlsConvertidos\\quadro3_dechirico01\\57_ponto_733_XRF_1.spt",
+          "nome_tecnica": "XRF_1"
+        }
+      ]
+    },
+    {
+      "ponto_id": 6,
+      "nome_ponto": "Ponto_6",
+      "coordenada_x": 2359,
+      "coordenada_y": 1222,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "\n",
+          "resultado": "Ca, Ti/Ba, Cr, Fe, Cu, Zn e Pb.\n",
+          "tonalidade": "branco",
+          "diretorio": "C:\\XmlsConvertidos\\quadro3_dechirico01\\57_ponto_734_XRF_2.spt",
+          "nome_tecnica": "XRF_2"
+        }
+      ]
+    },
+    {
+      "ponto_id": 7,
+      "nome_ponto": "Ponto_7",
+      "coordenada_x": 2974,
+      "coordenada_y": 1918,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "A intensidade de Cu e Cr n\u00E3o mudam em rela\u00E7\u00E3o aos demais pontos.\n",
+          "resultado": "Ca, Ti/Ba, Fe, Cr, Cu, Zn, Pb\n",
+          "tonalidade": "verde",
+          "diretorio": "C:\\XmlsConvertidos\\quadro3_dechirico01\\57_ponto_735_XRF_3.spt",
+          "nome_tecnica": "XRF_3"
+        }
+      ]
+    },
+    {
+      "ponto_id": 8,
+      "nome_ponto": "Ponto_8",
+      "coordenada_x": 2870,
+      "coordenada_y": 2364,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "Maior intensidade de Cu.\n",
+          "resultado": "Ca, Ti/Ba, Fe, Cr, Cu, Zn\n",
+          "tonalidade": "amarelo",
+          "diretorio": "C:\\XmlsConvertidos\\quadro3_dechirico01\\57_ponto_736_XRF_4.spt",
+          "nome_tecnica": "XRF_4"
+        }
+      ]
+    },
+    {
+      "ponto_id": 9,
+      "nome_ponto": "Ponto_9",
+      "coordenada_x": 3098,
+      "coordenada_y": 2380,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "Ca, Ti/Ba, Fe, Cu, Zn, Pb\n",
+          "tonalidade": "branco",
+          "diretorio": "C:\\XmlsConvertidos\\quadro3_dechirico01\\57_ponto_737_XRF_5.spt",
+          "nome_tecnica": "XRF_5"
+        }
+      ]
+    },
+    {
+      "ponto_id": 10,
+      "nome_ponto": "Ponto_10",
+      "coordenada_x": 3735,
+      "coordenada_y": 2005,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "Ca, Ti/Ba, Fe, Cu, Zn, Pb.\n",
+          "tonalidade": "vermelho",
+          "diretorio": "C:\\XmlsConvertidos\\quadro3_dechirico01\\57_ponto_738_XRF_6.spt",
+          "nome_tecnica": "XRF_6"
+        }
+      ]
+    },
+    {
+      "ponto_id": 11,
+      "nome_ponto": "Ponto_11",
+      "coordenada_x": 4122,
+      "coordenada_y": 2424,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "Intensidade de Cr relevante.\n",
+          "resultado": "Ca, Ti/Ba, Fe, Cr, Cu, Zn, Pb.\n",
+          "tonalidade": "marrom",
+          "diretorio": "C:\\XmlsConvertidos\\quadro3_dechirico01\\57_ponto_739_XRF_7.spt",
+          "nome_tecnica": "XRF_7"
+        }
+      ]
+    },
+    {
+      "ponto_id": 12,
+      "nome_ponto": "Ponto_12",
+      "coordenada_x": 3111,
+      "coordenada_y": 3108,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "Ca, Ti/Ba, Fe, Cr, Cu, Zn, Pb.\n",
+          "tonalidade": "preto",
+          "diretorio": "C:\\XmlsConvertidos\\quadro3_dechirico01\\57_ponto_740_XRF_8.spt",
+          "nome_tecnica": "XRF_8"
+        }
+      ]
+    },
+    {
+      "ponto_id": 13,
+      "nome_ponto": "Ponto_13",
+      "coordenada_x": 3512,
+      "coordenada_y": 3249,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "Ca, Ti/Ba, Fe, Cr, Cu, Zn, Pb.\n",
+          "tonalidade": "marrom",
+          "diretorio": "C:\\XmlsConvertidos\\quadro3_dechirico01\\57_ponto_741_XRF_9.spt",
+          "nome_tecnica": "XRF_9"
+        }
+      ]
+    },
+    {
+      "ponto_id": 14,
+      "nome_ponto": "Ponto_14",
+      "coordenada_x": 3252,
+      "coordenada_y": 2944,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "Ca, Ti/Ba, Fe, Cu, Zn, Pb.\n",
+          "tonalidade": "amarelo",
+          "diretorio": "C:\\XmlsConvertidos\\quadro3_dechirico01\\57_ponto_742_XRF_10.spt",
+          "nome_tecnica": "XRF_10"
+        }
+      ]
+    },
+    {
+      "ponto_id": 15,
+      "nome_ponto": "Ponto_15",
+      "coordenada_x": 1814,
+      "coordenada_y": 3064,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "\n",
+          "resultado": "Ca, Ti/Ba, Cr, Fe, Cu, Zn, Pb.\n",
+          "tonalidade": "cinza",
+          "diretorio": "C:\\XmlsConvertidos\\quadro3_dechirico01\\57_ponto_743_XRF_11.spt",
+          "nome_tecnica": "XRF_11"
+        }
+      ]
+    },
+    {
+      "ponto_id": 16,
+      "nome_ponto": "Ponto_16",
+      "coordenada_x": 2992,
+      "coordenada_y": 3044,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "\n",
+          "resultado": "Ca, Ti/Ba, Fe, Cu, Zn, Pb.\n",
+          "tonalidade": "branco",
+          "diretorio": "C:\\XmlsConvertidos\\quadro3_dechirico01\\57_ponto_744_XRF_12.spt",
+          "nome_tecnica": "XRF_12"
+        }
+      ]
+    },
+    {
+      "ponto_id": 17,
+      "nome_ponto": "Ponto_17",
+      "coordenada_x": 738,
+      "coordenada_y": 2374,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "\n",
+          "resultado": "Ca, Ti/Ba, Cr, Fe, Cu, Zn, Pb.\n",
+          "tonalidade": "laranja",
+          "diretorio": "C:\\XmlsConvertidos\\quadro3_dechirico01\\57_ponto_745_XRF_13.spt",
+          "nome_tecnica": "XRF_13"
+        }
+      ]
+    },
+    {
+      "ponto_id": 18,
+      "nome_ponto": "Ponto_18",
+      "coordenada_x": 720,
+      "coordenada_y": 2110,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "\n",
+          "resultado": "Ca, Ti/Ba, Cr, Fe, Cu, Zn, Pb.\n",
+          "tonalidade": "vermelho",
+          "diretorio": "C:\\XmlsConvertidos\\quadro3_dechirico01\\57_ponto_746_XRF_14.spt",
+          "nome_tecnica": "XRF_14"
+        }
+      ]
+    },
+    {
+      "ponto_id": 19,
+      "nome_ponto": "Ponto_19",
+      "coordenada_x": 997,
+      "coordenada_y": 1887,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "Ca, Ti/Ba, Cr, Fe, Cu, Zn, Pb.\n",
+          "tonalidade": "branco",
+          "diretorio": "C:\\XmlsConvertidos\\quadro3_dechirico01\\57_ponto_747_XRF_15.spt",
+          "nome_tecnica": "XRF_15"
+        }
+      ]
+    },
+    {
+      "ponto_id": 20,
+      "nome_ponto": "Ponto_20",
+      "coordenada_x": 1102,
+      "coordenada_y": 1668,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "Ca, Ti/Ba, Cr, Fe, Cu, Zn, Pb.\n",
+          "tonalidade": "marrom",
+          "diretorio": "C:\\XmlsConvertidos\\quadro3_dechirico01\\57_ponto_748_XRF_16.spt",
+          "nome_tecnica": "XRF_16"
+        }
+      ]
+    },
+    {
+      "ponto_id": 21,
+      "nome_ponto": "Ponto_21",
+      "coordenada_x": 1430,
+      "coordenada_y": 2657,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "Ca, Ti/Ba, Cr, Fe, Cu, Zn, Pb.\n",
+          "tonalidade": "cinza",
+          "diretorio": "C:\\XmlsConvertidos\\quadro3_dechirico01\\57_ponto_749_XRF_17.spt",
+          "nome_tecnica": "XRF_17"
+        }
+      ]
+    },
+    {
+      "ponto_id": 22,
+      "nome_ponto": "Ponto_22",
+      "coordenada_x": 3718,
+      "coordenada_y": 3433,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "pouco Ba comparado a outros pontos.\n",
+          "resultado": "Ca, Ti/Ba, Cr, Fe, Cu, Zn, Pb.\n",
+          "tonalidade": "assinatura",
+          "diretorio": "C:\\XmlsConvertidos\\quadro3_dechirico01\\57_ponto_750_XRF_18.spt",
+          "nome_tecnica": "XRF_18"
+        }
+      ]
+    }
+  ]
+}

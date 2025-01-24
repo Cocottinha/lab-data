@@ -97,14 +97,15 @@ function formatDateToBrazilian(dateString) {
 
 <template>
   <div class="posts">
-  <div class="search-bar">
-    <table class="tabela">
-      <tr>
-        <td>Ordenar por:</td>
-        <td>Itens por página:</td>
-      </tr>
-      <tr>
-        <td>
+    <div class="search-bar">
+      <div class="tabela">
+        <div class="pesquisa">
+          <input type="text" v-model="searchQuery" placeholder="Buscar projetos..." @keyup.enter="searchPosts" />
+          <button @click="searchPosts">Buscar</button>
+        </div>
+
+        <div>
+          <label>Ordernar por:</label>
           <select v-model="sortOption" @change="searchPosts">
             <option value="">Nenhum</option>
             <option value="date_asc">Data (Antiga → Nova)</option>
@@ -112,41 +113,24 @@ function formatDateToBrazilian(dateString) {
             <option value="name_asc">Nome (A → Z)</option>
             <option value="name_desc">Nome (Z → A)</option>
           </select>
-        </td>
-        <td>
+          <label>Itens por página:</label>
           <select v-model="perPage">
             <option :value="5">5</option>
             <option :value="10">10</option>
             <option :value="15">15</option>
             <option :value="30">30</option>
           </select>
-        </td>
-        <td>
-          <input type="text" v-model="searchQuery" placeholder="Buscar projetos..." @keyup.enter="searchPosts" />
-        </td>
-        <td>
-          <button @click="searchPosts">Buscar</button>
-        </td>
-      </tr>
-    </table>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div v-if="isLoading" class="loading">Loading...</div>
   <div v-else class="grid">
-    <div
-      class="postItem"
-      v-for="item in posts"
-      :key="item.projeto_id"
-      @click="$router.push(`/post/${item.projeto_id}`)"
-    >
-      <img
-        v-if="item.imageExists"
-        :src="`/files/ftp/${item.projeto_id}/${item.nome_imagem}${item.extensao_imagem}`"
-        width="80%"
-        height="75%"
-        class="imgCard"
-        :title="`${item.nome_projeto}`"
-      />
+    <div class="postItem" v-for="item in posts" :key="item.projeto_id"
+      @click="$router.push(`/post/${item.projeto_id}`)">
+      <img v-if="item.imageExists" :src="`/files/ftp/${item.projeto_id}/${item.nome_imagem}${item.extensao_imagem}`"
+        width="80%" height="75%" class="imgCard" :title="`${item.nome_projeto}`" />
       <img v-else src="/files/notfound.png" width="80%" height="75%" class="imgCard" />
       <div class="info">
         <h2>{{ item.nome_projeto }}</h2>
@@ -161,7 +145,6 @@ function formatDateToBrazilian(dateString) {
     <span>Página {{ currentPage }} de {{ lastPage }}</span>
     <button :disabled="currentPage === lastPage" @click="nextPage">Próxima</button>
   </div>
-</div>
 
 </template>
 
@@ -169,22 +152,28 @@ function formatDateToBrazilian(dateString) {
 <style lang="scss" scoped>
 $bgColor: rgb(250 250 250);
 
+.pesquisa {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+
+}
+
 .tabela {
-  label{
+  label {
     padding: 5px;
   }
-  th, td{
-    padding: 5px;
-    width: 120px;
-    text-wrap: wrap;
-  }
+
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 
 .search-bar {
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  margin-bottom: 20px;
   gap: 10px;
 }
 
@@ -198,7 +187,7 @@ $bgColor: rgb(250 250 250);
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  height: 44px;
+  min-height: 44px;
 }
 
 .search-bar select {
@@ -223,7 +212,7 @@ $bgColor: rgb(250 250 250);
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  height: 44px;
+  min-height: 44px;
 }
 
 .search-bar button:hover {
@@ -365,6 +354,12 @@ button:disabled {
 @media (max-width: 1176px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tabela {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
   }
 }
 

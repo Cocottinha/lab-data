@@ -171,10 +171,12 @@ $bgColor: rgb(250 250 250);
 
 .tabela {
   label{
-    padding: 10px;
+    padding: 5px;
   }
   th, td{
     padding: 5px;
+    width: 120px;
+    text-wrap: wrap;
   }
 }
 
@@ -205,6 +207,7 @@ $bgColor: rgb(250 250 250);
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: white;
+  min-width: 120px;
   cursor: pointer;
 }
 

@@ -104,8 +104,9 @@ function formatDateToBrazilian(dateString) {
           <button @click="searchPosts">Buscar</button>
         </div>
 
-        <div>
-          <label>Ordernar por:</label>
+        <div class="ordenar">
+          <div class="vrau">
+            <label>Ordernar por:</label>
           <select v-model="sortOption" @change="searchPosts">
             <option value="">Nenhum</option>
             <option value="date_asc">Data (Antiga → Nova)</option>
@@ -113,13 +114,17 @@ function formatDateToBrazilian(dateString) {
             <option value="name_asc">Nome (A → Z)</option>
             <option value="name_desc">Nome (Z → A)</option>
           </select>
-          <label>Itens por página:</label>
+          </div>
+          <div class="vrau">
+            <label>Itens por página:</label>
           <select v-model="perPage">
             <option :value="5">5</option>
             <option :value="10">10</option>
             <option :value="15">15</option>
             <option :value="30">30</option>
           </select>
+          </div>
+          
         </div>
       </div>
     </div>
@@ -157,9 +162,19 @@ $bgColor: rgb(250 250 250);
   flex-direction: row;
   justify-content: center;
   gap: 10px;
-
 }
-
+.vrau{
+  overflow: visible;
+    white-space: wrap;
+    label{
+      padding: 5px;
+    }
+}
+.ordenar{
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+}
 .tabela {
   label {
     padding: 5px;
@@ -371,11 +386,46 @@ button:disabled {
   }
 }
 
+@media (max-width: 616px) {
+  .ordenar{
+    flex-direction: column;
+  }
+}
+@media (max-width: 540px){
+  .tabela {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+}
+
 @media (max-width: 420px) {
   .imgCard {
     width: 260px;
   }
-
+  label{
+    padding: 0px;
+  }
+  .search-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    select{
+      width: 212px;
+    }
+  }
+.pesquisa{
+  flex-direction: column;
+  input{
+    width: 212px;
+  }
+  button{
+    width: 212px;
+  }
+}
+.tabela{
+  padding: 0px;
+}
   .postItem {
     width: 260px;
   }

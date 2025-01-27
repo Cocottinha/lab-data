@@ -195,6 +195,10 @@ a {
 .title {
   font-size: 50px;
   text-align: left;
+  white-space: wrap;
+  overflow: auto;
+  text-overflow: inherit;
+  overflow-wrap: break-word;
 }
 
 .detail {

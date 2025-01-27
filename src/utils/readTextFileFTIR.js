@@ -29,16 +29,15 @@ export default async function readTextFileFTIR(fileUrl){
     }
     else{
         line.forEach(l => {
-            let part = l.trim();
-            if(!part) return;
+            let trimmedLine = l.trim();
+            if(!trimmedLine) return;
 
-            //const delimiter = part.includes(';') ? ';' : ','; 
+            // console.log(trimmedLine);
+            const delimiter = trimmedLine.includes('\t') ? '\t' : trimmedLine.includes(',') ? ',' : ';';
 
-            const separate = part.replace('\t',';');
+            const parts = trimmedLine.split(delimiter).map(part => part.replace(",", "."));
 
-            const parts = separate.split(';');
-
-            if (parts) {
+            if (parts.length === 2) {
                 const num = parseFloat(parts[0])
                 const num1 = parseFloat(parts[1])
                 

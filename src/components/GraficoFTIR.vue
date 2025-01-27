@@ -24,7 +24,8 @@ export default {
 
                     atributos.value = props.attributes;
 
-                    console.log(atributos)
+                    console.log("A",arrayA)
+                    // console.log("B",vrau.arrayB)
                 } catch (error) {
                     console.error("Error loading FTIR file:", error);
                 }
@@ -46,8 +47,11 @@ export default {
 
 <template>
     <div v-if="arrayA.length && arrayB.length" class="container1">
-        <div class="chart">
+        <div v-if="arrayA.length && arrayB.length > 2000 " class="chart">
             <ChartComponent :xData="arrayA" :yData="arrayB" />                   
+        </div>
+        <div v-else class="error">
+          Não foi possível carregar o gráfico!
         </div>
         <div class="atributos">
                 <h2>Parâmetros de aquisição: </h2>
@@ -76,6 +80,11 @@ export default {
 .chart {
     display: grid;
     place-items: center;
+    
+}
+.error{
+  font-size: 30px;
+  padding: 100px;
 }
 .atributos {
     text-align: left;

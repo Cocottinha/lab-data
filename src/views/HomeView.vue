@@ -262,7 +262,7 @@ h4{
     }
 
     .brands {
-        width: 400px;
+        max-width: 400px;
     }
 
     .brandImg {
@@ -283,14 +283,14 @@ h4{
     }
 
     .brands {
-        width: 300px;
+        max-width: 270px;
         margin-bottom: 40px;
     }
 
     .brandImg {
         width: 100%;
         height: 30px;
-        margin-left: 5%;
+        
     }
 
     .container {
@@ -307,8 +307,10 @@ h4{
         padding-right: 20px;
     }
     .brands{
-        margin: 0;
+        margin: auto;
         width: 220px;
+        justify-content: center;
+        
     }
     h4{
         text-align: center;
@@ -317,7 +319,7 @@ h4{
     .textbox{
         gap: 20px;
     }.brandImg{
-        margin: 0;
+        margin: auto;
         padding: 25px;
     }
     .heroImg{

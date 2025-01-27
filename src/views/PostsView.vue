@@ -396,6 +396,16 @@ button:disabled {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  max-width: 320px;
+}
+.vrau{
+  max-width: 320px;
+}
+.ordenar{
+  max-width: 320px;
+}
+.search-bar{
+  justify-content: center;
 }
 }
 
@@ -410,9 +420,12 @@ button:disabled {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    select{
+    select, input, button{
       width: 212px;
     }
+  }
+  .vrau{
+    width: 212px;
   }
 .pesquisa{
   flex-direction: column;

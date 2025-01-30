@@ -70,7 +70,8 @@ export default {
             <p><strong>Comentário:</strong> {{ atributos?.comentario }}</p>
         </div>
 
-        <div v-for="(item, index) in atributos?.imagensEAumentos" :key="index" class="imagens">  
+<div class="grid">
+    <div v-for="(item, index) in atributos?.imagensEAumentos" :key="index" class="imagens">  
             <div class="norm">
                 <img :src="`/files/ftp/${idProjeto}/${item?.diretorio}`" alt="Image" class="imagem" @click="openModal(`/files/ftp/${idProjeto}/${item?.diretorio}`)"/>
                 <div id="myResult" class="img-zoom-result"></div>
@@ -78,6 +79,8 @@ export default {
             </div>
                                 
         </div>
+</div>
+        
     </div>
     <ZoomMoModal :isOpen="showModal" :onExit="closeModal" :file="filePath"/>
 </template>
@@ -96,9 +99,25 @@ export default {
     margin: 25px auto;
     max-width: 100%;
     align-items: left;
-  justify-content: center;
+    justify-content: center;
     display: flex;
     flex-direction: row;
+}
+.imagens { 
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+    gap: 0px;
+    max-width: 500px;
+    transition: 0.3s;
+    p{
+        text-align: center;
+    }
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  
+    gap: 15px;
 }
 .desc{
     display: flex;
@@ -114,19 +133,7 @@ export default {
     width: 300px;
   }
 }
-.imagens {
-    display: grid;
-    grid-template-columns: repeat(2, 0.5fr);
-    align-items: center;
-    justify-content: center;
-    margin: 0 20px;
-    gap: 0px;
-    max-width: 500px;
-    transition: 0.3s;
-    p{
-        text-align: center;
-    }
-}
+
 .imagem{
     max-width: 500px;
     cursor: zoom-in;   
@@ -134,4 +141,18 @@ export default {
 .imagens:hover{
         transform: scale(1.1);
     }
+
+@media (max-width: 1450px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 890px) {
+  .parametros{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+  }
+}
 </style>

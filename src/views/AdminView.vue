@@ -123,8 +123,7 @@ function formatDateToBrazilian(dateString) {
             <option :value="15">15</option>
             <option :value="30">30</option>
           </select>
-          </div>
-          
+          </div>     
         </div>
       </div>
     </div>

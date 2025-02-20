@@ -1,5 +1,5 @@
 <template>
-<nav>
+  <nav>
     <router-link to="/" class="logo" v-if="!isMobile">
       <img src="./assets/icon.svg" width="36px" class="logoI" /><span>Lab.Data</span>
     </router-link>
@@ -8,12 +8,14 @@
     </router-link>
 
     <div class="bar">
-      <router-link to="/posts" class="item">Postagens</router-link>
+      <router-link to="/admin" class="item" v-if="isAdmin">Admin</router-link>
+      <router-link to="/posts" class="item">Postagens</router-link>     
       <router-link to="/login" class="item" v-if="!loggedIn">Entrar</router-link>
       <a @click="showModal = true" class="profile" v-if="loggedIn">Sair</a>
     </div>
 
     <ConfirmationModal :isOpen="showModal" :onConfirm="handleLogout" :onCancel="cancelLogout" />
+    
   </nav>
   <router-view />
 </template>
@@ -32,9 +34,12 @@ export default {
     const store = useStore();
     const username = computed(() => store.getters.getUsername);
     const loggedIn = computed(() => store.getters.isLoggedIn);
+    const userType = computed(() => store.getters.getUserType);
+    const isAdmin = computed(() => loggedIn.value && userType.value === 'admin');
     const showModal = ref(false);
     const windowWidth = ref(window.innerWidth); // Reactive property for window width
 
+    console.log(userType, username);
     const handleLogout = () => {
       store.dispatch('logout');
       showModal.value = false;
@@ -58,6 +63,7 @@ export default {
       window.removeEventListener('resize', updateWindowWidth);
     });
 
+    
     return {
       loggedIn,
       username,
@@ -65,7 +71,9 @@ export default {
       handleLogout,
       cancelLogout,
       windowWidth,
-      isMobile
+      isMobile,
+      userType,
+      isAdmin
     };
   },
 };
@@ -91,6 +99,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
 }
 
 nav {
@@ -99,6 +108,7 @@ nav {
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
+  
 
   .router-link-exact-active {
     background: -webkit-linear-gradient(360deg, var(--labcolor), #00f0ff);

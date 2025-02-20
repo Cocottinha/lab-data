@@ -46,7 +46,9 @@ export default {
         if (response.data.Sucesso) {
           const token = response.data.Dados.token;
           const name = response.data.Dados.nome;
-          this.login({ token, name });
+          const type = response.data.Dados.type;
+          console.log(type);
+          this.login({ token, name, type });
           router.push(this.$route.query.redirect || '/');
           this.errorMessage = "Conectando ..."
         } else {

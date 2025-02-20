@@ -1,0 +1,988 @@
+{
+  "projeto_id": 0,
+  "nome_projeto": "guignard",
+  "nome_autor": "N\u00E3o Citado",
+  "ano_obra": 0,
+  "tecnica": "N\u00E3o Citado",
+  "estilo": "N\u00E3o Citado",
+  "equipe": "Lab.Mov",
+  "nome_imagem": "guignard",
+  "extensao_imagem": ".jpeg",
+  "largura_imagem": 1600,
+  "altura_imagem": 1200,
+  "pontos": [
+    {
+      "ponto_id": 1,
+      "nome_ponto": "Ponto_1",
+      "coordenada_x": 735,
+      "coordenada_y": 940,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "branco",
+          "diretorio": "",
+          "nome_tecnica": "FTIR_1"
+        }
+      ]
+    },
+    {
+      "ponto_id": 2,
+      "nome_ponto": "Ponto_2",
+      "coordenada_x": 568,
+      "coordenada_y": 936,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "verde",
+          "diretorio": "",
+          "nome_tecnica": "FTIR_2"
+        }
+      ]
+    },
+    {
+      "ponto_id": 3,
+      "nome_ponto": "Ponto_3",
+      "coordenada_x": 494,
+      "coordenada_y": 933,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "\n",
+          "resultado": "bandas ao redor da posi\u00E7\u00E3o 1000, que pode ser associada ao amarelo de cromo.",
+          "tonalidade": "amarelo",
+          "diretorio": "",
+          "nome_tecnica": "FTIR_3"
+        }
+      ]
+    },
+    {
+      "ponto_id": 4,
+      "nome_ponto": "Ponto_4",
+      "coordenada_x": 644,
+      "coordenada_y": 717,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "amarelo",
+          "diretorio": "",
+          "nome_tecnica": "FTIR_4"
+        }
+      ]
+    },
+    {
+      "ponto_id": 5,
+      "nome_ponto": "Ponto_5",
+      "coordenada_x": 272,
+      "coordenada_y": 991,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "marrom",
+          "diretorio": "",
+          "nome_tecnica": "FTIR_5"
+        }
+      ]
+    },
+    {
+      "ponto_id": 6,
+      "nome_ponto": "Ponto_6",
+      "coordenada_x": 1023,
+      "coordenada_y": 714,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "vinho",
+          "diretorio": "",
+          "nome_tecnica": "FTIR_6"
+        }
+      ]
+    },
+    {
+      "ponto_id": 7,
+      "nome_ponto": "Ponto_7",
+      "coordenada_x": 1227,
+      "coordenada_y": 703,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "Esses amarelos parecem ter amarelo de cromo.\n",
+          "resultado": "",
+          "tonalidade": "amarelo",
+          "diretorio": "",
+          "nome_tecnica": "FTIR_7"
+        }
+      ]
+    },
+    {
+      "ponto_id": 8,
+      "nome_ponto": "Ponto_8",
+      "coordenada_x": 386,
+      "coordenada_y": 787,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "branco",
+          "diretorio": "",
+          "nome_tecnica": "FTIR_8"
+        }
+      ]
+    },
+    {
+      "ponto_id": 9,
+      "nome_ponto": "Ponto_9",
+      "coordenada_x": 1142,
+      "coordenada_y": 629,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "Amarelo com ferro sem chumbo.\n",
+          "resultado": "",
+          "tonalidade": "vermelho",
+          "diretorio": "",
+          "nome_tecnica": "FTIR_9"
+        }
+      ]
+    },
+    {
+      "ponto_id": 10,
+      "nome_ponto": "Ponto_10",
+      "coordenada_x": 1013,
+      "coordenada_y": 352,
+      "tecnicas": [
+        {
+          "$type": "FTIR",
+          "tempo": 0,
+          "intervalo": 0,
+          "resolucao": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "verde",
+          "diretorio": "",
+          "nome_tecnica": "FTIR_10"
+        }
+      ]
+    },
+    {
+      "ponto_id": 11,
+      "nome_ponto": "Ponto_11",
+      "coordenada_x": 1263,
+      "coordenada_y": 175,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "Investigar o que aparece na regi\u00E3o do meio entre 10 - 20 keV.\n",
+          "resultado": "Majorit\u00E1rios (Fe, Zn), minorit\u00E1rios (Ca, Ba/Ti, Cr, Co, Cd?)\n",
+          "tonalidade": "verde",
+          "diretorio": "C:\\XmlsConvertidos\\guignard\\ponto_11_XRF_1.spt",
+          "nome_tecnica": "XRF_1"
+        }
+      ]
+    },
+    {
+      "ponto_id": 12,
+      "nome_ponto": "Ponto_12",
+      "coordenada_x": 1076,
+      "coordenada_y": 210,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "investigar se o Cd est\u00E1 produzindo a tonalidade verde.\n",
+          "resultado": "Majorit\u00E1rios (Fe, Zn), minorit\u00E1rios (Ca, Ba/Ti, Cr, Mn, Cd?).\n",
+          "tonalidade": "verde",
+          "diretorio": "C:\\XmlsConvertidos\\guignard\\ponto_12_XRF_2.spt",
+          "nome_tecnica": "XRF_2"
+        }
+      ]
+    },
+    {
+      "ponto_id": 13,
+      "nome_ponto": "Ponto_13",
+      "coordenada_x": 1369,
+      "coordenada_y": 86,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "A intensidade de Fe diminui e do Ca aumenta. Provavelmente n\u00E3o tem Ba.\n",
+          "resultado": "Majorit\u00E1rios (Zn), minorit\u00E1rios (Ca, Fe, Ba/Ti, Co)\n",
+          "tonalidade": "assinatura",
+          "diretorio": "C:\\XmlsConvertidos\\guignard\\ponto_13_XRF_3.spt",
+          "nome_tecnica": "XRF_3"
+        }
+      ]
+    },
+    {
+      "ponto_id": 14,
+      "nome_ponto": "Ponto_14",
+      "coordenada_x": 1260,
+      "coordenada_y": 82,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "Resultado semelhante ao ponto 03.\n",
+          "resultado": "Majorit\u00E1rios (Zn), minorit\u00E1rios (Ca, Fe, Ba/Ti, Co)\n",
+          "tonalidade": "marrom",
+          "diretorio": "C:\\XmlsConvertidos\\guignard\\ponto_14_XRF_4.spt",
+          "nome_tecnica": "XRF_4"
+        }
+      ]
+    },
+    {
+      "ponto_id": 15,
+      "nome_ponto": "Ponto_15",
+      "coordenada_x": 1131,
+      "coordenada_y": 452,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "A tonalidade vermelha provavelmente est\u00E1 relacionada ao c\u00E1dmio. O Fe teve sua intensidade diminuida neste ponto.\n",
+          "resultado": "Majorit\u00E1rios (Zn), minorit\u00E1rios (Ca, Ba/Ti, Cr, Mn, Fe, Cd?).\n",
+          "tonalidade": "vermelho",
+          "diretorio": "C:\\XmlsConvertidos\\guignard\\ponto_15_XRF_5.spt",
+          "nome_tecnica": "XRF_5"
+        }
+      ]
+    },
+    {
+      "ponto_id": 16,
+      "nome_ponto": "Ponto_16",
+      "coordenada_x": 1080,
+      "coordenada_y": 647,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "Resultado semelhante ao ponto 05. O B\u00E1rio aparece com certeza.\n",
+          "resultado": "Majorit\u00E1rios (Zn), minorit\u00E1rios (Ca, Ba/Ti, Cr, Mn, Fe, Cd).\n",
+          "tonalidade": "vermelho",
+          "diretorio": "C:\\XmlsConvertidos\\guignard\\ponto_16_XRF_6.spt",
+          "nome_tecnica": "XRF_6"
+        }
+      ]
+    },
+    {
+      "ponto_id": 17,
+      "nome_ponto": "Ponto_17",
+      "coordenada_x": 1189,
+      "coordenada_y": 738,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "Aparece neste ponto Cd e Pb em altas intensidades.\n",
+          "resultado": "Majorit\u00E1rios (Zn, Cd, Pb), minorit\u00E1rios (Ca, Ba/Ti, Cr, Mn, Fe).\n",
+          "tonalidade": "amarelo",
+          "diretorio": "C:\\XmlsConvertidos\\guignard\\ponto_17_XRF_7.spt",
+          "nome_tecnica": "XRF_7"
+        }
+      ]
+    },
+    {
+      "ponto_id": 18,
+      "nome_ponto": "Ponto_18",
+      "coordenada_x": 989,
+      "coordenada_y": 729,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "N\u00E3o tem cadmio neste ponto. Esse vermelho provavelmente \u00E9 devido a um pigmento org\u00E2nico.\n",
+          "resultado": "Majorit\u00E1rios (Fe, Zn), minorit\u00E1rios (Ca, Ba/Ti, Cr, Mn).\n",
+          "tonalidade": "vermelho",
+          "diretorio": "C:\\XmlsConvertidos\\guignard\\ponto_18_XRF_8.spt",
+          "nome_tecnica": "XRF_8"
+        }
+      ]
+    },
+    {
+      "ponto_id": 19,
+      "nome_ponto": "Ponto_19",
+      "coordenada_x": 1090,
+      "coordenada_y": 747,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "Altas intensidade de Fe neste ponto.\n",
+          "resultado": "Majorit\u00E1rios (Fe, Zn), minorit\u00E1rios (Ca, Ba/Ti, Cr, Mn, Cd?).\n",
+          "tonalidade": "preto",
+          "diretorio": "C:\\XmlsConvertidos\\guignard\\ponto_19_XRF_9.spt",
+          "nome_tecnica": "XRF_9"
+        }
+      ]
+    },
+    {
+      "ponto_id": 20,
+      "nome_ponto": "Ponto_20",
+      "coordenada_x": 952,
+      "coordenada_y": 844,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "Altas intensidade de Zn.\n",
+          "resultado": "Majorit\u00E1rios (Fe, Zn), minorit\u00E1rios (Ca, Ba/Ti, Cr, Mn).\n",
+          "tonalidade": "sombra",
+          "diretorio": "C:\\XmlsConvertidos\\guignard\\ponto_20_XRF_10.spt",
+          "nome_tecnica": "XRF_10"
+        }
+      ]
+    },
+    {
+      "ponto_id": 21,
+      "nome_ponto": "Ponto_21",
+      "coordenada_x": 905,
+      "coordenada_y": 852,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "O Zinco aparece em altas intensidades no quadro.\n",
+          "resultado": "Majorit\u00E1rios (Zn), minorit\u00E1rios (Ca, Ba/Ti, Co?, Mn, Fe).\n",
+          "tonalidade": "branco",
+          "diretorio": "C:\\XmlsConvertidos\\guignard\\ponto_21_XRF_11.spt",
+          "nome_tecnica": "XRF_11"
+        }
+      ]
+    },
+    {
+      "ponto_id": 22,
+      "nome_ponto": "Ponto_22",
+      "coordenada_x": 814,
+      "coordenada_y": 832,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "Resultado semelhante ao ponto 11. A tonalidade deve ser devido a pigmento org\u00E2nico.\n",
+          "resultado": "Majorit\u00E1rios (Zn), minorit\u00E1rios (Ca, Ba/Ti, Co?, Mn, Fe).\n",
+          "tonalidade": "rosa",
+          "diretorio": "C:\\XmlsConvertidos\\guignard\\ponto_22_XRF_12.spt",
+          "nome_tecnica": "XRF_12"
+        }
+      ]
+    },
+    {
+      "ponto_id": 23,
+      "nome_ponto": "Ponto_23",
+      "coordenada_x": 653,
+      "coordenada_y": 734,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "O Cd e Ba s\u00E3o muito intensos neste ponto.\n",
+          "resultado": "Majorit\u00E1rios (Cd, Zn, Ba), minorit\u00E1rios (Ca, Mn, Fe).\n",
+          "tonalidade": "amarelo",
+          "diretorio": "C:\\XmlsConvertidos\\guignard\\ponto_23_XRF_13.spt",
+          "nome_tecnica": "XRF_13"
+        }
+      ]
+    },
+    {
+      "ponto_id": 24,
+      "nome_ponto": "Ponto_24",
+      "coordenada_x": 632,
+      "coordenada_y": 603,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "Altas intensidades de Ba e Zn. Tonalidade provavelmente devido ao litopone.\n",
+          "resultado": "Majorit\u00E1rios (Ba, Zn), minorit\u00E1rios (Ca, Co, Mn, Fe).\n",
+          "tonalidade": "branco",
+          "diretorio": "C:\\XmlsConvertidos\\guignard\\ponto_24_XRF_14.spt",
+          "nome_tecnica": "XRF_14"
+        }
+      ]
+    },
+    {
+      "ponto_id": 25,
+      "nome_ponto": "Ponto_25",
+      "coordenada_x": 716,
+      "coordenada_y": 574,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "Esse branco \u00E9 semlhante do ponto 14.\n",
+          "resultado": "Majorit\u00E1rios (Zn, Cd), minorit\u00E1rios (Ca, Co, Ba/Ti, Mn, Fe).\n",
+          "tonalidade": "branco",
+          "diretorio": "C:\\XmlsConvertidos\\guignard\\ponto_25_XRF_15.spt",
+          "nome_tecnica": "XRF_15"
+        }
+      ]
+    },
+    {
+      "ponto_id": 26,
+      "nome_ponto": "Ponto_26",
+      "coordenada_x": 743,
+      "coordenada_y": 539,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "Resultado semelhante do ponto 13.\n",
+          "resultado": "Majorit\u00E1rios (Cd, Zn, Ba), minorit\u00E1rios (Ca, Mn, Fe).\n",
+          "tonalidade": "amarelo",
+          "diretorio": "C:\\XmlsConvertidos\\guignard\\ponto_26_XRF_16.spt",
+          "nome_tecnica": "XRF_16"
+        }
+      ]
+    },
+    {
+      "ponto_id": 27,
+      "nome_ponto": "Ponto_27",
+      "coordenada_x": 0,
+      "coordenada_y": 0,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 0,
+          "tensao": 0,
+          "corrente": 0,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "verde",
+          "diretorio": "",
+          "nome_tecnica": "XRF_17"
+        }
+      ]
+    },
+    {
+      "ponto_id": 28,
+      "nome_ponto": "Ponto_28",
+      "coordenada_x": 1058,
+      "coordenada_y": 638,
+      "tecnicas": [
+        {
+          "$type": "MO",
+          "objetiva": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "vermelho",
+          "imagensEAumentos": [
+            {
+              "diretorio": "",
+              "aumento": 0
+            }
+          ],
+          "nome_tecnica": "MO_1"
+        }
+      ]
+    },
+    {
+      "ponto_id": 29,
+      "nome_ponto": "Ponto_29",
+      "coordenada_x": 1170,
+      "coordenada_y": 698,
+      "tecnicas": [
+        {
+          "$type": "MO",
+          "objetiva": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "rosa",
+          "imagensEAumentos": [
+            {
+              "diretorio": "",
+              "aumento": 0
+            }
+          ],
+          "nome_tecnica": "MO_2"
+        }
+      ]
+    },
+    {
+      "ponto_id": 30,
+      "nome_ponto": "Ponto_30",
+      "coordenada_x": 1210,
+      "coordenada_y": 737,
+      "tecnicas": [
+        {
+          "$type": "MO",
+          "objetiva": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "amarelo",
+          "imagensEAumentos": [
+            {
+              "diretorio": "",
+              "aumento": 0
+            }
+          ],
+          "nome_tecnica": "MO_3"
+        }
+      ]
+    },
+    {
+      "ponto_id": 31,
+      "nome_ponto": "Ponto_31",
+      "coordenada_x": 1114,
+      "coordenada_y": 746,
+      "tecnicas": [
+        {
+          "$type": "MO",
+          "objetiva": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "preto",
+          "imagensEAumentos": [
+            {
+              "diretorio": "",
+              "aumento": 0
+            }
+          ],
+          "nome_tecnica": "MO_4"
+        }
+      ]
+    },
+    {
+      "ponto_id": 32,
+      "nome_ponto": "Ponto_32",
+      "coordenada_x": 974,
+      "coordenada_y": 744,
+      "tecnicas": [
+        {
+          "$type": "MO",
+          "objetiva": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "vermelho",
+          "imagensEAumentos": [
+            {
+              "diretorio": "",
+              "aumento": 0
+            }
+          ],
+          "nome_tecnica": "MO_5"
+        }
+      ]
+    },
+    {
+      "ponto_id": 33,
+      "nome_ponto": "Ponto_33",
+      "coordenada_x": 956,
+      "coordenada_y": 859,
+      "tecnicas": [
+        {
+          "$type": "MO",
+          "objetiva": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "cinza",
+          "imagensEAumentos": [
+            {
+              "diretorio": "",
+              "aumento": 0
+            }
+          ],
+          "nome_tecnica": "MO_6"
+        }
+      ]
+    },
+    {
+      "ponto_id": 34,
+      "nome_ponto": "Ponto_34",
+      "coordenada_x": 429,
+      "coordenada_y": 776,
+      "tecnicas": [
+        {
+          "$type": "MO",
+          "objetiva": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "branco",
+          "imagensEAumentos": [
+            {
+              "diretorio": "",
+              "aumento": 0
+            }
+          ],
+          "nome_tecnica": "MO_7"
+        }
+      ]
+    },
+    {
+      "ponto_id": 35,
+      "nome_ponto": "Ponto_35",
+      "coordenada_x": 516,
+      "coordenada_y": 1032,
+      "tecnicas": [
+        {
+          "$type": "MO",
+          "objetiva": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "restauro",
+          "imagensEAumentos": [
+            {
+              "diretorio": "",
+              "aumento": 0
+            }
+          ],
+          "nome_tecnica": "MO_8"
+        }
+      ]
+    },
+    {
+      "ponto_id": 36,
+      "nome_ponto": "Ponto_36",
+      "coordenada_x": 1137,
+      "coordenada_y": 589,
+      "tecnicas": [
+        {
+          "$type": "MO",
+          "objetiva": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "amarelo",
+          "imagensEAumentos": [
+            {
+              "diretorio": "",
+              "aumento": 0
+            }
+          ],
+          "nome_tecnica": "MO_9"
+        }
+      ]
+    },
+    {
+      "ponto_id": 37,
+      "nome_ponto": "Ponto_37",
+      "coordenada_x": 1332,
+      "coordenada_y": 595,
+      "tecnicas": [
+        {
+          "$type": "MO",
+          "objetiva": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "verde",
+          "imagensEAumentos": [
+            {
+              "diretorio": "",
+              "aumento": 0
+            }
+          ],
+          "nome_tecnica": "MO_10"
+        }
+      ]
+    },
+    {
+      "ponto_id": 38,
+      "nome_ponto": "Ponto_38",
+      "coordenada_x": 904,
+      "coordenada_y": 850,
+      "tecnicas": [
+        {
+          "$type": "MO",
+          "objetiva": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "branco",
+          "imagensEAumentos": [
+            {
+              "diretorio": "",
+              "aumento": 0
+            }
+          ],
+          "nome_tecnica": "MO_11"
+        }
+      ]
+    },
+    {
+      "ponto_id": 39,
+      "nome_ponto": "Ponto_39",
+      "coordenada_x": 812,
+      "coordenada_y": 841,
+      "tecnicas": [
+        {
+          "$type": "MO",
+          "objetiva": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "rosa",
+          "imagensEAumentos": [
+            {
+              "diretorio": "",
+              "aumento": 0
+            }
+          ],
+          "nome_tecnica": "MO_12"
+        }
+      ]
+    },
+    {
+      "ponto_id": 40,
+      "nome_ponto": "Ponto_40",
+      "coordenada_x": 627,
+      "coordenada_y": 730,
+      "tecnicas": [
+        {
+          "$type": "MO",
+          "objetiva": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "amarelo",
+          "imagensEAumentos": [
+            {
+              "diretorio": "",
+              "aumento": 0
+            }
+          ],
+          "nome_tecnica": "MO_13"
+        }
+      ]
+    },
+    {
+      "ponto_id": 41,
+      "nome_ponto": "Ponto_41",
+      "coordenada_x": 501,
+      "coordenada_y": 611,
+      "tecnicas": [
+        {
+          "$type": "MO",
+          "objetiva": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "branco",
+          "imagensEAumentos": [
+            {
+              "diretorio": "",
+              "aumento": 0
+            }
+          ],
+          "nome_tecnica": "MO_14"
+        }
+      ]
+    },
+    {
+      "ponto_id": 42,
+      "nome_ponto": "Ponto_42",
+      "coordenada_x": 709,
+      "coordenada_y": 573,
+      "tecnicas": [
+        {
+          "$type": "MO",
+          "objetiva": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "branco",
+          "imagensEAumentos": [
+            {
+              "diretorio": "",
+              "aumento": 0
+            }
+          ],
+          "nome_tecnica": "MO_15"
+        }
+      ]
+    },
+    {
+      "ponto_id": 43,
+      "nome_ponto": "Ponto_43",
+      "coordenada_x": 736,
+      "coordenada_y": 539,
+      "tecnicas": [
+        {
+          "$type": "MO",
+          "objetiva": 0,
+          "data": "",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "amarelo",
+          "imagensEAumentos": [
+            {
+              "diretorio": "",
+              "aumento": 0
+            }
+          ],
+          "nome_tecnica": "MO_16"
+        }
+      ]
+    },
+    {
+      "ponto_id": 44,
+      "nome_ponto": "Ponto_44",
+      "coordenada_x": 1461,
+      "coordenada_y": 62,
+      "tecnicas": [
+        {
+          "$type": "MO",
+          "objetiva": 0,
+          "data": "2025/01/28",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "assinatura",
+          "imagensEAumentos": [
+            {
+              "diretorio": "C:\\XmlsConvertidos\\guignard\\ponto_44_MO_17_0_0.jpeg",
+              "aumento": 0
+            },
+            {
+              "diretorio": "C:\\XmlsConvertidos\\guignard\\ponto_44_MO_17_0_0_(1).jpeg",
+              "aumento": 0
+            },
+            {
+              "diretorio": "C:\\XmlsConvertidos\\guignard\\ponto_44_MO_17_0_0_(2).jpeg",
+              "aumento": 0
+            }
+          ],
+          "nome_tecnica": "MO_17"
+        }
+      ]
+    }
+  ]
+}

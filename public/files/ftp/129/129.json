@@ -1,0 +1,257 @@
+{
+  "projeto_id": 129,
+  "nome_projeto": "Flamengo",
+  "nome_autor": "Desconhecido",
+  "ano_obra": 0,
+  "tecnica": "Desconhecida",
+  "estilo": "Desconhecido",
+  "equipe": "Lab.Mov",
+  "nome_imagem": "129",
+  "extensao_imagem": ".jpeg",
+  "largura_imagem": 1091,
+  "altura_imagem": 1280,
+  "pontos": [
+    {
+      "ponto_id": 1,
+      "nome_ponto": "Ponto_1",
+      "coordenada_x": 912,
+      "coordenada_y": 852,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 30,
+          "tensao": 40,
+          "corrente": 10,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "2023/11/30",
+          "comentario": "Tonalidade de vermelho mais escura.",
+          "resultado": "Majorit\u00E1rio: Zinco\nMinorit\u00E1rio: C\u00E1lcio, Sel\u00EAnio, Tit\u00E2nio, Ferro?, C\u00E1dmio",
+          "tonalidade": "vermelho",
+          "diretorio": "C:\\Flamengo\\129_ponto_2672_XRF_1.csv",
+          "nome_tecnica": "XRF_1"
+        }
+      ]
+    },
+    {
+      "ponto_id": 2,
+      "nome_ponto": "Ponto_2",
+      "coordenada_x": 446,
+      "coordenada_y": 332,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 30,
+          "tensao": 40,
+          "corrente": 10,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "30/11/2023",
+          "comentario": "",
+          "resultado": "Majorit\u00E1rio: Zinco\nMinorit\u00E1rio: C\u00E1lcio, Ferro?, Tit\u00E2nio?",
+          "tonalidade": "preto",
+          "diretorio": "C:\\Flamengo\\129_ponto_2673_XRF_2.csv",
+          "nome_tecnica": "XRF_2"
+        }
+      ]
+    },
+    {
+      "ponto_id": 3,
+      "nome_ponto": "Ponto_3",
+      "coordenada_x": 326,
+      "coordenada_y": 210,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 30,
+          "tensao": 40,
+          "corrente": 10,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "30/11/2023",
+          "comentario": "Tit\u00E2nio (verificando podemos notar que os picos pr\u00F3coordenada_ximos ao c\u00E1lcio fitam melhor com o elemento b\u00E1rio) ideal que a presen\u00E7a do b\u00E1rio ou do tit\u00E2nio seja verificada de forma mais assertiva usando fit do Pcoordenada_yMCA.",
+          "resultado": "Majorit\u00E1rio: Zinco\nMinorit\u00E1rio: C\u00E1lcio, Tit\u00E2nio, Ferro, Sel\u00EAnio",
+          "tonalidade": "dourado",
+          "diretorio": "C:\\Flamengo\\129_ponto_2674_XRF_3.csv",
+          "nome_tecnica": "XRF_3"
+        }
+      ]
+    },
+    {
+      "ponto_id": 4,
+      "nome_ponto": "Ponto_4",
+      "coordenada_x": 242,
+      "coordenada_y": 292,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 30,
+          "tensao": 40,
+          "corrente": 10,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "30/11/2023",
+          "comentario": "",
+          "resultado": "Majorit\u00E1rio: Zinco\nMinorit\u00E1rio: C\u00E1lcio, Ferro.",
+          "tonalidade": "preto",
+          "diretorio": "C:\\Flamengo\\129_ponto_2675_XRF_4.csv",
+          "nome_tecnica": "XRF_4"
+        }
+      ]
+    },
+    {
+      "ponto_id": 5,
+      "nome_ponto": "Ponto_5",
+      "coordenada_x": 548,
+      "coordenada_y": 308,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 30,
+          "tensao": 40,
+          "corrente": 10,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "30/11/2023",
+          "comentario": "",
+          "resultado": "Majorit\u00E1rio:Zinco\nMinorit\u00E1rio: Ferro, C\u00E1lcio, B\u00E1rio e Sel\u00EAnio",
+          "tonalidade": "dourado",
+          "diretorio": "C:\\Flamengo\\129_ponto_2676_XRF_5.csv",
+          "nome_tecnica": "XRF_5"
+        }
+      ]
+    },
+    {
+      "ponto_id": 6,
+      "nome_ponto": "Ponto_6",
+      "coordenada_x": 658,
+      "coordenada_y": 484,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 30,
+          "tensao": 40,
+          "corrente": 10,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "30/11/2023",
+          "comentario": "tonalidade de vermelho mais escuro.",
+          "resultado": "Majorit\u00E1rio: Zinco\nMinorit\u00E1rio: B\u00E1rio, Sel\u00EAnio, Ferro?, C\u00E1lcio, C\u00E1dmio",
+          "tonalidade": "vermelho",
+          "diretorio": "C:\\Flamengo\\129_ponto_2677_XRF_6.csv",
+          "nome_tecnica": "XRF_6"
+        }
+      ]
+    },
+    {
+      "ponto_id": 7,
+      "nome_ponto": "Ponto_7",
+      "coordenada_x": 342,
+      "coordenada_y": 666,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 30,
+          "tensao": 40,
+          "corrente": 10,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "30/11/2023",
+          "comentario": "Tonalidade de vermelho mais claro.\nVerificar presen\u00E7a ou n\u00E3o do ferro usando o fit do Pcoordenada_yMCA.",
+          "resultado": "Majorit\u00E1rio: Zinco\nMinorit\u00E1rio: C\u00E1lcio, B\u00E1rio, Sel\u00EAnio, C\u00E1dmio, Ferro?",
+          "tonalidade": "vermelho",
+          "diretorio": "C:\\Flamengo\\129_ponto_2678_XRF_7.csv",
+          "nome_tecnica": "XRF_7"
+        }
+      ]
+    },
+    {
+      "ponto_id": 8,
+      "nome_ponto": "Ponto_8",
+      "coordenada_x": 306,
+      "coordenada_y": 370,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 30,
+          "tensao": 40,
+          "corrente": 10,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "30/11/2023",
+          "comentario": "Tonalidade de vermelho mais claro.",
+          "resultado": "Majorit\u00E1rio: Zinco\nMinorit\u00E1rio: C\u00E1lcio, B\u00E1rio, Ferro?, Sel\u00EAnio, C\u00E1dmio",
+          "tonalidade": "vermelho",
+          "diretorio": "C:\\Flamengo\\129_ponto_2679_XRF_8.csv",
+          "nome_tecnica": "XRF_8"
+        }
+      ]
+    },
+    {
+      "ponto_id": 9,
+      "nome_ponto": "Ponto_9",
+      "coordenada_x": 546,
+      "coordenada_y": 806,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 30,
+          "tensao": 40,
+          "corrente": 10,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "30/11/2023",
+          "comentario": "",
+          "resultado": "Majorit\u00E1rio: Zinco\nMinorit\u00E1rio: C\u00E1lcio, B\u00E1rio, Ferro?",
+          "tonalidade": "preto",
+          "diretorio": "C:\\Flamengo\\129_ponto_2680_XRF_9.csv",
+          "nome_tecnica": "XRF_9"
+        }
+      ]
+    },
+    {
+      "ponto_id": 10,
+      "nome_ponto": "Ponto_10",
+      "coordenada_x": 508,
+      "coordenada_y": 1240,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 30,
+          "tensao": 40,
+          "corrente": 10,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "30/11/2023",
+          "comentario": "",
+          "resultado": "Majorit\u00E1rio: Zinco\nMinorit\u00E1rio: C\u00E1lcio, B\u00E1rio, Chumbo",
+          "tonalidade": "branco",
+          "diretorio": "C:\\Flamengo\\129_ponto_2681_XRF_10.csv",
+          "nome_tecnica": "XRF_10"
+        }
+      ]
+    },
+    {
+      "ponto_id": 11,
+      "nome_ponto": "Ponto_11",
+      "coordenada_x": 668,
+      "coordenada_y": 1186,
+      "tecnicas": [
+        {
+          "$type": "XRF",
+          "tempo": 30,
+          "tensao": 40,
+          "corrente": 10,
+          "calibracao": 0,
+          "colimador": 0,
+          "data": "30/11/2023",
+          "comentario": "",
+          "resultado": "Majorit\u00E1rio: Zinco\nMinorit\u00E1rio: C\u00E1lcio, Chumbo e Ferro?",
+          "tonalidade": "branco",
+          "diretorio": "C:\\Flamengo\\129_ponto_2682_XRF_11.csv",
+          "nome_tecnica": "XRF_11"
+        }
+      ]
+    }
+  ]
+}

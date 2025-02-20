@@ -331,6 +331,9 @@ a {
   .img{
     max-width: none;
   }
+  .textContainer{
+    width: 70%;
+  }
 }
 
 @media (max-width: 1024px) {

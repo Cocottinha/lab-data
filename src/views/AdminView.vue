@@ -190,12 +190,13 @@ function formatDateToBrazilian(dateString) {
           </div>
 
           
-          <div>
-          </div>
+          <label>
+            ID: {{  item.projeto_id}}
+          </label>
 
           <button type="submit">Atualizar</button>
       </form>
-      <hr>
+      
     </div>
   </div>
 
@@ -347,32 +348,36 @@ button:disabled {
   gap: 35px;
   padding-left: 0px;
   margin-bottom: 50px;
-
+  place-items: center;
 }
 
 .imgCard {
-  width: 200px;
-  height: 210px;
+  width: 300px;
+  height: 230px;
   object-fit: cover;
   padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
+  padding-bottom: 10px;
   float: left;
   border-radius: 20px;
 }
 
 .postItem {
-  width: 100%;
-  height: 220px;
-  border-radius: 0px;
-  
+  width: 60%;
+  height: 230px;
+  border-radius: 20px;
+  place-items: center;
+  -webkit-box-shadow: 3px 3px 9px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 3px 3px 9px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 3px 9px 1px rgba(0, 0, 0, 0.5);
 }
 
 .info {
   padding-left: 5px;
   margin-bottom: 5px;
   padding-right: 20px;
-  margin-top: 5px;
+  margin-top: 10px;
 
   font-size: 14px;
   display: grid;
@@ -382,7 +387,7 @@ button:disabled {
   button{
     width: 100%;
     height: 30px;
-    margin: 5px;
+    margin: 8px 0px 0px 0px;
   }
 
   .data{
@@ -390,7 +395,7 @@ button:disabled {
   }
 
   label {
-    text-align: left;
+    text-align: right;
     padding-top: 15px;
   }
 

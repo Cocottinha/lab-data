@@ -52,13 +52,18 @@ const router = createRouter({
 // Global navigation guard
 router.beforeEach((to, from, next) => {
   const authToken = localStorage.getItem('auth-token');
-
+  const userType = localStorage.getItem('user-type');
   // If the user is trying to access a protected route
-  const protectedRoutes = ['Posts', 'Post', 'Grafico', 'Image']; // Add your protected route names here
+  const protectedRoutes = ['Posts', 'Post', 'Grafico', 'Image', 'Admin']; // Add your protected route names here
   if (protectedRoutes.includes(to.name) && !authToken) {
     // Redirect to login if not authenticated
     next({ name: 'Login' });
-  } else {
+  }
+  else if (to.name === 'Admin' && userType !== 'admin') {
+    alert('Acesso negado! Você não tem permissão para acessar esta página.');
+    next({ name: 'Home' }); // Redirect unauthorized users to home
+  }  
+  else {
     next(); // Allow the route
   }
 });

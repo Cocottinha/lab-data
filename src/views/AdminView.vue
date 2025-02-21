@@ -76,6 +76,36 @@ const prevPage = () => {
   }
 };
 
+const updatePost = async (item) => {
+  try {
+    const response = await axios.put(
+      `${process.env.VUE_APP_APIPROJETOS}/${item.projeto_id}`,
+      {
+        nome_projeto: item.nome_projeto,
+        nome_autor: item.nome_autor,
+        ano_obra: item.ano_obra,
+        estilo: item.estilo,
+        tecnica: item.tecnica,
+        equipe: item.equipe,
+      },
+      {
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json; charset=utf-8',
+          'Authorization': `Bearer ${localStorage.getItem("auth-token")}`,
+        },
+      }
+    );
+
+    if (response.status === 200) {
+      alert('Projeto atualizado com sucesso!');
+    }
+  } catch (error) {
+    console.error('Erro ao atualizar projeto:', error);
+    alert('Erro ao atualizar projeto. Tente novamente.');
+  }
+};
+
 onMounted(() => {
   getPosts();
 });
@@ -107,23 +137,23 @@ function formatDateToBrazilian(dateString) {
         <div class="ordenar">
           <div class="vrau">
             <label>Ordernar por:</label>
-          <select v-model="sortOption" @change="searchPosts">
-            <option value="">Nenhum</option>
-            <option value="date_asc">Data (Antiga → Nova)</option>
-            <option value="date_desc">Data (Nova → Antiga)</option>
-            <option value="name_asc">Nome (A → Z)</option>
-            <option value="name_desc">Nome (Z → A)</option>
-          </select>
+            <select v-model="sortOption" @change="searchPosts">
+              <option value="">Nenhum</option>
+              <option value="date_asc">Data (Antiga → Nova)</option>
+              <option value="date_desc">Data (Nova → Antiga)</option>
+              <option value="name_asc">Nome (A → Z)</option>
+              <option value="name_desc">Nome (Z → A)</option>
+            </select>
           </div>
           <div class="vrau">
             <label>Itens por página:</label>
-          <select v-model="perPage">
-            <option :value="5">5</option>
-            <option :value="10">10</option>
-            <option :value="15">15</option>
-            <option :value="30">30</option>
-          </select>
-          </div>     
+            <select v-model="perPage">
+              <option :value="10">10</option>
+              <option :value="15">15</option>
+              <option :value="30">30</option>
+              <option :value="50">50</option>
+            </select>
+          </div>
         </div>
       </div>
     </div>
@@ -131,16 +161,41 @@ function formatDateToBrazilian(dateString) {
 
   <div v-if="isLoading" class="loading">Loading...</div>
   <div v-else class="grid">
-    <div class="postItem" v-for="item in posts" :key="item.projeto_id"
-      @click="$router.push(`/post/${item.projeto_id}`)">
+    <div class="postItem" v-for="item in posts" :key="item.projeto_id">
       <img v-if="item.imageExists" :src="`/files/ftp/${item.projeto_id}/${item.nome_imagem}${item.extensao_imagem}`"
         width="80%" height="75%" class="imgCard" :title="`${item.nome_projeto}`" />
       <img v-else src="/files/notfound.png" width="80%" height="75%" class="imgCard" />
-      <div class="info">
-        <h2>{{ item.nome_projeto }}</h2>
-        <p>{{ item.nome_autor }}</p>
-        <p>{{ formatDateToBrazilian(item.created_at) }}</p>
-      </div>
+      <form @submit.prevent="updatePost(item)" class="info">
+          <label for="nome_projeto">Nome Obra:</label>
+          <input type="text" v-model="item.nome_projeto">
+
+          <label for="nome_autor">Nome Autor:</label>
+          <input type="text" v-model="item.nome_autor">
+
+          <label for="ano_obra">Ano:</label>
+          <input type="text" v-model="item.ano_obra">
+
+          <label for="estilo">Estilo:</label>
+          <input type="text" v-model="item.estilo">
+          
+
+          <label for="tecnica">Técnica:</label>
+          <input type="text" v-model="item.tecnica">
+
+          <label for="equipe">Equipe:</label>
+          <input type="text" v-model="item.equipe">
+          <label>Data: </label>
+          <div class="data">
+            {{ formatDateToBrazilian(item.created_at) }}
+          </div>
+
+          
+          <div>
+          </div>
+
+          <button type="submit">Atualizar</button>
+      </form>
+      <hr>
     </div>
   </div>
 
@@ -162,18 +217,22 @@ $bgColor: rgb(250 250 250);
   justify-content: center;
   gap: 10px;
 }
-.vrau{
+
+.vrau {
   overflow: visible;
-    white-space: wrap;
-    label{
-      padding: 5px;
-    }
+  white-space: wrap;
+
+  label {
+    padding: 5px;
+  }
 }
-.ordenar{
+
+.ordenar {
   gap: 10px;
   display: flex;
   justify-content: center;
 }
+
 .tabela {
   label {
     padding: 5px;
@@ -183,6 +242,10 @@ $bgColor: rgb(250 250 250);
   display: flex;
   flex-direction: row;
   gap: 10px;
+}
+hr{
+  margin-top: 30px;
+  margin-bottom: 0px;
 }
 
 .search-bar {
@@ -279,85 +342,69 @@ button:disabled {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   margin-top: 4%;
-  gap: 50px;
+  gap: 35px;
   padding-left: 0px;
   margin-bottom: 50px;
-  place-items: center;
+
 }
 
 .imgCard {
-  width: 320px;
+  width: 200px;
+  height: 210px;
   object-fit: cover;
-  border-radius: 10px 10px 0 0;
   padding-top: 10px;
   padding-left: 10px;
   padding-right: 10px;
+  float: left;
+  border-radius: 20px;
 }
 
 .postItem {
-  width: 320px;
-  height: 400px;
-  cursor: pointer;
-  background-color: $bgColor;
-  // background-color: aqua;
-  transition: transform 0.3s;
+  width: 100%;
+  height: 220px;
   border-radius: 0px;
-  -webkit-box-shadow: 3px 3px 9px 1px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 3px 3px 9px 1px rgba(0, 0, 0, 0.5);
-  box-shadow: 3px 3px 9px 1px rgba(0, 0, 0, 0.5);
+  
 }
 
 .info {
   padding-left: 5px;
   margin-bottom: 5px;
   padding-right: 20px;
+  margin-top: 5px;
 
-  h2 {
-    text-align: left;
-    padding: 8px 0 5px 10px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    max-width: 300px;
+  font-size: 14px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+
+  button{
+    width: 100%;
+    height: 30px;
+    margin: 5px;
   }
 
-  p {
-    text-align: left;
-    padding-left: 11px;
-    padding-bottom: 0;
+  .data{
+    margin-top: 15px;
   }
+
+  label {
+    text-align: left;
+    padding-top: 15px;
+  }
+
+  input {
+    font-size: 14px;
+    padding: 5px;
+    margin-top: 10px;
+    border: 0.1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  gap: 15px;
 }
 
-.postItem:hover {
-  transform: scale(1.1);
-  background: -webkit-linear-gradient(360deg, var(--labcolor), #00f0ff);
-  color: white;
-
-  p {
-    color: white;
-  }
-
-  .info {
-    padding-left: 5px;
-    margin-bottom: 5px;
-    padding-right: 20px;
-
-    h2 {
-      text-align: left;
-      padding: 8px 0 5px 10px;
-      white-space: wrap;
-      overflow: auto;
-      text-overflow: inherit;
-      overflow-wrap: break-word;
-    }
-
-    p {
-      visibility: hidden;
-    }
-  }
-}
 
 @media (max-width: 1700px) {
   .grid {
@@ -386,58 +433,73 @@ button:disabled {
 }
 
 @media (max-width: 616px) {
-  .ordenar{
+  .ordenar {
     flex-direction: column;
   }
 }
-@media (max-width: 540px){
+
+@media (max-width: 540px) {
   .tabela {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 320px;
-}
-.vrau{
-  max-width: 320px;
-}
-.ordenar{
-  max-width: 320px;
-}
-.search-bar{
-  justify-content: center;
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 320px;
+  }
+
+  .vrau {
+    max-width: 320px;
+  }
+
+  .ordenar {
+    max-width: 320px;
+  }
+
+  .search-bar {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 420px) {
   .imgCard {
     width: 260px;
   }
-  label{
+
+  label {
     padding: 0px;
   }
+
   .search-bar {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    select, input, button{
+
+    select,
+    input,
+    button {
       width: 212px;
     }
   }
-  .vrau{
+
+  .vrau {
     width: 212px;
   }
-.pesquisa{
-  flex-direction: column;
-  input{
-    width: 212px;
+
+  .pesquisa {
+    flex-direction: column;
+
+    input {
+      width: 212px;
+    }
+
+    button {
+      width: 212px;
+    }
   }
-  button{
-    width: 212px;
+
+  .tabela {
+    padding: 0px;
   }
-}
-.tabela{
-  padding: 0px;
-}
+
   .postItem {
     width: 260px;
   }

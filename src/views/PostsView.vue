@@ -31,6 +31,7 @@ const getPosts = async (page = 1, query = '', sort = '') => {
           'Accept': 'application/json',
           'Content-Type': 'application/json; charset=utf-8',
           'Authorization': `Bearer ${localStorage.getItem("auth-token")}`,
+          'Access-Control-Allow-Origin': '*',
         }
       }
     );
@@ -39,7 +40,8 @@ const getPosts = async (page = 1, query = '', sort = '') => {
       throw new Error('Failed to fetch posts');
     }
 
-    posts.value = response.data.Dados.data;
+    posts.value = response.data.Dados;
+    console.log(response.data.Dados.data);
     currentPage.value = response.data.Dados.current_page;
     lastPage.value = response.data.Dados.last_page;
 

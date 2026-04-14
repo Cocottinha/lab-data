@@ -42,8 +42,9 @@ export default {
           email: this.username,
           password: this.password,
         });
-
+        console.log("teste", response);
         if (response.data.Sucesso) {
+          console.log(response.data);
           const token = response.data.Dados.token;
           const name = response.data.Dados.nome;
           const type = response.data.Dados.type;

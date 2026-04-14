@@ -13,6 +13,7 @@ export default {
     const filteredPosts = ref([]);
     const selectedOption = ref('Todas');
     const selectedPonto = ref(null);
+    const selectedAnalise = ref(null);
     const isTecnicaListVisible = ref(false);
     const route = useRoute();
     const isLoading = ref(true);
@@ -23,10 +24,12 @@ export default {
           headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json; charset=utf-8',
-            'Authorization': `Bearer ${localStorage.getItem('auth-token')}`
+            'Authorization': `Bearer ${localStorage.getItem('auth-token')}`,
+            'Access-Control-Allow-Origin': '*',
           }
         });
         post.value = response.data;
+
       } catch (error) {
         console.error('Error fetching posts:', error);
       } finally {
@@ -48,6 +51,11 @@ export default {
         }
       }, 0);
     };
+    const handleAnaliseClick = (analiseId) => {
+      selectedAnalise.value = analiseId;
+      
+      
+    };
 
     const handleFilteredPostsChange = (newFilteredPosts) => {
       filteredPosts.value = newFilteredPosts;
@@ -63,10 +71,12 @@ export default {
       filteredPosts,
       selectedOption,
       selectedPonto,
+      selectedAnalise,
       isTecnicaListVisible,
       handlePontoClick,
       handleFilteredPostsChange,
       handleSelectChange,
+      handleAnaliseClick,
       isLoading
     };
   }
@@ -86,7 +96,7 @@ export default {
       </div>
 
       <div class="textContainer">
-        <h1 class="title">{{ post.nome_projeto }}</h1>
+        <h1 class="title">{{post.nome_projeto}}</h1>
         <div class="detail">
           <div class="detailText">
             <span class="detailTitle">Autor:</span>
@@ -138,9 +148,47 @@ export default {
                 </ul>
               </div>
             </div>
-
           </div>
         </div>
+        <div class="contTop">
+          <div class="cont">
+            <div class="row">
+              <h2>Análises:</h2>
+              <div class="column">
+                <ul>
+                  <template v-for="tipo in post.tipo_analises" :key="tipo.id">
+
+                    <li v-for="item in tipo.analises" 
+                    :key="item.id_analise" @click="handleAnaliseClick(item.id_analise)"
+                    :class="{ selected: selectedAnalise === item.id_analise }">
+                    
+                      {{ item.nome }}
+
+                    </li>
+                  </template>
+                </ul>
+              </div>
+            </div>
+            <!-- <div class="row" id="hide" v-show="isTecnicaListVisible">
+              <h2>Arquivos:</h2>
+              <div class="column">
+                <ul>
+                  <template
+                    v-for="(tecnica, index) in post.pontos.find(ponto => ponto.ponto_id === selectedPonto)?.tecnicas || []">
+                    <router-link :key="index" v-if="tecnica.nome_tecnica.startsWith('MO')"
+                      :to="`/imagem/${post.projeto_id}-${tecnica.nome_tecnica}`" target="_blank">
+                      <li>{{ tecnica.nome_tecnica }}</li>
+                    </router-link>
+                    <router-link :key="tecnica"
+                      v-else-if="tecnica.nome_tecnica.startsWith('FTIR') || tecnica.nome_tecnica.startsWith('XRF') || selectedOption === 'Todas'"
+                      :to="`/grafico/${post.projeto_id}-${tecnica.nome_tecnica}`" target="_blank">
+                      <li>{{ tecnica.nome_tecnica }}</li>
+                    </router-link>
+                  </template>
+                </ul>
+              </div>
+            </div> -->
+          </div></div>
       </div>
     </div>
   </div>
@@ -305,8 +353,6 @@ a {
   .Post {
     width: 1280px;
   }
-
-  .imgContainer {}
 }
 
 @media (max-width: 1536px) {
@@ -314,7 +360,6 @@ a {
     width: 1200px;
   }
 
-  .imgContainer {}
 }
 
 @media (max-width: 1367px) {

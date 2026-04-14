@@ -9,7 +9,7 @@ const lastPage = ref(1);
 const isLoading = ref(true);
 const searchQuery = ref('');
 const sortOption = ref('');
-const perPage = ref(10); // Default items per page
+const perPage = ref(10);
 const router = useRouter();
 
 const checkImageExists = async (imageUrl) => {

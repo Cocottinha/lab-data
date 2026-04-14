@@ -8,6 +8,7 @@
             <input type="text" id="email" placeholder="Email" v-model="email" required />
             <input type="password" id="password" placeholder="Senha" v-model="password" required />
             <input type="password" id="c_password" placeholder="Confirme a Senha" v-model="cPassword" required />
+            <input type="text" id="user_type" placeholder="Tipo de Usuário" v-model="usertype" required />
           </div>
           <button type="submit">Criar</button>
   
@@ -29,6 +30,7 @@
         email: '',
         password: '',
         cPassword: '',
+        usertype: '',
         errorMessage: '',
       };
     },
@@ -48,12 +50,13 @@
             email: this.email.toString(),
             password: this.password.toString(),
             c_password: this.cPassword.toString(),
+            user_type: this.usertype,
           },{
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json; charset=utf-8',
         }});
-          
+          console.log(response);
           if (response.data.Sucesso) {
             // Armazena o token e redireciona
             const token = response.data.Dados.token;

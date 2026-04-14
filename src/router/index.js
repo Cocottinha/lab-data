@@ -28,6 +28,11 @@ const routes = [
     component: () => import('../views/ImagemView.vue'),
   },
   {
+    path: '/analise/:id',
+    name: 'Analise',
+    component: () => import('../views/AnaliseView.vue'),
+  },
+  {
     path: '/admin',
     name: 'Admin',
     component: () => import('../views/AdminView.vue'),

@@ -1,12 +1,12 @@
 <script>
-import Analise from '@/components/Analise.vue';
 import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 import axios from 'axios';
+import AnaliseProjeto from '@/components/AnaliseProjeto.vue';
 
 export default {
     components:{
-        Analise
+        AnaliseProjeto
     },
     props:['params'],
     setup(){
@@ -101,7 +101,7 @@ export default {
         <div v-if="objetoAnalise">
             <h1>{{idPonto}}_{{ objetoAnalise.nome_tecnica }}</h1>
             <br>
-            <ImagemMO v-if="tecnica.startsWith('MO') && idProjeto" :idProjeto="idProjeto" :attributes="atributos"/>
+            <AnaliseProjeto v-if="tecnica.startsWith('MO') && idProjeto" :idProjeto="idProjeto" :attributes="atributos"/>
         </div>
     </div>
 </template>

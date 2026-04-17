@@ -171,32 +171,13 @@ export default {
                     :to="`/analise/${post.projeto_id}-${item.nome}-${tipo.Id_tipo_analise}-${item.id_analise}`" target="_blank">
                     <li>{{ item.nome }}</li>
                       
-
                   </router-link >
                   </template>
                 </ul>
               </div>
             </div>
-            <!-- <div class="row" id="hide" v-show="isTecnicaListVisible">
-              <h2>Arquivos:</h2>
-              <div class="column">
-                <ul>
-                  <template
-                    v-for="(tecnica, index) in post.pontos.find(ponto => ponto.ponto_id === selectedPonto)?.tecnicas || []">
-                    <router-link :key="index" v-if="tecnica.nome_tecnica.startsWith('MO')"
-                      :to="`/imagem/${post.projeto_id}-${tecnica.nome_tecnica}`" target="_blank">
-                      <li>{{ tecnica.nome_tecnica }}</li>
-                    </router-link>
-                    <router-link :key="tecnica"
-                      v-else-if="tecnica.nome_tecnica.startsWith('FTIR') || tecnica.nome_tecnica.startsWith('XRF') || selectedOption === 'Todas'"
-                      :to="`/grafico/${post.projeto_id}-${tecnica.nome_tecnica}`" target="_blank">
-                      <li>{{ tecnica.nome_tecnica }}</li>
-                    </router-link>
-                  </template>
-                </ul>
-              </div>
-            </div> -->
-          </div></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

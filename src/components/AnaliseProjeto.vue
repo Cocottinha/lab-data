@@ -64,18 +64,17 @@ export default {
         <div class="desc">
             <h2>Parâmetros:</h2>
             <p><strong>Data:</strong> {{ formatDateToBrazilian(atributos?.data) }}</p>
-            <p><strong>Tonalidade:</strong> {{ atributos?.tonalidade }}</p>
-            <p><strong>Objetiva:</strong> {{ atributos?.objetiva }}</p>
-            <p><strong>Resultado:</strong> {{ atributos?.resultado }}</p>
-            <p><strong>Comentário:</strong> {{ atributos?.comentario }}</p>
+            <p><strong>Nome:</strong> {{ atributos?.nome }}</p>
+            <p><strong>Descrição:</strong> {{ atributos?.descricao }}</p>
+            <p><strong>Parâmetros:</strong> {{ atributos?.parametros }}</p>
         </div>
 
 <div class="grid">
-    <div v-for="(item, index) in atributos?.imagensEAumentos" :key="index" class="imagens">  
+    <div v-for="(item, index) in atributos?.diretorio" :key="index" class="imagens">  
             <div class="norm">
-                <img :src="`/files/ftp/${idProjeto}/${item?.diretorio}`" alt="Image" class="imagem" @click="openModal(`/files/ftp/${idProjeto}/${item?.diretorio}`)"/>
+                <img :src="`/files/ftp/${idProjeto}/${item}`" alt="Image" class="imagem" @click="openModal(`/files/ftp/${idProjeto}/${item}`)"/>
                 <div id="myResult" class="img-zoom-result"></div>
-                <p><strong>Aumento:</strong> {{ item?.aumento }}</p> 
+                {{item}}              
             </div>
                                 
         </div>

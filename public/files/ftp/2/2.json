@@ -1,0 +1,56 @@
+{
+  "projeto_id": 2,
+  "nome_projeto": "teste2",
+  "nome_autor": "teste2",
+  "ano_obra": 0,
+  "tecnica": "teste2",
+  "estilo": "teste2",
+  "equipe": "Lab.Mov",
+  "nome_imagem": "2",
+  "extensao_imagem": ".jpeg",
+  "largura_imagem": 2528,
+  "altura_imagem": 3507,
+  "pontos": [
+    {
+      "ponto_id": 1,
+      "nome_ponto": "Ponto_1",
+      "coordenada_x": 739,
+      "coordenada_y": 1604,
+      "tecnicas": []
+    },
+    {
+      "ponto_id": 2,
+      "nome_ponto": "Ponto_2",
+      "coordenada_x": 1439,
+      "coordenada_y": 1784,
+      "tecnicas": []
+    },
+    {
+      "ponto_id": 3,
+      "nome_ponto": "Ponto_3",
+      "coordenada_x": 1604,
+      "coordenada_y": 994,
+      "tecnicas": []
+    }
+  ],
+  "tipo_analises": [
+    {
+      "Id_tipo_analise": 1,
+      "analises": [
+        {
+          "$type": "Radiografia",
+          "id_radiografia": 1,
+          "nome": "dasdasda",
+          "descricao": "dasda",
+          "parametros": "asdasd",
+          "diretorio": [
+            "2_radiografia_1_dasdasda_1.png",
+            "2_radiografia_1_dasdasda_2.png"
+          ],
+          "data": "16-04-2026",
+          "id_analise": 1
+        }
+      ]
+    }
+  ]
+}

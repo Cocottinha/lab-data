@@ -4,16 +4,18 @@ import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 import PontoAnalise from '@/components/PontoAnalise.vue';
 import ComboBoxTecnicas from '@/components/ComboBoxTecnicas.vue'; // Assuming ComboBoxTecnicas.vue exists
+import ComboBoxAnalises from '@/components/ComboBoxAnalises.vue';
 
 export default {
   name: 'PostView',
-  components: { PontoAnalise, ComboBoxTecnicas },
+  components: { PontoAnalise, ComboBoxTecnicas, ComboBoxAnalises },
   setup() {
     const post = ref({});
     const filteredPosts = ref([]);
     const selectedOption = ref('Todas');
     const selectedPonto = ref(null);
     const selectedAnalise = ref(null);
+    const filteredAnalises = ref([]);
     const isTecnicaListVisible = ref(false);
     const route = useRoute();
     const isLoading = ref(true);
@@ -29,7 +31,7 @@ export default {
           }
         });
         post.value = response.data;
-
+        filteredAnalises.value = response.data.tipo_analises;
       } catch (error) {
         console.error('Error fetching posts:', error);
       } finally {
@@ -56,7 +58,9 @@ export default {
       
       
     };
-
+    const handleFilteredAnalisesChange = (newFilteredAnalises) => {
+      filteredAnalises.value = newFilteredAnalises;
+    };
     const handleFilteredPostsChange = (newFilteredPosts) => {
       filteredPosts.value = newFilteredPosts;
       isTecnicaListVisible.value = false;
@@ -68,6 +72,8 @@ export default {
 
     return {
       post,
+      filteredAnalises, // Retorne para o template
+      handleFilteredAnalisesChange,
       filteredPosts,
       selectedOption,
       selectedPonto,
@@ -151,20 +157,22 @@ export default {
           </div>
         </div>
         <div class="contTop">
+          <ComboBoxAnalises :tipoAnalises="post.tipo_analises || []" @setSortedAnalises="handleFilteredAnalisesChange"/>
           <div class="cont">
             <div class="row">
               <h2>Análises:</h2>
               <div class="column">
                 <ul>
-                  <template v-for="tipo in post.tipo_analises" :key="tipo.id">
-
-                    <li v-for="item in tipo.analises" 
-                    :key="item.id_analise" @click="handleAnaliseClick(item.id_analise)"
-                    :class="{ selected: selectedAnalise === item.id_analise }">
+                  <template v-for="tipo in filteredAnalises" :key="tipo.Id_tipo_analise">
                     
-                      {{ item.nome }}
+                    <router-link v-for="item in tipo.analises" 
+                    :key="item.id_analise" @click="handleAnaliseClick(item.id_analise)"
+                    :class="{ selected: selectedAnalise === item.id_analise }"
+                    :to="`/analise/${post.projeto_id}-${item.nome}-${tipo.Id_tipo_analise}-${item.id_analise}`" target="_blank">
+                    <li>{{ item.nome }}</li>
+                      
 
-                    </li>
+                  </router-link >
                   </template>
                 </ul>
               </div>

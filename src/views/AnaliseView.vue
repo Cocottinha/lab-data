@@ -10,10 +10,8 @@ export default {
     },
     props:['params'],
     setup(){
-        const tecnica = ref('');
         const post = ref(null);
         const objetoAnalise = ref(null);
-        const idPonto = ref(null);
         const atributos = ref(null);
         const filePath = ref([]);
         const isLoading = ref(true)
@@ -23,7 +21,7 @@ export default {
 
         const getParams = async () => {
             const tecnicaParams = route.params.id.split('-');
-            tecnica.value = tecnicaParams[1];
+            console.log(tecnicaParams);
             return tecnicaParams;
         };
 
@@ -50,25 +48,11 @@ export default {
             idProjeto.value = params[0];
             post.value = await getPost(params[0]);
             if (post.value && post.value.status === 200) {
-                const Pontos = post.value.data.pontos;
-                Pontos.forEach((ponto) => {
-                    ponto.tecnicas.forEach((analise) => {
-                        if (analise.nome_tecnica === tecnica.value) {
-                            objetoAnalise.value = analise;
-                            idPonto.value = ponto.nome_ponto;
-                            atributos.value = analise;
-                        }
-                    });
-                });
-
+                
+                objetoAnalise.value = post.value.data.tipo_analises.find(tipo => tipo.Id_tipo_analise === parseInt(params[2]))
+                    .analises.find(analise => analise.id_analise === parseInt(params[3]));
                 if (objetoAnalise.value) {
-                    const a = objetoAnalise.value.imagensEAumentos;
-                    a.forEach((t) => {
-                        if(t.diretorio !== null){
-                            filePath.value.push(`/files/ftp/${params[0]}/${t.diretorio}`);
-                        }
-                    })
-                    console.log(filePath)       
+                         console.log("Objeto de análise encontrado:", objetoAnalise.value);
                 }
             } else {
                 console.log("Impossível recuperar os dados!");
@@ -81,9 +65,7 @@ export default {
 
         return {
             objetoAnalise,
-            tecnica,
             filePath,
-            idPonto,
             atributos,
             isLoading,
             idProjeto
@@ -99,9 +81,9 @@ export default {
     </div>
     <div v-else>
         <div v-if="objetoAnalise">
-            <h1>{{idPonto}}_{{ objetoAnalise.nome_tecnica }}</h1>
+            <h1>{{item}}</h1>
             <br>
-            <AnaliseProjeto v-if="tecnica.startsWith('MO') && idProjeto" :idProjeto="idProjeto" :attributes="atributos"/>
+            <AnaliseProjeto :idProjeto="idProjeto" :attributes="objetoAnalise"/>
         </div>
     </div>
 </template>

@@ -1,0 +1,71 @@
+{
+  "projeto_id": 1,
+  "nome_projeto": "teste",
+  "nome_autor": "teste",
+  "ano_obra": 1998,
+  "tecnica": "teste",
+  "estilo": "teste",
+  "equipe": "Lab.Mov",
+  "nome_imagem": "1",
+  "extensao_imagem": ".jpg",
+  "largura_imagem": 800,
+  "altura_imagem": 800,
+  "pontos": [
+    {
+      "ponto_id": 1,
+      "nome_ponto": "Ponto_1",
+      "coordenada_x": 262,
+      "coordenada_y": 190,
+      "tecnicas": []
+    },
+    {
+      "ponto_id": 2,
+      "nome_ponto": "Ponto_2",
+      "coordenada_x": 382,
+      "coordenada_y": 295,
+      "tecnicas": [
+        {
+          "$type": "MO",
+          "objetiva": 10,
+          "data": "2026/04/10",
+          "comentario": "",
+          "resultado": "",
+          "tonalidade": "azul",
+          "imagensEAumentos": [
+            {
+              "diretorio": "1_ponto_2_MO_1_10_10.jpeg",
+              "aumento": 10
+            }
+          ],
+          "nome_tecnica": "MO_1"
+        }
+      ]
+    },
+    {
+      "ponto_id": 3,
+      "nome_ponto": "Ponto_3",
+      "coordenada_x": 201,
+      "coordenada_y": 416,
+      "tecnicas": []
+    }
+  ],
+  "tipo_analises": [
+    {
+      "Id_tipo_analise": 1,
+      "analises": [
+        {
+          "$type": "Radiografia",
+          "id_radiografia": 1,
+          "nome": "tew",
+          "descricao": "e",
+          "parametros": "tes",
+          "diretorio": [
+            "1_radiografia_1_tew.jpg"
+          ],
+          "data": "10-04-2026",
+          "id_analise": 1
+        }
+      ]
+    }
+  ]
+}

@@ -167,7 +167,7 @@ export default {
                     
                     <router-link v-for="item in tipo.analises" 
                     :key="item.id_analise" @click="handleAnaliseClick(item.id_analise)"
-                    :class="{ selected: selectedAnalise === item.id_analise }"
+                    
                     :to="`/analise/${post.projeto_id}-${item.nome}-${tipo.Id_tipo_analise}-${item.id_analise}`" target="_blank">
                     <li>{{ item.nome }}</li>
                       

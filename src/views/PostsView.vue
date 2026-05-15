@@ -41,12 +41,12 @@ const getPosts = async (page = 1, query = '', sort = '') => {
     }
 
     posts.value = response.data.Dados;
-    console.log(response.data.Dados.data);
+    console.log(response.data.Dados);
     currentPage.value = response.data.Dados.current_page;
     lastPage.value = response.data.Dados.last_page;
 
     for (const item of posts.value) {
-      const imageUrl = `/files/ftp/${item.projeto_id}/${item.nome_imagem}${item.extensao_imagem}`;
+      const imageUrl = `/files/ftp/${item.projeto_id}/${item.projeto_id}${item.extensao_imagem}`;
       item.imageExists = await checkImageExists(imageUrl);
     }
   } catch (error) {

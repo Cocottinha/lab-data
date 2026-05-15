@@ -27,6 +27,7 @@ export default {
                 idProjeto.value = props.idProjeto;
 
                 atributos.value = props.attributes;
+                console.log("vrau",atributos.value);
 
             } catch (error) {
                 console.log(error)
@@ -72,9 +73,10 @@ export default {
 <div class="grid">
     <div v-for="(item, index) in atributos?.diretorio" :key="index" class="imagens">  
             <div class="norm">
+                
                 <img :src="`/files/ftp/${idProjeto}/${item}`" alt="Image" class="imagem" @click="openModal(`/files/ftp/${idProjeto}/${item}`)"/>
-                <div id="myResult" class="img-zoom-result"></div>
-                {{item}}              
+                <div id="myResult" class="img-zoom-result"></div>  
+                {{ atributos?.elementos[index]}}       
             </div>
                                 
         </div>

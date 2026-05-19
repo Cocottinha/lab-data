@@ -64,7 +64,7 @@ export default {
     <div class="parametros">
         <div class="desc">
             <h2>Parâmetros:</h2>
-            <p><strong>Data:</strong> {{ formatDateToBrazilian(atributos?.data) }}</p>
+            <p><strong>Data:</strong> {{ atributos?.data }}</p>
             <p><strong>Nome:</strong> {{ atributos?.nome }}</p>
             <p><strong>Descrição:</strong> {{ atributos?.descricao }}</p>
             <p><strong>Parâmetros:</strong> {{ atributos?.parametros }}</p>
@@ -76,7 +76,15 @@ export default {
                 
                 <img :src="`/files/ftp/${idProjeto}/${item}`" alt="Image" class="imagem" @click="openModal(`/files/ftp/${idProjeto}/${item}`)"/>
                 <div id="myResult" class="img-zoom-result"></div>  
-                {{ atributos?.elementos[index]}}       
+                <div v-if="atributos?.elementos && atributos.elementos[index]" class="legenda-elemento">
+                    {{ atributos.elementos[index] }}
+                </div>   
+                <div v-if="atributos?.quadrantes && atributos.quadrantes[index]" class="legenda-elemento">
+                    {{ atributos.quadrantes[index] }}
+                </div> 
+                <div v-if="atributos?.filtros && atributos.filtros[index]" class="legenda-elemento">
+                    {{ atributos.filtros[index] }}
+                </div> 
             </div>
                                 
         </div>

@@ -40,10 +40,15 @@ const getPosts = async (page = 1, query = '', sort = '') => {
       throw new Error('Failed to fetch posts');
     }
 
-    posts.value = response.data.Dados;
-    console.log(response.data.Dados);
-    currentPage.value = response.data.Dados.current_page;
-    lastPage.value = response.data.Dados.last_page;
+    const dadosRetornados = response.data.Dados;
+
+    // Se vier paginado do Laravel, pega o '.data', se vier array direto, usa ele mesmo
+    posts.value = dadosRetornados.data ? dadosRetornados.data : dadosRetornados;
+
+    console.log("Projetos carregados:", posts.value);
+
+    currentPage.value = dadosRetornados.current_page || 1;
+    lastPage.value = dadosRetornados.last_page || 1;
 
     for (const item of posts.value) {
       const imageUrl = `/files/ftp/${item.projeto_id}/${item.projeto_id}${item.extensao_imagem}`;

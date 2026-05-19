@@ -39,7 +39,7 @@ const getPosts = async (page = 1, query = '', sort = '') => {
       throw new Error('Failed to fetch posts');
     }
 
-    posts.value = response.data.Dados.data;
+    posts.value = response.data.Dados;
     currentPage.value = response.data.Dados.current_page;
     lastPage.value = response.data.Dados.last_page;
 
@@ -126,6 +126,7 @@ function formatDateToBrazilian(dateString) {
 </script>
 
 <template>
+  
   <div class="posts">
     <div class="search-bar">
       <div class="tabela">
@@ -145,6 +146,7 @@ function formatDateToBrazilian(dateString) {
               <option value="name_desc">Nome (Z → A)</option>
             </select>
           </div>
+          
           <div class="vrau">
             <label>Itens por página:</label>
             <select v-model="perPage">
@@ -154,11 +156,12 @@ function formatDateToBrazilian(dateString) {
               <option :value="50">50</option>
             </select>
           </div>
+          <router-link to="/gerenciamento-tags" class="item"><button>Gerenciar Tags</button></router-link>
         </div>
       </div>
     </div>
   </div>
-
+  
   <div v-if="isLoading" class="loading">Loading...</div>
   <div v-else class="grid">
     <div class="postItem" v-for="item in posts" :key="item.projeto_id">

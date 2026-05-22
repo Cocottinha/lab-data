@@ -59,6 +59,7 @@ export default {
                             idPonto.value = ponto.nome_ponto;
                             console.log(idPonto.value)
                             atributos.value = analise;
+                            console.log(atributos.value);
                         }
                     });
                 });
@@ -75,7 +76,7 @@ export default {
         onMounted(() => {
             fetchData();
         });
-
+        console.log("creu", atributos);
         return {
             objetoAnalise,
             tecnica,

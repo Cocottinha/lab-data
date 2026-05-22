@@ -33,6 +33,7 @@ export default {
             loadFileData();        
         };
 
+        console.log("vrau",atributos);
         watch(() => props.filePath, loadFileData, { immediate: true });
 
         return {

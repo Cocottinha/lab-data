@@ -109,7 +109,10 @@ const updatePost = async (item) => {
 onMounted(() => {
   getPosts();
 });
-
+const goToPost = (id) => {
+  // Ajuste a rota abaixo para bater exatamente com o caminho do seu router (ex: '/post/:id' ou '/projeto/:id')
+  router.push(`/post-edit/${id}`); 
+};
 watch(perPage, () => {
   getPosts(1, searchQuery.value, sortOption.value); // Reset to the first page when perPage changes
 });
@@ -164,11 +167,18 @@ function formatDateToBrazilian(dateString) {
   
   <div v-if="isLoading" class="loading">Loading...</div>
   <div v-else class="grid">
-    <div class="postItem" v-for="item in posts" :key="item.projeto_id">
+    <div 
+      class="postItem" 
+      v-for="item in posts" 
+      :key="item.projeto_id"
+      @click="goToPost(item.projeto_id)"
+      style="cursor: pointer;"
+    >
       <img v-if="item.imageExists" :src="`/files/ftp/${item.projeto_id}/${item.nome_imagem}${item.extensao_imagem}`"
         width="80%" height="75%" class="imgCard" :title="`${item.nome_projeto}`" />
       <img v-else src="/files/notfound.png" width="80%" height="75%" class="imgCard" />
-      <form @submit.prevent="updatePost(item)" class="info">
+      
+      <form @submit.prevent="updatePost(item)" @click.stop class="info">
           <label for="nome_projeto">Nome Obra:</label>
           <input type="text" v-model="item.nome_projeto">
 
@@ -181,17 +191,16 @@ function formatDateToBrazilian(dateString) {
           <label for="estilo">Estilo:</label>
           <input type="text" v-model="item.estilo">
           
-
           <label for="tecnica">Técnica:</label>
           <input type="text" v-model="item.tecnica">
 
           <label for="equipe">Equipe:</label>
           <input type="text" v-model="item.equipe">
+          
           <label>Data: </label>
           <div class="data">
             {{ formatDateToBrazilian(item.created_at) }}
           </div>
-
           
           <label>
             ID: {{  item.projeto_id}}

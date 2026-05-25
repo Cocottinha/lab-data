@@ -38,6 +38,11 @@ const routes = [
     component: () => import('../views/AdminView.vue'),
   },
   {
+    path: '/post-edit/:id',
+    name: 'PostEdit',
+    component: () => import('../views/PostEditView.vue'),
+  },
+  {
     path: '/gerenciamento-tags',
     name: 'GerenciamentoTags',
     component: () => import('../views/GerenciamentoTags.vue'),
@@ -64,7 +69,7 @@ router.beforeEach((to, from, next) => {
   const authToken = localStorage.getItem('auth-token');
   const userType = localStorage.getItem('user-type');
   // If the user is trying to access a protected route
-  const protectedRoutes = ['Posts', 'Post', 'Grafico', 'Image', 'Admin', 'GerenciamentoTags']; // Add your protected route names here
+  const protectedRoutes = ['Posts', 'Post', 'Grafico', 'Image', 'Admin', 'GerenciamentoTags', 'PostEdit']; // Add your protected route names here
   if (protectedRoutes.includes(to.name) && !authToken) {
     // Redirect to login if not authenticated
     next({ name: 'Login' });

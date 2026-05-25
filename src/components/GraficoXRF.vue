@@ -58,7 +58,7 @@ export default {
         <div class="atributos">
             <h2>Parâmetros de aquisição:</h2>
             <p>Tempo: {{ atributos?.tempo }}</p>
-            <p>Tensão: {{ atributos?.tensao }}</p>
+            <p>Tensão: {{ atributos?.voltagem }}</p>
             <p>Corrente: {{ atributos?.corrente }}</p>
             <p>Colimador: {{ atributos?.colimador }}</p>
             <p>Data: {{ atributos?.data }}</p>

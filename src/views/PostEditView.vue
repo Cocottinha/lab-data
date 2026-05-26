@@ -87,8 +87,14 @@ const handleUpdate = async () => {
       router.push('/posts');
     }
   } catch (error) {
-    console.error('Erro ao salvar alterações:', error);
-    alert('Erro ao salvar as alterações. Verifique os dados e tente novamente.');
+    console.error('Erro detalhado do servidor:', error);
+    
+    // Se o backend retornou o nosso objeto de erro customizado
+    if (error.response && error.response.data && error.response.data.erro_real) {
+      alert(`Erro no Backend:\n${error.response.data.erro_real}\nNo arquivo: ${error.response.data.arquivo} (Linha ${error.response.data.linha})`);
+    } else {
+      alert('Erro ao salvar as alterações do projeto. Tente novamente.');
+    }
   } finally {
     isSaving.value = false;
   }
@@ -104,7 +110,7 @@ onMounted(() => {
     <div v-if="isLoading" class="loading">Carregando dados estruturados do projeto...</div>
     
     <div v-else class="wrapper-edit">
-      <h1>Editar Projeto (ID: {{ projetoId }})</h1>
+      <h1>Editar Projeto (ID: {{ projetoId }}) ({{ projeto.nome_projeto }})</h1>
       
       <form @submit.prevent="handleUpdate" class="main-form">
         
@@ -148,6 +154,7 @@ onMounted(() => {
             
             <div class="tecnicas-container">
               <div v-for="tec in ponto.tecnicas" :key="tec.tecnica_id" class="tecnica-card">
+              <p>{{ tec.nome_tecnica }} ({{ tec.$type }})</p>
                 <div class="tecnica-title">
                   <span class="badge">{{ tec.$type }}</span>
                   <strong>{{ tec.nome_tecnica }}</strong>
@@ -156,19 +163,19 @@ onMounted(() => {
                 <div class="tecnica-fields">
                   <div class="form-group-sub" v-if="tec.tempo !== undefined">
                     <label>Tempo:</label>
-                    <input type="text" v-model="tec.tempo">
+                    <input type="number" v-model="tec.tempo">
                   </div>
                   <div class="form-group-sub" v-if="tec.tensao !== undefined">
                     <label>Tensão:</label>
-                    <input type="text" v-model="tec.tensao">
+                    <input type="number" v-model="tec.tensao">
                   </div>
                   <div class="form-group-sub" v-if="tec.corrente !== undefined">
                     <label>Corrente:</label>
-                    <input type="text" v-model="tec.corrente">
+                    <input type="number" v-model="tec.corrente">
                   </div>
                   <div class="form-group-sub" v-if="tec.colimador !== undefined">
                     <label>Colimador:</label>
-                    <input type="text" v-model="tec.colimador">
+                    <input type="number" v-model="tec.colimador">
                   </div>
                   <div class="form-group-sub" v-if="tec.tonalidade !== undefined">
                     <label>Tonalidade:</label>
@@ -176,11 +183,11 @@ onMounted(() => {
                   </div>
                   <div class="form-group-sub" v-if="tec.intervalo !== undefined">
                     <label>Intervalo:</label>
-                    <input type="text" v-model="tec.intervalo">
+                    <input type="number" v-model="tec.intervalo">
                   </div>
                   <div class="form-group-sub" v-if="tec.resolucao !== undefined">
                     <label>Resolução:</label>
-                    <input type="text" v-model="tec.resolucao">
+                    <input type="number" v-model="tec.resolucao">
                   </div>
                   <div class="form-group-sub full-width">
                     <label>Comentário:</label>
@@ -244,8 +251,15 @@ $primaryColor: #0056b3;
   padding: 40px 20px;
   display: flex;
   justify-content: center;
+  border-radius: 12px;
+  margin-bottom: 20px;
 }
 
+.analise-item-header{
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
 .wrapper-edit {
   width: 100%;
   max-width: 1000px;
@@ -263,7 +277,13 @@ $primaryColor: #0056b3;
   flex-direction: column;
   gap: 30px;
 }
-
+ textarea{
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-indent: 10px;
+  padding: 4px;
+ }
 .section-card {
   background: $cardBg;
   border: none;
@@ -370,6 +390,7 @@ $primaryColor: #0056b3;
 
 .full-width {
   grid-column: span 4;
+  height: auto;
 }
 
 /* Seção de Tipos de Análises */

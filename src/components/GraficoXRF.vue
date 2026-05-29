@@ -64,7 +64,7 @@ export default {
 <template>
     <div v-if="arrayA.length && arrayB.length" class="container1">
         
-        <div class="painel-calibracao">
+        <!-- <div class="painel-calibracao">
             <div class="ponto-input">
                 <label>Ponto 1 - Canal (X1): <input type="number" v-model.number="ponto1.x" /></label>
                 <label>Energia keV (Y1): <input type="number" step="0.001" v-model.number="ponto1.y" /></label>
@@ -73,7 +73,7 @@ export default {
                 <label>Ponto 2 - Canal (X2): <input type="number" v-model.number="ponto2.x" /></label>
                 <label>Energia keV (Y2): <input type="number" step="0.001" v-model.number="ponto2.y" /></label>
             </div>
-        </div>
+        </div> -->
 
         <div class="chart">
             <ChartComponent :xData="eixoXCalibrado" :yData="arrayB" />

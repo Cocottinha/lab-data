@@ -73,8 +73,12 @@ export default async function readTextFileXRF(fileUrl, applyLog = false) {
     }
 
     if (applyLog) {
-        arrayB = arrayB.map(value => Math.log10(value));
-    }
+    arrayB = arrayB.map(value => {
+        // Se o valor for menor ou igual a 0, tratamos como 1 (ou 0.1) para evitar o -Infinity
+        const valorSeguro = value > 0 ? value : 1; 
+        return Math.log10(valorSeguro);
+    });
+}
 
     return { arrayA, arrayB };
 }

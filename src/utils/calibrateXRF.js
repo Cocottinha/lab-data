@@ -26,6 +26,6 @@ export function calibrateChannelsToKeV(arrayCanais, ponto1, ponto2) {
     // Aplica a função de primeiro grau para cada canal do arrayA
     return arrayCanais.map(canal => {
         const energiaKeV = (a * canal) + b;
-        return Number(energiaKeV.toFixed(3)); // Retorna com precisão de 3 casas decimais
+        return Number(energiaKeV.toFixed(2)); // Retorna com precisão de 3 casas decimais
     });
 }

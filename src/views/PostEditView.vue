@@ -149,17 +149,16 @@ onMounted(() => {
           
           <div v-for="ponto in pontos" :key="ponto.ponto_id" class="ponto-block">
             <div class="ponto-header">
-              <h3>Ponto: <input type="text" v-model="ponto.nome_ponto" class="input-inline-header"></h3>
+              <h3>{{ ponto.nome_ponto }} </h3>
             </div>
             
             <div class="tecnicas-container">
               <div v-for="tec in ponto.tecnicas" :key="tec.tecnica_id" class="tecnica-card">
-              <p>{{ tec.nome_tecnica }} ({{ tec.$type }})</p>
+              
                 <div class="tecnica-title">
                   <span class="badge">{{ tec.$type }}</span>
                   <strong>{{ tec.nome_tecnica }}</strong>
-                </div>
-                
+                </div>  
                 <div class="tecnica-fields">
                   <div class="form-group-sub" v-if="tec.tempo !== undefined">
                     <label>Tempo:</label>
@@ -172,6 +171,14 @@ onMounted(() => {
                   <div class="form-group-sub" v-if="tec.corrente !== undefined">
                     <label>Corrente:</label>
                     <input type="number" v-model="tec.corrente">
+                  </div>
+                  <div class="form-group-sub" v-if="tec.aumento !== undefined">
+                    <label>Aumento:</label>
+                    <input type="number" v-model="tec.aumento">
+                  </div>
+                  <div class="form-group-sub" v-if="tec.objetiva !== undefined">
+                    <label>Objetiva:</label>
+                    <input type="number" v-model="tec.objetiva">
                   </div>
                   <div class="form-group-sub" v-if="tec.colimador !== undefined">
                     <label>Colimador:</label>
@@ -189,6 +196,32 @@ onMounted(() => {
                     <label>Resolução:</label>
                     <input type="number" v-model="tec.resolucao">
                   </div>
+                  {{ console.log(tec.$type) }}
+                 <div v-if="tec.$type === 'MO'" class="aumentos-container">
+                    <div v-for="(img, index) in (tec.imagensEAumentos || tec.aumentos || [])" :key="index"
+                      class="aumento-row">
+
+                      <div class="inputs-inline-group">
+                        <div class="form-group-sub short-input">
+                          <label>Aumento:</label>
+                          <input type="text" v-model="img.aumento" placeholder="Ex: 100x, 500x">
+                        </div>
+
+                        <div class="form-group-sub long-input">
+                          <label>Diretório da Imagem:</label>
+                          <input type="text" v-model="img.diretorio">
+                        </div>
+                      </div>
+
+                      <div class="aumento-actions">
+                        <router-link class="btn-imagem" v-if="tec.nome_tecnica.startsWith('MO')"
+                          :to="`/imagem/${projetoId}-${tec.nome_tecnica}`" target="_blank">
+                          Exibir Imagem
+                        </router-link>
+                      </div>
+
+                    </div>
+                  </div>
                   <div class="form-group-sub full-width">
                     <label>Comentário:</label>
                     <textarea v-model="tec.comentario" rows="2" placeholder="Notas sobre a análise..."></textarea>
@@ -197,6 +230,11 @@ onMounted(() => {
                     <label>Resultados:</label>
                     <textarea v-model="tec.resultado" rows="2" placeholder="Notas sobre a análise..."></textarea>
                   </div>
+                  <router-link class="btn-grafico" :key="tec.nome_tecnica"
+                      v-if="tec.nome_tecnica.startsWith('FTIR') || tec.nome_tecnica.startsWith('XRF') || selectedOption === 'Todas'"
+                      :to="`/grafico/${projetoId}-${tec.nome_tecnica}`" target="_blank">
+                      <li>Exibir Gráfico</li>
+                    </router-link>
                 </div>
               </div>
             </div>
@@ -226,6 +264,13 @@ onMounted(() => {
                 <label>Parâmetros:</label>
                 <input type="text" v-model="analise.parametros">
               </div>
+              <router-link class="btn-grafico" v-for="item in tipo.analises" 
+                    :key="item.id_analise" @click="handleAnaliseClick(item.id_analise)"
+                    
+                    :to="`/analise/${projetoId}-${item.nome}-${tipo.Id_tipo_analise}-${item.id_analise}`" target="_blank">
+                    <li>Exibir Análise</li>
+                      
+                  </router-link >
             </div>
           </div>
         </fieldset>
@@ -244,7 +289,56 @@ onMounted(() => {
 $bgColor: #f4f6f9;
 $cardBg: #ffffff;
 $primaryColor: #0056b3;
+.btn-grafico {
+  text-decoration: none;
+  color: $primaryColor;
+  font-weight: 600;
+  &:hover { background-color: $primaryColor; color: white; }
+  transition: all 0.3s ease;
+  list-style-type: none;
+  padding: 8px 12px;
+  border: 1px solid $primaryColor;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+.inputs-inline-group {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
 
+.short-input {
+  width: 25%; // Define um tamanho fixo menor para o aumento
+}
+
+.long-input {
+  width: 75%; // O diretório ganha a maior parte do espaço
+}
+
+.aumento-actions {
+  display: flex;
+  justify-content: flex-start; // Alinha o botão à esquerda (ou 'flex-end' se preferir à direita)
+  margin-top: 5px;
+}
+
+.btn-imagem {
+  display: inline-block;
+  text-decoration: none;
+  color: $primaryColor;
+  font-weight: 600;
+  padding: 8px 16px;
+  border: 1px solid $primaryColor;
+  border-radius: 4px;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  text-align: center;
+
+  &:hover {
+    background-color: $primaryColor;
+    color: white;
+  }
+}
 .edit-container {
   background-color: $bgColor;
   min-height: 100vh;
@@ -254,7 +348,16 @@ $primaryColor: #0056b3;
   border-radius: 12px;
   margin-bottom: 20px;
 }
-
+.aumento-row {
+  display: flex;
+  flex-direction: column; // Faz os inputs ficarem em cima e as ações embaixo
+  gap: 12px;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #e1e8ed;
+  margin-bottom: 15px;
+}
 .analise-item-header{
   gap: 10px;
   display: flex;

@@ -76,36 +76,6 @@ const prevPage = () => {
   }
 };
 
-const updatePost = async (item) => {
-  try {
-    const response = await axios.put(
-      `${process.env.VUE_APP_APIPROJETOS}/${item.projeto_id}`,
-      {
-        nome_projeto: item.nome_projeto,
-        nome_autor: item.nome_autor,
-        ano_obra: item.ano_obra,
-        estilo: item.estilo,
-        tecnica: item.tecnica,
-        equipe: item.equipe,
-      },
-      {
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json; charset=utf-8',
-          'Authorization': `Bearer ${localStorage.getItem("auth-token")}`,
-        },
-      }
-    );
-
-    if (response.status === 200) {
-      alert('Projeto atualizado com sucesso!');
-    }
-  } catch (error) {
-    console.error('Erro ao atualizar projeto:', error);
-    alert('Erro ao atualizar projeto. Tente novamente.');
-  }
-};
-
 onMounted(() => {
   getPosts();
 });
@@ -177,38 +147,12 @@ function formatDateToBrazilian(dateString) {
       <img v-if="item.imageExists" :src="`/files/ftp/${item.projeto_id}/${item.nome_imagem}${item.extensao_imagem}`"
         width="80%" height="75%" class="imgCard" :title="`${item.nome_projeto}`" />
       <img v-else src="/files/notfound.png" width="80%" height="75%" class="imgCard" />
+      <div class="info">
+        <h2>{{ item.nome_projeto }}</h2>
+        <p>{{ item.nome_autor }}</p>
+        <p>{{ formatDateToBrazilian(item.created_at) }}</p>
       
-      <form @submit.prevent="updatePost(item)" @click.stop class="info">
-          <label for="nome_projeto">Nome Obra:</label>
-          <input type="text" v-model="item.nome_projeto">
-
-          <label for="nome_autor">Nome Autor:</label>
-          <input type="text" v-model="item.nome_autor">
-
-          <label for="ano_obra">Ano:</label>
-          <input type="text" v-model="item.ano_obra">
-
-          <label for="estilo">Estilo:</label>
-          <input type="text" v-model="item.estilo">
-          
-          <label for="tecnica">Técnica:</label>
-          <input type="text" v-model="item.tecnica">
-
-          <label for="equipe">Equipe:</label>
-          <input type="text" v-model="item.equipe">
-          
-          <label>Data: </label>
-          <div class="data">
-            {{ formatDateToBrazilian(item.created_at) }}
-          </div>
-          
-          <label>
-            ID: {{  item.projeto_id}}
-          </label>
-
-          <button type="submit">Atualizar</button>
-      </form>
-      
+    </div>
     </div>
   </div>
 
@@ -239,7 +183,25 @@ $bgColor: rgb(250 250 250);
     padding: 5px;
   }
 }
-
+.postItem {
+  width: 500px;
+  height: 230px;
+  border-radius: 20px;
+  place-items: center;
+  display: flex;
+  -webkit-box-shadow: 3px 3px 9px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 3px 3px 9px 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 3px 9px 1px rgba(0, 0, 0, 0.5);
+  &:hover { background-color: #0056b3; color: white; }
+}
+.info{
+  display: flex;
+  flex-direction: column;
+  gap: 5px; 
+  justify-content: center;
+  align-items: center;
+  margin:auto;
+}
 .ordenar {
   gap: 10px;
   display: flex;
@@ -350,21 +312,18 @@ button:disabled {
   text-align: center;
   font-size: 20px;
   margin: 20px;
-  /* Add margin for aesthetics */
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   margin-top: 4%;
-  gap: 35px;
-  padding-left: 0px;
-  margin-bottom: 50px;
+  gap: 25px;
   place-items: center;
 }
 
 .imgCard {
-  width: 300px;
+  width: 280px;
   height: 230px;
   object-fit: cover;
   padding-top: 10px;
@@ -374,54 +333,6 @@ button:disabled {
   float: left;
   border-radius: 20px;
 }
-
-.postItem {
-  width: 60%;
-  height: 230px;
-  border-radius: 20px;
-  place-items: center;
-  -webkit-box-shadow: 3px 3px 9px 1px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 3px 3px 9px 1px rgba(0, 0, 0, 0.5);
-  box-shadow: 3px 3px 9px 1px rgba(0, 0, 0, 0.5);
-}
-
-.info {
-  padding-left: 5px;
-  margin-bottom: 5px;
-  padding-right: 20px;
-  margin-top: 10px;
-
-  font-size: 14px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-
-  button{
-    width: 100%;
-    height: 30px;
-    margin: 8px 0px 0px 0px;
-  }
-
-  .data{
-    margin-top: 15px;
-  }
-
-  label {
-    text-align: right;
-    padding-top: 15px;
-  }
-
-  input {
-    font-size: 14px;
-    padding: 5px;
-    margin-top: 10px;
-    border: 0.1px solid #ccc;
-    border-radius: 5px;
-  }
-
-  gap: 15px;
-}
-
 
 @media (max-width: 1700px) {
   .grid {

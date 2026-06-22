@@ -1,9 +1,10 @@
 <script setup>
 import axios from 'axios';
-import { ref, onMounted, watch } from 'vue';
+import { ref, onMounted, watch, computed } from 'vue';
 import { useRouter } from 'vue-router'; // Import the useRouter hook
 
 const posts = ref([]);
+const tagsDisponiveis = ref([]);
 const currentPage = ref(1);
 const lastPage = ref(1);
 const isLoading = ref(true);
@@ -11,6 +12,9 @@ const searchQuery = ref('');
 const sortOption = ref('');
 const perPage = ref(10); // Default items per page
 const router = useRouter();
+const isAdmin = ref(false); // Assuming you have a way to determine if the user is an admin
+
+const selectedTag = ref('');
 
 const checkImageExists = async (imageUrl) => {
   try {
@@ -20,6 +24,48 @@ const checkImageExists = async (imageUrl) => {
     return false;
   }
 };
+const checkAdminStatus = () => {
+  // Substitua 'user-role' pela chave real que você usa para salvar o cargo do usuário
+  const role = localStorage.getItem('user-type'); 
+  isAdmin.value = role === 'admin'; 
+};
+const getTags = async () => {
+  try {
+    const response = await axios.get(`${process.env.VUE_APP_API_URL}/tags`, {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem("auth-token")}`,
+      }
+    });
+    tagsDisponiveis.value = response.data.Dados || response.data;
+  } catch (error) {
+    console.error('Error fetching tags:', error);
+    tagsDisponiveis.value = [];
+  }
+};
+const projetosFiltrados = computed(() => {
+  // Se não tem tag selecionada, mostra todos os projetos da paginação normal
+  if (!selectedTag.value) {
+    return posts.value;
+  }
+
+  // 1. Encontra o objeto completo da Tag que o usuário escolheu no select
+  const tagObjeto = tagsDisponiveis.value.find(t => t.id == selectedTag.value);
+  if (!tagObjeto) return posts.value;
+
+  // 2. Pega os projetos vinculados a essa tag específica
+  const listaProjetosDaTag = tagObjeto.projetos || tagObjeto.projects || [];
+
+  // 3. Mapeia os IDs dos projetos que pertencem a essa tag (exatamente como você fez no gerenciador)
+  const idsProjetosVinculados = listaProjetosDaTag.map(p => {
+    if (p.projeto_id) return p.projeto_id;
+    if (p.id) return p.id;
+    if (p.pivot) return p.pivot.projeto_id || p.pivot.id;
+    return null;
+  });
+
+  // 4. Só deixa passar no grid o post cujo projeto_id esteja nessa lista de IDs da tag
+  return posts.value.filter(post => idsProjetosVinculados.includes(post.projeto_id));
+});
 
 const getPosts = async (page = 1, query = '', sort = '') => {
   isLoading.value = true;
@@ -85,6 +131,8 @@ const prevPage = () => {
 
 onMounted(() => {
   getPosts();
+  getTags();
+  checkAdminStatus();
 });
 
 watch(perPage, () => {
@@ -112,6 +160,15 @@ function formatDateToBrazilian(dateString) {
         </div>
 
         <div class="ordenar">
+          <div v-if="isAdmin" class="vrau tag-striper">
+            <label>Tag:</label>
+            <select v-model="selectedTag">
+              <option value="">Todas as Tags</option>
+              <option v-for="tag in tagsDisponiveis" :key="tag.id" :value="tag.id">
+                {{ tag.name }}
+              </option>
+            </select>
+          </div>
           <div class="vrau">
             <label>Ordernar por:</label>
           <select v-model="sortOption" @change="searchPosts">
@@ -139,7 +196,7 @@ function formatDateToBrazilian(dateString) {
 
   <div v-if="isLoading" class="loading">Loading...</div>
   <div v-else class="grid">
-    <div class="postItem" v-for="item in posts" :key="item.projeto_id"
+    <div class="postItem" v-for="item in projetosFiltrados" :key="item.projeto_id"
       @click="$router.push(`/post/${item.projeto_id}`)">
       <img v-if="item.imageExists" :src="`/files/ftp/${item.projeto_id}/${item.nome_imagem}${item.extensao_imagem}`"
         width="80%" height="75%" class="imgCard" :title="`${item.nome_projeto}`" />

@@ -51,6 +51,17 @@ export default async function readTextFileXRF(fileUrl, applyLog = false) {
             }         
         });
     }
+    else if(extensao === "txt"){
+         const lines = text.split('\n');
+        lines.forEach((line, index) => {
+            if (index > startDataLine) {
+                const trimmedLine = line.trim();
+                if (!trimmedLine || isNaN(trimmedLine)) return;
+                const value = parseFloat(trimmedLine);
+                arrayB.push(value);
+                arrayA = generateRange(arrayB.length);
+            }
+        });}
     else{
         const lines = text.split('\n');
         lines.forEach(line => {

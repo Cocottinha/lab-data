@@ -6,7 +6,7 @@
 
 <script>
 import * as echarts from 'echarts';
-import { onMounted, onBeforeUnmount, ref, watch } from 'vue';
+import { onMounted, onBeforeUnmount, ref, watch, nextTick } from 'vue';
 
 export default {
   name: 'EChartComponent',
@@ -26,7 +26,14 @@ export default {
     const chartRef = ref(null);
     let chartInstance = null;
 
-    const initChart = () => {
+    const renderChart = async () => {
+      await nextTick();
+      if (!chartRef.value) return;
+
+      if (!chartInstance) {
+        chartInstance = echarts.init(chartRef.value);
+      }
+
       const option = {
         tooltip: {
           trigger: 'axis',
@@ -68,10 +75,8 @@ export default {
         },
       };
 
-      if (!chartInstance) {
-        chartInstance = echarts.init(chartRef.value);
-      }
-      chartInstance.setOption(option);
+      chartInstance.setOption(option, true);
+      chartInstance.resize();
     };
 
     const resizeChart = () => {
@@ -80,23 +85,23 @@ export default {
       }
     };
 
-    // Watch for data changes and update the chart
     watch(
       () => [props.xData, props.yData],
       () => {
-        initChart(); // Re-initialize the chart with updated data
+        renderChart();
       },
-      { deep: true }
+      { deep: false }
     );
 
     onMounted(() => {
-      initChart();
+      renderChart();
       window.addEventListener('resize', resizeChart);
     });
 
     onBeforeUnmount(() => {
       if (chartInstance) {
         chartInstance.dispose();
+        chartInstance = null;
       }
       window.removeEventListener('resize', resizeChart);
     });
@@ -113,6 +118,7 @@ export default {
   width: 1200px;
   height: 700px;
 }
+/* ... seus @media continuam iguais ... */
 
 @media (max-width: 1367px) {
   .chart {
